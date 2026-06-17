@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <title>Contact Us | IRBF - Institute of Retail Banking &amp; Finance</title>
+  <meta name="description" content="Contact IRBF for admissions, student support, or franchise queries. Reach our Thane head office or send us a message.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <style>
+    .contact-layout { display:grid; grid-template-columns:1fr 1.2fr; gap:40px; align-items:start; }
+    .contact-info-card { background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:#fff; border-radius:var(--radius); padding:36px; }
+    .contact-info-card h3 { color:#fff; margin-bottom:8px; }
+    .contact-info-card > p { color:rgba(255,255,255,0.8); font-size:0.9rem; margin-bottom:26px; }
+    .ci-item { display:flex; gap:14px; align-items:flex-start; margin-bottom:22px; }
+    .ci-item i { color:var(--accent); font-size:1.1rem; margin-top:3px; width:22px; text-align:center; }
+    .ci-item strong { display:block; font-family:var(--font-headings); font-size:0.9rem; }
+    .ci-item span { font-size:0.85rem; color:rgba(255,255,255,0.8); }
+    .contact-form-card { background:var(--bg-white); border:1px solid var(--border-color); border-radius:var(--radius); box-shadow:var(--shadow-md); padding:36px; }
+    .cf-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .cf-field { margin-bottom:16px; }
+    .cf-field.full { grid-column:1/-1; }
+    .cf-field input, .cf-field select, .cf-field textarea { width:100%; padding:13px 16px; border:1px solid var(--border-color); border-radius:8px; font-family:var(--font-body); font-size:0.9rem; }
+    .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { outline:none; border-color:var(--secondary); box-shadow:0 0 0 3px rgba(155,26,30,0.1); }
+    .field-error { color:var(--secondary); font-size:0.78rem; margin-top:4px; display:none; }
+    .form-msg { text-align:center; margin-top:14px; font-weight:600; color:#128C7E; display:none; }
+    @media(max-width:900px){ .contact-layout{grid-template-columns:1fr;} .cf-row{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div class="top-bar"><div class="container top-bar-content"><div class="top-bar-info"><span><i class="fa-solid fa-phone"></i> <a>+91 91721 55613</a></span><span><i class="fa-solid fa-envelope"></i> <a href="mailto:info@irbfedu.com">info@irbfedu.com</a></span><span class="top-bar-hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</span></div><div class="top-bar-socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div></div>
+  <header><div class="container navbar"><a href="index.html" class="logo"><img src="logo.jpg" alt="IRBF Logo"></a><ul class="nav-menu"><li><a href="index.html" class="nav-link">Home</a></li><li class="has-dropdown"><a class="nav-link dropdown-toggle">About Us <i class="fa-solid fa-chevron-down"></i></a><ul class="nav-dropdown"><li><a href="about.html">IRBF Overview</a></li><li><a href="video-gallery.html">Video Gallery</a></li><li><a href="image-gallery.html">Image Gallery</a></li><li><a href="team.html">IRBF Team &amp; Founder's Message</a></li></ul></li><li><a href="programs.html" class="nav-link">Programs</a></li><li><a href="placements.html" class="nav-link">Placements</a></li><li><a href="centers.html" class="nav-link">Centers</a></li><li><a href="blogs.html" class="nav-link">Blogs</a></li><li><a href="contact.html" class="nav-link active">Contact</a></li></ul><div class="nav-cta"><a href="contact.html" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a></div><div class="hamburger"><span></span><span></span><span></span></div></div></header>
+  <section class="page-banner"><div class="container"><h1>Contact Us</h1><p>Ready to start your banking career? Get in touch with our team today.</p><div class="breadcrumb"><a href="index.html">Home</a> / Contact</div></div></section>
+  <section class="page-section"><div class="container"><div class="contact-layout">
+    <div class="contact-info-card reveal-left">
+      <h3>Get In Touch</h3><p>Reach out for admissions, student support, or franchise opportunities.</p>
+      <div class="ci-item"><i class="fa-solid fa-location-dot"></i><div><strong>Thane Head Office</strong><span>Wagle Industrial Estate, Thane West, Maharashtra - 400604</span></div></div>
+      <div class="ci-item"><i class="fa-solid fa-phone"></i><div><strong>Admissions</strong><span>+91 91721 55613</span></div></div>
+      <div class="ci-item"><i class="fa-solid fa-headset"></i><div><strong>Student Helpline</strong><span>+91 75591 15998</span></div></div>
+      <div class="ci-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>info@irbfedu.com</span></div></div>
+      <div class="ci-item"><i class="fa-solid fa-store"></i><div><strong>Franchise</strong><span>franchise@irbfedu.com</span></div></div>
+    </div>
+    <div class="contact-form-card reveal-right">
+      <form id="contactForm" novalidate>
+        <div class="cf-row">
+          <div class="cf-field"><input type="text" name="name" placeholder="Full Name *"><div class="field-error">Please enter your name.</div></div>
+          <div class="cf-field"><input type="tel" name="phone" placeholder="Phone Number *"><div class="field-error">Enter a valid 10-digit phone.</div></div>
+        </div>
+        <div class="cf-field full"><input type="email" name="email" placeholder="Email Address *"><div class="field-error">Enter a valid email.</div></div>
+        <div class="cf-field full"><select name="category"><option value="">Inquiry Type *</option><option>Admissions</option><option>Student Support</option><option>Franchise</option></select><div class="field-error">Please select an inquiry type.</div></div>
+        <div class="cf-field full"><textarea name="message" rows="4" placeholder="Your Message *"></textarea><div class="field-error">Please enter a message.</div></div>
+        <div style="text-align:center;"><button type="submit" class="btn btn-primary btn-lg">Send Message <i class="fa-solid fa-paper-plane"></i></button></div>
+        <div class="form-msg" id="cfMsg">Thank you! Opening your email app to send the message...</div>
+      </form>
+    </div>
+  </div></div></section>
+  <footer><div class="container footer-grid"><div class="footer-col"><div class="footer-logo"><img src="logo.jpg" alt="IRBF Footer Logo"></div><p>Grooming university graduates into high-performing professional retail banking assets in Maharashtra.</p><div class="footer-socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div><div class="footer-col"><h3>Quick Navigation</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="placements.html">Placements</a></li><li><a href="team.html">Our Team</a></li></ul></div><div class="footer-col"><h3>Useful Information</h3><ul class="footer-links"><li><a href="faq.html">FAQs</a></li><li><a href="centers.html">State Centers</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h3>Thane Head Office</h3><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><div>Wagle Industrial Estate, Thane West,<br>Maharashtra - 400604</div></div><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div>+91 91721 55613</div></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><div>info@irbfedu.com</div></div></div></div><div class="container footer-bottom"><div>&copy; 2026 Institute of Retail Banking &amp; Finance (IRBF). All Rights Reserved.</div><div>Designed for IRBF Careers</div></div></footer>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    const cform = document.getElementById('contactForm');
+    cform.addEventListener('submit', e => {
+      e.preventDefault();
+      let valid = true;
+      const f = cform.elements;
+      const setErr = (el, show) => { el.parentElement.querySelector('.field-error').style.display = show ? 'block' : 'none'; if(show) valid=false; };
+      setErr(f.name, !f.name.value.trim());
+      setErr(f.phone, !/^\d{10}$/.test(f.phone.value.trim()));
+      setErr(f.email, !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim()));
+      setErr(f.category, !f.category.value);
+      setErr(f.message, !f.message.value.trim());
+      if(!valid) return;
+      document.getElementById('cfMsg').style.display='block';
+      const body = encodeURIComponent(`Name: ${f.name.value}\nPhone: ${f.phone.value}\nEmail: ${f.email.value}\nType: ${f.category.value}\n\n${f.message.value}`);
+      window.location.href = `mailto:info@irbfedu.com?subject=${f.category.value} Inquiry - ${f.name.value}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
