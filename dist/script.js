@@ -143,6 +143,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // === SKELETON IMAGE LOADING ===
+  document.querySelectorAll('img.lazy-img').forEach(img => {
+    const reveal = () => {
+      img.classList.add('loaded');
+      const wrap = img.closest('.has-skeleton');
+      if (wrap) wrap.classList.add('loaded');
+    };
+    if (img.complete && img.naturalWidth > 0) reveal();
+    else { img.addEventListener('load', reveal); img.addEventListener('error', reveal); }
+  });
+
   // === VIDEO LIGHTBOX MODAL ===
   const videoCards = document.querySelectorAll('.testimonial-video-card');
   const videoModal = document.getElementById('videoModal');

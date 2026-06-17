@@ -279,6 +279,28 @@ header.scrolled {
 .page-section { padding: 72px 0; }
 .page-section.alt { background: var(--bg-light); }
 
+/* === SKELETON LOADING (shimmer) === */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #e8ebf2;
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.65), transparent);
+  animation: skeletonShimmer 1.3s infinite;
+}
+@keyframes skeletonShimmer { 100% { transform: translateX(100%); } }
+/* image starts hidden under skeleton, fades in on load */
+img.lazy-img { opacity: 0; transition: opacity 0.4s ease; }
+img.lazy-img.loaded { opacity: 1; }
+.skel-block { display:block; border-radius:var(--radius); }
+.has-skeleton.loaded { background: transparent; }
+.has-skeleton.loaded::after { display:none; }
+
 /* === DROPDOWN MOBILE === */
 @media (max-width: 992px) {
   .nav-menu li.has-dropdown:hover .nav-dropdown { opacity: 0; visibility: hidden; }
