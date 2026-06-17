@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  
+  <!-- SEO Meta Tags -->
+  <title>About Us - IRBF | Institute of Retail Banking & Finance</title>
+  <meta name="description" content="Learn more about IRBF (Institute of Retail Banking & Finance). Read about our Aim, Mission, Vision, core values, and our journey in grooming graduates into professional retail bankers.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="chatbot.css">
+
+  <style>
+    /* --- About Page Specific Styles --- */
+    .about-hero {
+      background: linear-gradient(rgba(31, 46, 85, 0.9), rgba(155, 26, 30, 0.85)), url('hero_banking.png') center/cover no-repeat;
+      padding: 100px 0 80px;
+      color: var(--bg-white);
+      text-align: center;
+    }
+    .about-hero h1 {
+      font-size: 3rem;
+      color: var(--bg-white);
+      margin-bottom: 12px;
+    }
+    .about-hero p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+    .about-breadcrumb {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 15px;
+    }
+    .about-breadcrumb a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Intro Section */
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .about-intro-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .about-intro-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+    .about-intro-image img {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--bg-white);
+    }
+
+    /* AIM Banner */
+    .about-aim-banner {
+      background: var(--bg-light);
+      border-left: 5px solid var(--secondary);
+      padding: 40px;
+      border-radius: var(--radius);
+      text-align: center;
+      margin: 40px auto 80px;
+      max-width: 900px;
+      box-shadow: var(--shadow-sm);
+    }
+    .about-aim-banner h3 {
+      font-size: 1.5rem;
+      color: var(--secondary);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .about-aim-banner p {
+      font-size: 1.8rem;
+      font-family: var(--font-headings);
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    /* Mission / Vision Cards */
+    .about-mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+    .about-mv-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .about-mv-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--secondary);
+    }
+    .about-mv-card h3 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .about-mv-card h3 i {
+      color: var(--secondary);
+    }
+    .about-mv-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Core Values Section */
+    .about-values-section {
+      background-color: #7A1417;
+      color: var(--bg-white);
+      padding: 80px 0;
+    }
+    .about-values-section h2 {
+      color: var(--bg-white);
+      text-align: center;
+      margin-bottom: 48px;
+      font-size: 2.2rem;
+    }
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .about-values-grid .value-card:nth-child(n+5) {
+      grid-column: span 1;
+    }
+    /* Special layout for centering bottom 3 cards */
+    .about-values-row-2 {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .value-card {
+      background-color: var(--bg-white);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      text-align: center;
+      color: var(--text-main);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .value-card-row-2 {
+      width: calc(25% - 18px);
+    }
+    .value-card:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+    }
+    .value-icon {
+      font-size: 2rem;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+    .value-card h4 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .value-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Process Flow Flowchart */
+    .about-process-section {
+      padding: 80px 0;
+      background-color: var(--bg-white);
+    }
+    .about-process-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .about-process-left {
+      background: linear-gradient(135deg, var(--secondary) 0%, #B71C1C 100%);
+      color: var(--bg-white);
+      border-radius: var(--radius);
+      padding: 40px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-process-left h3 {
+      color: var(--bg-white);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    .about-process-left .stat-callout {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 15px 0;
+    }
+    .about-process-left p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .about-process-left .salary-flex {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 20px;
+    }
+    .salary-flex-item h4 {
+      color: var(--accent);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .salary-flex-item p {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .process-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .process-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--bg-light);
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+    .process-step:hover {
+      border-color: var(--secondary);
+      transform: translateX(5px);
+    }
+    .process-num {
+      width: 45px;
+      height: 45px;
+      background-color: var(--primary);
+      color: var(--bg-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .process-info h4 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .process-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Benefits Section */
+    .about-benefits-section {
+      padding: 80px 0;
+      background-color: var(--bg-light);
+    }
+    .about-benefits-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .about-benefits-list {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .benefit-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .benefit-item i {
+      color: var(--secondary);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+    .benefit-item h4 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .benefit-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 992px) {
+      .about-intro-grid, .about-mv-grid, .about-process-grid, .about-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .about-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-values-row-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      .value-card-row-2 {
+        width: 100%;
+      }
+    }
+    @media (max-width: 576px) {
+      .about-values-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-hero h1 {
+        font-size: 2.2rem;
+      }
+      .about-aim-banner p {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-phone"></i> <a href="tel:+919172155613">+91 91721 55613</a></span>
+        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:info@irbfedu.com">info@irbfedu.com</a></span>
+        <span class="top-bar-hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</span>
+      </div>
+      <div class="top-bar-socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Navigation Header -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html#home" class="logo">
+        <img src="logo.jpg" alt="IRBF Logo">
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="index.html#programs" class="nav-link">Programs</a></li>
+        <li><a href="index.html#why-choose-us" class="nav-link">Why Choose Us</a></li>
+        <li><a href="index.html#reviews" class="nav-link">Student Reviews</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="index.html#contact" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. About Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="reveal">Be a Smart Banker</h1>
+      <p class="reveal">Every graduate deserves a professional career</p>
+      <a href="index.html#contact" class="btn btn-primary btn-lg reveal">Apply Today <i class="fa-solid fa-graduation-cap"></i></a>
+      <div class="about-breadcrumb reveal">
+        <a href="index.html">Home</a> &gt; IRBF Grooming Bankers
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Introduction Section -->
+  <section class="container">
+    <div class="about-intro-grid">
+      <div class="about-intro-content reveal-left">
+        <h2>INSTITUTE OF RETAIL BANKING & FINANCE</h2>
+        <p><strong>Institute of Retail Banking & Finance (IRBF)</strong> is one of the premier institutions in Maharashtra committed to bridging the gap between university graduation and professional employment in the private banking sector.</p>
+        <p>We believe that standard academic curriculums often lack the practical, day-to-day branch application skills required by modern retail banks. To address this, IRBF offers specialized PG Certification programs designed and mentored by ex-banker branch managers.</p>
+        <p>Our training incorporates simulated bank environments, direct system workflows, extensive product knowledge, compliance training, and rigorous mock interview preparations to make fresh graduates fully job-ready within 2 months.</p>
+      </div>
+      <div class="about-intro-image reveal-right">
+        <img src="irbf_classroom_training.png?v=2" alt="IRBF Classroom Training">
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. AIM, Mission, & Vision -->
+  <section class="container">
+    <div class="about-aim-banner reveal">
+      <h3>Our Aim</h3>
+      <p>To create 10,000+ retail bankers by the year 2030</p>
+    </div>
+
+    <div class="about-mv-grid">
+      <div class="about-mv-card reveal-left">
+        <h3><i class="fa-solid fa-rocket"></i> Our Mission</h3>
+        <p>Our mission is to transform graduates into highly skilled, industry-ready professionals. We bridge the gap between academic education and banking requirements through ex-banker mentored branch simulations, real-world case studies, and hands-on operational training.</p>
+      </div>
+      <div class="about-mv-card reveal-right">
+        <h3><i class="fa-solid fa-eye"></i> Our Vision</h3>
+        <p>To be India's most trusted banking training institute, recognized for curriculum excellence, realistic branch exposure, and a robust placement delivery network that empowers young fresh graduates to build secure corporate banking careers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Core Values -->
+  <section class="about-values-section">
+    <div class="container">
+      <h2 class="reveal">Core Values: The Standards That Define Who We Are</h2>
+      
+      <!-- Top Row: 4 Cards -->
+      <div class="about-values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon"><i class="fa-solid fa-award"></i></div>
+          <h4>Professional Excellence</h4>
+          <p>Delivering high-caliber training modules that keep pace with private sector banking changes.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon"><i class="fa-solid fa-user-graduate"></i></div>
+          <h4>Graduate Focus</h4>
+          <p>Placing student outcomes, counseling, and placement achievements at the absolute core of our efforts.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h4>Trust & Loyalty</h4>
+          <p>Practicing transparent advisory procedures and maintaining robust ethical standards with both students and banks.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+          <h4>Respect & Recognition</h4>
+          <p>Fostering an encouraging space where every student's learning pace is respected and achievements recognized.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Row: 3 Centered Cards -->
+      <div class="about-values-row-2">
+        <div class="value-card value-card-row-2 reveal">
+          <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Ownership & Accountability</h4>
+          <p>Taking proactive responsibility for the skills development and placement assistance of enrolled graduates.</p>
+        </div>
+        <div class="value-card value-card-row-2 reveal">
+          <div class="value-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+          <h4>Continuous Individual Growth</h4>
+          <p>Providing opportunities for faculty and learners to consistently upgrade their soft skills and domain knowledge.</p>
+        </div>
+        <div class="value-card value-card-row-2 reveal">
+          <div class="value-icon"><i class="fa-solid fa-check-double"></i></div>
+          <h4>Committed to Quality</h4>
+          <p>Sticking strictly to structured learning guidelines, mock assessments, and reliable placement drives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Journey & Stats Banner -->
+  <section class="stats-banner" id="stats">
+    <div class="container stats-banner-grid">
+      <div class="stats-banner-item">
+        <h3 class="stat-number" data-target="6200" data-suffix="+">0+</h3>
+        <p>Placed Graduates</p>
+      </div>
+      <div class="stats-banner-item">
+        <h3 class="stat-number" data-target="14" data-suffix="+">0+</h3>
+        <p>State Centers</p>
+      </div>
+      <div class="stats-banner-item">
+        <h3 class="stat-number" data-target="34" data-suffix="+">0+</h3>
+        <p>Batches Active</p>
+      </div>
+      <div class="stats-banner-item">
+        <h3 class="stat-number" data-target="100" data-suffix="+">0+</h3>
+        <p>Recruiter Partners</p>
+      </div>
+      <div class="stats-banner-item">
+        <h3 class="stat-number" data-target="25" data-suffix="+">0+</h3>
+        <p>Coaching Modules</p>
+      </div>
+      <div class="stats-banner-item">
+        <h3 class="stat-number" data-target="3.0" data-decimals="1" data-suffix=" LPA+">0.0 LPA+</h3>
+        <p>Average Package</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Why Choose us & Process -->
+  <section class="about-process-section">
+    <div class="container">
+      <div class="about-process-grid">
+        <div class="about-process-left reveal-left">
+          <h3>Why Choose IRBF</h3>
+          <p>Empowering Fresh Graduates Pan India</p>
+          <div class="stat-callout">6,200+</div>
+          <p>Students Placed Successfully</p>
+          <div class="salary-flex">
+            <div class="salary-flex-item">
+              <h4>₹ 4.9 LPA</h4>
+              <p>Highest Salary</p>
+            </div>
+            <div class="salary-flex-item">
+              <h4>₹ 2.4 - 3.5 LPA</h4>
+              <p>Average Salary Range</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-process-right reveal-right">
+          <h3 style="margin-bottom: 24px; font-size: 1.8rem;">Our Process Flow</h3>
+          <div class="process-timeline">
+            <div class="process-step">
+              <div class="process-num">1</div>
+              <div class="process-info">
+                <h4>Application</h4>
+                <p>Register for our program and submit your academic details for primary eligibility verification.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-num">2</div>
+              <div class="process-info">
+                <h4>Screening Test</h4>
+                <p>Attend our standard basic aptitude screening and personal assessment interview.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-num">3</div>
+              <div class="process-info">
+                <h4>Shortlisting</h4>
+                <p>Selected candidates receive their admission confirmation and batch allocation options.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-num">4</div>
+              <div class="process-info">
+                <h4>Interactive Training</h4>
+                <p>Undergo a 2-month rigorous ex-banker mentored classroom/online program including branch simulators.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. What you get Section -->
+  <section class="about-benefits-section">
+    <div class="container">
+      <div class="about-benefits-grid">
+        <div class="about-benefits-left reveal-left">
+          <h2>What you get by enrolling in IRBF</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">By enrolling in our professional retail banking program, you gain comprehensive skills and advantages that set you apart in private sector bank interviews.</p>
+          
+          <div class="about-benefits-list">
+            <div class="benefit-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>ISO 9001:2015 Certified Certificate</h4>
+                <p>Receive a widely accepted, quality-certified postgraduate certificate detailing your retail banking skills.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Ex-Banker Faculty Mentorship</h4>
+                <p>Learn directly from retired senior branch managers who provide genuine insights and simulator training.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Intense Mock Interview Prep</h4>
+                <p>Overcome interview anxiety with multiple rounds of tailored mock HR assessments and domain question banks.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Dedicated Placement Drives</h4>
+                <p>Get direct opportunity line-ups with top recruitment panels from leading private sector banking partners.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-benefits-right reveal-right">
+          <img src="banking_careers_guide.png?v=2" alt="Banking Careers Guide" style="border-radius: var(--radius); border: 4px solid #fff; box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Contact Us -->
+  <section id="contact" class="contact-section-red">
+    <div class="container">
+      <h2>CONTACT US</h2>
+      <p>Have questions about admissions, centers, or training? Reach out to us today.</p>
+    </div>
+  </section>
+  <div class="container contact-cards-container">
+    <div class="contact-cards-grid">
+      <div class="contact-box-white reveal">
+        <div class="contact-box-icon"><i class="fa-solid fa-phone"></i></div>
+        <h3>For Admission</h3>
+        <p>+91 91721 55613</p>
+        <span>info@irbfedu.com</span>
+      </div>
+      <div class="contact-box-white reveal">
+        <div class="contact-box-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>For Student Helpline</h3>
+        <p>+91 75591 15998</p>
+        <span>support@irbfedu.com</span>
+      </div>
+      <div class="contact-box-white reveal">
+        <div class="contact-box-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>For Franchise</h3>
+        <p>+91 91721 55613</p>
+        <span>franchise@irbfedu.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. CTA Floating Card -->
+  <div class="container footer-top-card-wrapper">
+    <div class="footer-floating-card reveal-scale">
+      <div class="cta-content">
+        <h3>First Step Towards a Successful Banking Career</h3>
+        <p>Join 6,200+ graduates already placed in top banks.</p>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary btn-lg">Apply Today <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- 12. Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="logo.jpg" alt="IRBF Footer Logo">
+        </div>
+        <p>Grooming university graduates into high-performing professional retail banking assets in Maharashtra. Engage, Nurture, and Grow with IRBF.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Quick Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#programs">Training Programs</a></li>
+          <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+          <li><a href="index.html#reviews">Student Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Useful Information</h3>
+        <ul class="footer-links">
+          <li><a href="index.html#home">Privacy Policy</a></li>
+          <li><a href="index.html#home">Terms & Conditions</a></li>
+          <li><a href="index.html#home">FAQs</a></li>
+          <li><a href="index.html#home">State Centers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Thane Head Office</h3>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            Wagle Industrial Estate, Thane West,<br>
+            Maharashtra - 400604
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>+91 91721 55613</div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>info@irbfedu.com</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Institute of Retail Banking & Finance (IRBF). All Rights Reserved.</div>
+      <div>Designed for IRBF Careers</div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript and Chatbot scripts -->
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
