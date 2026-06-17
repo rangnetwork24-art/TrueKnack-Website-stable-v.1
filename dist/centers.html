@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <title>State Centers | IRBF Training Centers in Maharashtra</title>
+  <meta name="description" content="Find IRBF offline training and counseling centers across Maharashtra including Thane, Pune, Mumbai, Nashik, and Nagpur.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <style>
+    .centers-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .center-card { background:var(--bg-white); border:1px solid var(--border-color); border-top:4px solid var(--secondary); border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:26px; transition:var(--transition); }
+    .center-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
+    .center-card h3 { color:var(--primary); display:flex; align-items:center; gap:8px; margin-bottom:14px; }
+    .center-card h3 i { color:var(--secondary); }
+    .center-detail { display:flex; gap:10px; align-items:flex-start; font-size:0.86rem; color:var(--text-muted); margin-bottom:10px; }
+    .center-detail i { color:var(--accent); margin-top:3px; }
+    .center-card .btn { margin-top:6px; }
+    @media(max-width:992px){ .centers-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:640px){ .centers-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div class="top-bar"><div class="container top-bar-content"><div class="top-bar-info"><span><i class="fa-solid fa-phone"></i> <a>+91 91721 55613</a></span><span><i class="fa-solid fa-envelope"></i> <a href="mailto:info@irbfedu.com">info@irbfedu.com</a></span><span class="top-bar-hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</span></div><div class="top-bar-socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div></div>
+  <header><div class="container navbar"><a href="index.html" class="logo"><img src="logo.jpg" alt="IRBF Logo"></a><ul class="nav-menu"><li><a href="index.html" class="nav-link">Home</a></li><li class="has-dropdown"><a class="nav-link dropdown-toggle">About Us <i class="fa-solid fa-chevron-down"></i></a><ul class="nav-dropdown"><li><a href="about.html">IRBF Overview</a></li><li><a href="video-gallery.html">Video Gallery</a></li><li><a href="image-gallery.html">Image Gallery</a></li><li><a href="team.html">IRBF Team &amp; Founder's Message</a></li></ul></li><li><a href="programs.html" class="nav-link">Programs</a></li><li><a href="placements.html" class="nav-link">Placements</a></li><li><a href="centers.html" class="nav-link active">Centers</a></li><li><a href="blogs.html" class="nav-link">Blogs</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul><div class="nav-cta"><a href="contact.html" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a></div><div class="hamburger"><span></span><span></span><span></span></div></div></header>
+  <section class="page-banner"><div class="container"><h1>Our State Centers</h1><p>Offline training and counseling centers active across Maharashtra.</p><div class="breadcrumb"><a href="index.html">Home</a> / Centers</div></div></section>
+  <section class="page-section"><div class="container"><div class="centers-grid">
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Thane (Head Office)</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Wagle Industrial Estate, Thane West, Maharashtra - 400604</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Pune</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Pune, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Mumbai</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Mumbai, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Nashik</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Nashik, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Nagpur</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Nagpur, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Kolhapur</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Kolhapur, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Aurangabad</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Chhatrapati Sambhajinagar, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Solapur</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Solapur, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+    <div class="center-card reveal"><h3><i class="fa-solid fa-location-dot"></i> Nanded</h3><div class="center-detail"><i class="fa-solid fa-map-pin"></i><span>Nanded, Maharashtra</span></div><div class="center-detail"><i class="fa-solid fa-phone"></i><span>+91 91721 55613</span></div><a href="contact.html" class="btn btn-outline btn-sm">Enquire</a></div>
+  </div></div></section>
+  <footer><div class="container footer-grid"><div class="footer-col"><div class="footer-logo"><img src="logo.jpg" alt="IRBF Footer Logo"></div><p>Grooming university graduates into high-performing professional retail banking assets in Maharashtra.</p><div class="footer-socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div><div class="footer-col"><h3>Quick Navigation</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="placements.html">Placements</a></li><li><a href="team.html">Our Team</a></li></ul></div><div class="footer-col"><h3>Useful Information</h3><ul class="footer-links"><li><a href="faq.html">FAQs</a></li><li><a href="centers.html">State Centers</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h3>Thane Head Office</h3><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><div>Wagle Industrial Estate, Thane West,<br>Maharashtra - 400604</div></div><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div>+91 91721 55613</div></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><div>info@irbfedu.com</div></div></div></div><div class="container footer-bottom"><div>&copy; 2026 Institute of Retail Banking &amp; Finance (IRBF). All Rights Reserved.</div><div>Designed for IRBF Careers</div></div></footer>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
