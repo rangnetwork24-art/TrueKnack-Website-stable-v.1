@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // === DROPDOWN NAV (mobile click / accordion) ===
+  document.querySelectorAll('.nav-menu .dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        toggle.closest('.has-dropdown').classList.toggle('open');
+      }
+    });
+  });
+
   // === ACTIVE NAV LINK ON SCROLL ===
   const sections = document.querySelectorAll('section[id]');
   const navObserver = new IntersectionObserver((entries) => {
