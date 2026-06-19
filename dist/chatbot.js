@@ -1,5 +1,5 @@
 /**
- * IRBF Chatbot Assistant
+ * TrueKnack Chatbot Assistant
  */
 document.addEventListener('DOMContentLoaded', () => {
   // Create chatbot elements dynamically and inject them
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function injectChatbotHTML() {
     const chatbotContainer = document.createElement('div');
-    chatbotContainer.id = 'irbf-chatbot-container';
+    chatbotContainer.id = 'trueknack-chatbot-container';
     chatbotContainer.innerHTML = `
       <div class="chatbot-launcher">
         <i class="fa-solid fa-comments"></i>
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <i class="fa-solid fa-user-tie"></i>
           </div>
           <div class="chatbot-header-info">
-            <h4>IRBF Career Coach 🚀</h4>
-            <span>Online</span>
+            <h4>Knacky 🚀</h4>
+            <span>Admission Assistant</span>
           </div>
           <div class="chatbot-close">
             <i class="fa-solid fa-xmark"></i>
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       removeTypingIndicator();
       addBotMessage(
-        "Hey there! 🌟 Welcome to the **Institute of Retail Banking & Finance (IRBF)**! I'm your virtual Career Coach. I'm super excited to help you launch a successful career in banking! 🚀 What are we exploring today?",
+        "Hey there! 🌟 Welcome to **TrueKnack**! I'm Knacky, your Admission Assistant. I'm super excited to help you launch a successful career in banking! 🚀 What are we exploring today?",
         [
           { text: "Explore Courses 🎓", reply: "courses" },
           { text: "Placement Record 💼", reply: "placement" },
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Match keywords
       if (query.includes('course') || query.includes('program') || query.includes('pgcr') || query === 'courses') {
         addBotMessage(
-          "Fantastic choice! Banking is one of the most stable and rewarding careers out there. 📈 At IRBF, we have two flagship programs custom-designed to get you job-ready in no time:\n\n" +
+          "Fantastic choice! Banking is one of the most stable and rewarding careers out there. 📈 At TrueKnack, we have two flagship programs custom-designed to get you job-ready in no time:\n\n" +
           "1. **PGCRBF** (Post Graduate Certificate in Retail Banking & Finance): Perfect if you love interacting with people, managing relations, and driving sales! 🤝\n" +
           "2. **PGCRBO** (Post Graduate Certificate in Retail Banking Operations): Ideal if you prefer operations, support, and keeping the banking machinery running smoothly behind the scenes! ⚙️\n\n" +
           "Which path sounds more exciting to you?",
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (query.includes('placement') || query.includes('job') || query.includes('hiring') || query.includes('recruit')) {
         addBotMessage(
           "Our placement record is something we are incredibly proud of! 🎉\n\n" +
-          "We have successfully helped over **6,200+ graduates** kickstart their careers! 🚀 Our students are placed in top private sector banks like Axis Bank, HDFC Bank, Kotak Mahindra, and ICICI, with average packages starting from **3.0 LPA+**! 💸\n\n" +
+          "We have successfully helped over **6,000+ graduates** kickstart their careers! 🚀 Our students are placed in top private sector banks like Axis Bank, HDFC Bank, Kotak Mahindra, and ICICI, with average packages starting from **3.0 LPA+**! 💸\n\n" +
           "Want to see where our graduates work?",
           [
             { text: "View Recruiters", reply: "recruiters" },
@@ -257,9 +257,9 @@ document.addEventListener('DOMContentLoaded', () => {
         addBotMessage(
           "Let's chat! Our friendly advisor team is ready to answer all your questions and guide you:\n\n" +
           "📞 **Admissions Helpline**: +91 91721 55613\n" +
-          "📧 **Email**: info@irbfedu.com\n" +
+          "📧 **Email**: info@trueknack.com\n" +
           "💬 **WhatsApp**: [Click here to Chat directly!](https://wa.me/919172155613)\n\n" +
-          "Helpline hours: Mon - Sat, 9:00 AM - 7:00 PM. Talk soon! 😊",
+          "Helpline hours: Mon - Sat, 9:00 AM - 6:00 PM. Talk soon! 😊",
           [
             { text: "Back to Menu", reply: "menu" }
           ]

@@ -9,15 +9,59 @@
   <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
   
   <!-- SEO Meta Tags -->
-  <title>IRBF - Institute of Retail Banking & Finance | Banking Training & Placement</title>
-  <meta name="description" content="Launch your career in banking with the Institute of Retail Banking & Finance (IRBF). Get 100% placement support, ex-banker faculty training, and job-ready certifications in Maharashtra.">
-  <meta name="keywords" content="banking course, retail banking, post graduate certificate banking, banking jobs, banking placement, finance institute mumbai, bank training Pune">
-  <meta name="author" content="IRBF">
+  <title>Online Banking Course with Placement in India | TrueKnack</title>
+  <meta name="description" content="Banking course with placement in India. Join TrueKnack – a top banking training institute offering job-oriented courses for graduates with placement.">
+  <meta name="keywords" content="banking course, retail banking, post graduate certificate banking, banking jobs, banking placement, finance institute, bank training, TrueKnack">
+  <meta name="author" content="TrueKnack">
+  <link rel="canonical" href="https://trueknack.com/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Online Banking Course with Placement in India | TrueKnack">
+  <meta property="og:description" content="Banking course with placement in India. Join TrueKnack – a top banking training institute offering job-oriented courses for graduates with placement.">
+  <meta property="og:url" content="https://trueknack.com/">
+  <meta property="og:image" content="https://trueknack.com/logo.png">
+  <meta property="og:site_name" content="TrueKnack">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Online Banking Course with Placement in India | TrueKnack">
+  <meta name="twitter:description" content="Banking course with placement in India. Join TrueKnack – a top banking training institute.">
+  <meta name="twitter:image" content="https://trueknack.com/logo.png">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "TrueKnack",
+    "alternateName": "TrueKnack - The Knack of Finding True Talent",
+    "url": "https://trueknack.com",
+    "logo": "https://trueknack.com/logo.png",
+    "description": "India's most trusted banking training institute offering PG courses in retail banking with 100% placement assistance.",
+    "telephone": "+919172155613",
+    "email": "info@trueknack.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Wagle Industrial Estate, Thane West",
+      "addressLocality": "Thane",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400604",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61585407331946",
+      "https://www.linkedin.com/company/institute-of-retail-banking-finance-irbf/",
+      "https://www.instagram.com/irbf_instituteofbanking",
+      "https://www.youtube.com/@IRBF_institute_of_Banking"
+    ]
+  }
+  </script>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,47 +69,125 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="chatbot.css">
+
+  <style>
+    /* === PROGRAM CAROUSEL === */
+    .program-carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 0 50px;
+    }
+    .program-carousel-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .program-carousel-slide {
+      min-width: 50%;
+      padding: 0 12px;
+      box-sizing: border-box;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      background: var(--bg-white);
+      color: var(--primary);
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .carousel-btn:hover {
+      background: var(--primary);
+      color: var(--bg-white);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+    .carousel-btn-prev { left: 0; }
+    .carousel-btn-next { right: 0; }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      background: transparent;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .carousel-dot.active {
+      background: var(--secondary);
+      border-color: var(--secondary);
+    }
+    .carousel-dot:hover {
+      border-color: var(--secondary);
+    }
+
+    /* 2nd recruiter row */
+    .recruiters-marquee-wrapper + .recruiters-marquee-wrapper {
+      margin-top: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .program-carousel-slide { min-width: 100%; }
+      .program-carousel-wrapper { padding: 0 40px; }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- 1. Top Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-content">
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-phone"></i> <a href="tel:+919172155613">+91 91721 55613</a></span>
-        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:info@irbfedu.com">info@irbfedu.com</a></span>
-        <span class="top-bar-hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</span>
-      </div>
-      <div class="top-bar-socials">
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. Navigation Header -->
-  <header>
+<header>
     <div class="container navbar">
-      <a href="#home" class="logo">
-        <img src="logo.jpg" alt="IRBF Logo">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="TrueKnack Logo">
       </a>
-      
       <ul class="nav-menu">
         <li><a href="#home" class="nav-link active">Home</a></li>
-        <li class="has-dropdown"><a class="nav-link dropdown-toggle">About Us <i class="fa-solid fa-chevron-down"></i></a><ul class="nav-dropdown"><li><a href="about.html">IRBF Overview</a></li><li><a href="video-gallery.html">Video Gallery</a></li><li><a href="image-gallery.html">Image Gallery</a></li><li><a href="team.html">IRBF Team &amp; Founder's Message</a></li></ul></li>
-        <li><a href="programs.html" class="nav-link">Programs</a></li>
-        <li><a href="placements.html" class="nav-link">Placements</a></li>
-        <li><a href="centers.html" class="nav-link">Centers</a></li>
-        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle ">About <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="about.html">TrueKnack Overview</a></li>
+            <li><a href="video-gallery.html">Alumni Video Testimonials</a></li>
+            <li><a href="image-gallery.html">Our Gallery</a></li>
+            <li><a href="team.html">TrueKnack Team & Founder's Message</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle ">Courses <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="programs.html#pgcrbf">PGCRBF Program</a></li>
+            <li><a href="programs.html#pgcrbo">PGCRBO Program</a></li>
+            <li><a href="programs.html#sales-officer">Sales Officer Program</a></li>
+            <li><a href="programs.html#interview-expert">Interview Expert Program</a></li>
+          </ul>
+        </li>
+        <li><a href="franchise.html" class="nav-link ">Franchise</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle ">Explore <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="placements.html">Placements</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link ">Contact Us</a></li>
+        <li><a href="careers.html" class="nav-link ">Career</a></li>
       </ul>
-      
       <div class="nav-cta">
-        <a href="#contact" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-primary">Apply Now! <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -76,13 +198,21 @@
 
   <!-- 3. Hero Section -->
   <section id="home" class="hero">
+    <!-- Decorative floating dots (from TrueKnack) -->
+    <div class="floating-dot animate-float" style="width:12px;height:12px;background:var(--secondary);top:15%;left:3%"></div>
+    <div class="floating-dot animate-float-slow" style="width:8px;height:8px;background:var(--primary);top:80%;left:2%"></div>
+    <div class="floating-dot animate-float-reverse" style="width:16px;height:16px;background:rgba(39,51,106,0.2);top:25%;right:5%"></div>
+    <div class="floating-dot animate-float" style="width:8px;height:8px;background:rgba(155,42,39,0.3);top:85%;right:3%"></div>
+    <div class="floating-dot animate-float-reverse" style="width:12px;height:12px;background:rgba(39,51,106,0.15);top:55%;left:4%;animation-delay:2s"></div>
+    <!-- Slow spinning decorative circle -->
+    <div class="animate-spin-slow" style="position:absolute;top:10%;right:15%;width:250px;height:250px;border:1px solid rgba(39,51,106,0.04);border-radius:50%;pointer-events:none"></div>
     <div class="container hero-grid">
       <div class="hero-content reveal-left">
         <div class="hero-badge">
-          <i class="fa-solid fa-award"></i> Maharashtra's Most Trusted Banking Institute
+          <i class="fa-solid fa-award"></i> India's Most Trusted Banking Institute
         </div>
         <h1 class="hero-title">
-          India's Most Trusted Institute for <span class="highlight">Online Banking Course</span>
+          India's Most<br>Trusted Institute for<br><span class="text-shimmer">Online Banking Course</span>
         </h1>
         
         <p class="hero-tagline">
@@ -90,22 +220,22 @@
           <span class="tagline-divider">|</span>
           <span class="tagline-segment">6,000+ Placements</span>
           <span class="tagline-divider">|</span>
-          <span class="tagline-segment">100+ Hiring Partners</span>
+          <span class="tagline-segment">30+ Hiring Partners</span>
           <br>
-          <span class="tagline-sub">Grooming graduates into highly paid retail bankers.</span>
+          <span class="tagline-sub">Grooming graduates into competent banking professionals.</span>
         </p>
         
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary btn-lg">Free Demo Class <i class="fa-solid fa-graduation-cap"></i></a>
-          <a href="#contact" class="btn btn-outline btn-lg">Download Brochure <i class="fa-solid fa-file-pdf"></i></a>
-          <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">Chat on WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+          <a href="Trueknack-Brochure.pdf" target="_blank" class="btn btn-primary">Download Brochure</a>
+          <a href="#contact" class="btn btn-secondary">Apply Now!</a>
+          <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Whatsapp Now</a>
         </div>
       </div>
       
       <div class="hero-image-side reveal-right">
         <div class="hero-image-wrapper">
           <div class="hero-image-circle">
-            <img src="hero_banking.png" alt="Indian Banking Professionals Group">
+            <img src="hero_banking.png" alt="TrueKnack Banking Professionals" class="breathe-img">
           </div>
           <div class="hero-dots"></div>
         </div>
@@ -124,7 +254,7 @@
   <!-- 4. Placement Ribbon -->
   <div class="ribbon-bar">
     <div class="container">
-      <i class="fa-solid fa-trophy"></i> 6,200+ Placements in Leading Private Sector Banks till 31st March 2026
+      <i class="fa-solid fa-trophy"></i> 6,000+ Placements in Leading Private Sector Banks till 31st March 2026
     </div>
   </div>
 
@@ -135,7 +265,7 @@
     </div>
     <div class="placed-track-wrapper">
       <div class="placed-track" id="placedTrack">
-        <!-- Set 1 - Real IRBF placed students with local images -->
+        <!-- Set 1 -->
         <div class="placed-student-card">
           <img src="images/students/nikita-garud.jpg" alt="Nikita Garud" loading="lazy">
           <h4>Nikita Garud</h4>
@@ -174,38 +304,44 @@
         <div class="placed-student-card">
           <img src="images/students/sakshi-jadhav.jpg" alt="Sakshi Jadhav" loading="lazy">
           <h4>Sakshi Jadhav</h4>
-          <p>Yes Bank</p>
+          <p>Axis Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/priti-yadav.jpg" alt="Priti Yadav" loading="lazy">
           <h4>Priti Yadav</h4>
-          <p>IndusInd Bank</p>
+          <p>HDFC Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/gajanan-bhalerao.jpg" alt="Gajanan Bhalerao" loading="lazy">
           <h4>Gajanan Bhalerao</h4>
-          <p>Federal Bank</p>
+          <p>Kotak Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/datta-gunde.jpg" alt="Datta Gunde" loading="lazy">
           <h4>Datta Gunde</h4>
-          <p>ICICI Bank</p>
+          <p>HDFC Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/ganesh-mulgir.jpg" alt="Ganesh Mulgir" loading="lazy">
           <h4>Ganesh Mulgir</h4>
-          <p>AU Small Finance</p>
+          <p>ICICI Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/sandeep-bhalerao.jpg" alt="Sandeep Bhalerao" loading="lazy">
           <h4>Sandeep Bhalerao</h4>
-          <p>RBL Bank</p>
+          <p>IndusInd Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/bharat-sawant.jpg" alt="Bharat Sawant" loading="lazy">
           <h4>Bharat Sawant</h4>
           <p>DCB Bank</p>
         </div>
+        <div class="placed-student-card">
+          <img src="images/students/tukaram-echnar.jpg" alt="Tukaram Echnar" loading="lazy">
+          <h4>Tukaram Echnar</h4>
+          <p>HDFC Bank</p>
+        </div>
+
         <!-- Set 2 - Duplicate for seamless loop -->
         <div class="placed-student-card">
           <img src="images/students/nikita-garud.jpg" alt="Nikita Garud" loading="lazy">
@@ -245,48 +381,55 @@
         <div class="placed-student-card">
           <img src="images/students/sakshi-jadhav.jpg" alt="Sakshi Jadhav" loading="lazy">
           <h4>Sakshi Jadhav</h4>
-          <p>Yes Bank</p>
+          <p>Axis Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/priti-yadav.jpg" alt="Priti Yadav" loading="lazy">
           <h4>Priti Yadav</h4>
-          <p>IndusInd Bank</p>
+          <p>HDFC Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/gajanan-bhalerao.jpg" alt="Gajanan Bhalerao" loading="lazy">
           <h4>Gajanan Bhalerao</h4>
-          <p>Federal Bank</p>
+          <p>Kotak Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/datta-gunde.jpg" alt="Datta Gunde" loading="lazy">
           <h4>Datta Gunde</h4>
-          <p>ICICI Bank</p>
+          <p>HDFC Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/ganesh-mulgir.jpg" alt="Ganesh Mulgir" loading="lazy">
           <h4>Ganesh Mulgir</h4>
-          <p>AU Small Finance</p>
+          <p>ICICI Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/sandeep-bhalerao.jpg" alt="Sandeep Bhalerao" loading="lazy">
           <h4>Sandeep Bhalerao</h4>
-          <p>RBL Bank</p>
+          <p>IndusInd Bank</p>
         </div>
         <div class="placed-student-card">
           <img src="images/students/bharat-sawant.jpg" alt="Bharat Sawant" loading="lazy">
           <h4>Bharat Sawant</h4>
           <p>DCB Bank</p>
         </div>
+        <div class="placed-student-card">
+          <img src="images/students/tukaram-echnar.jpg" alt="Tukaram Echnar" loading="lazy">
+          <h4>Tukaram Echnar</h4>
+          <p>HDFC Bank</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- 6. Recruiter Partners - Scrolling Logo Marquee -->
+  <!-- 6. Recruiter Partners - Scrolling Logo Marquee (2 Rows) -->
   <section class="recruiters-section">
     <div class="container">
-      <h2 class="section-title-center reveal">IRBF's Prospective Recruiters</h2>
+      <h2 class="section-title-center reveal">TrueKnack's Prospective Recruiters</h2>
       <p class="section-subtitle-center reveal">Trained graduates get hired directly by leading private banks across India.</p>
     </div>
+    <!-- Row 1 -->
     <div class="recruiters-marquee-wrapper">
       <div class="recruiters-track" id="recruiterTrack">
         <div class="recruiter-logo-card"><img src="images/banks/axis.svg" alt="Axis Bank"></div>
@@ -296,14 +439,7 @@
         <div class="recruiter-logo-card"><img src="images/banks/indusind.svg" alt="IndusInd Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/icici.svg" alt="ICICI Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/au.svg" alt="AU Small Finance Bank"></div>
-        <div class="recruiter-logo-card"><img src="images/banks/rbl.svg" alt="RBL Bank"></div>
-        <div class="recruiter-logo-card"><img src="images/banks/idfc.svg" alt="IDFC First Bank"></div>
-        <div class="recruiter-logo-card"><img src="images/banks/federal.svg" alt="Federal Bank"></div>
-        <div class="recruiter-logo-card"><img src="images/banks/bandhan.svg" alt="Bandhan Bank"></div>
-        <div class="recruiter-logo-card"><img src="images/banks/dcb.svg" alt="DCB Bank"></div>
-        <div class="recruiter-logo-card"><img src="images/banks/utkarsh.png" alt="Utkarsh Bank"></div>
-        <div class="recruiter-logo-card"><img src="images/banks/equitas.svg" alt="Equitas SFB"></div>
-        <!-- Set 2 - Duplicate for seamless loop -->
+        <!-- Duplicate for seamless loop -->
         <div class="recruiter-logo-card"><img src="images/banks/axis.svg" alt="Axis Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/hdfc.svg" alt="HDFC Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/kotak.svg" alt="Kotak Mahindra Bank"></div>
@@ -311,6 +447,19 @@
         <div class="recruiter-logo-card"><img src="images/banks/indusind.svg" alt="IndusInd Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/icici.svg" alt="ICICI Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/au.svg" alt="AU Small Finance Bank"></div>
+      </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="recruiters-marquee-wrapper">
+      <div class="recruiters-track" id="recruiterTrack2" style="animation-direction: reverse;">
+        <div class="recruiter-logo-card"><img src="images/banks/rbl.svg" alt="RBL Bank"></div>
+        <div class="recruiter-logo-card"><img src="images/banks/idfc.svg" alt="IDFC First Bank"></div>
+        <div class="recruiter-logo-card"><img src="images/banks/federal.svg" alt="Federal Bank"></div>
+        <div class="recruiter-logo-card"><img src="images/banks/bandhan.svg" alt="Bandhan Bank"></div>
+        <div class="recruiter-logo-card"><img src="images/banks/dcb.svg" alt="DCB Bank"></div>
+        <div class="recruiter-logo-card"><img src="images/banks/utkarsh.png" alt="Utkarsh Bank"></div>
+        <div class="recruiter-logo-card"><img src="images/banks/equitas.svg" alt="Equitas SFB"></div>
+        <!-- Duplicate for seamless loop -->
         <div class="recruiter-logo-card"><img src="images/banks/rbl.svg" alt="RBL Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/idfc.svg" alt="IDFC First Bank"></div>
         <div class="recruiter-logo-card"><img src="images/banks/federal.svg" alt="Federal Bank"></div>
@@ -326,28 +475,28 @@
   <section class="stats-banner" id="stats">
     <div class="container stats-banner-grid">
       <div class="stats-banner-item">
-        <h3 class="stat-number" data-target="6200" data-suffix="+">0+</h3>
-        <p>Placed Graduates</p>
+        <h3 class="stat-number" data-target="6000" data-suffix="+">0+</h3>
+        <p>Candidates Trained & Placed</p>
       </div>
       <div class="stats-banner-item">
-        <h3 class="stat-number" data-target="15" data-suffix="+">0+</h3>
-        <p>State Centers</p>
+        <h3 class="stat-number" data-target="5000" data-suffix="+">0+</h3>
+        <p>Alumni Network</p>
       </div>
       <div class="stats-banner-item">
-        <h3 class="stat-number" data-target="50" data-suffix="+">0+</h3>
-        <p>Batches Active</p>
-      </div>
-      <div class="stats-banner-item">
-        <h3 class="stat-number" data-target="100" data-suffix="+">0+</h3>
+        <h3 class="stat-number" data-target="30" data-suffix="+">0+</h3>
         <p>Recruiter Partners</p>
       </div>
       <div class="stats-banner-item">
-        <h3 class="stat-number" data-target="25" data-suffix="+">0+</h3>
-        <p>Coaching Modules</p>
+        <h3 class="stat-number" data-target="20" data-suffix="+">0+</h3>
+        <p>Banking Trainers & Experts</p>
       </div>
       <div class="stats-banner-item">
-        <h3 class="stat-number" data-target="4.9" data-decimals="1" data-suffix=" LPA">0.0 LPA</h3>
-        <p>Average Package</p>
+        <h3 class="stat-number" data-target="90" data-suffix=" Days">0 Days</h3>
+        <p>Training Duration</p>
+      </div>
+      <div class="stats-banner-item">
+        <h3 class="stat-number" data-target="4.5" data-decimals="1" data-suffix=" LPA">0.0 LPA</h3>
+        <p>Highest Package</p>
       </div>
     </div>
   </section>
@@ -356,36 +505,36 @@
   <section id="reviews" class="testimonials-section">
     <div class="container">
       <h2 class="section-title-center reveal">Reviews From Students</h2>
-      <p class="section-subtitle-center reveal">Watch success stories of IRBF graduates launching their corporate banking careers.</p>
+      <p class="section-subtitle-center reveal">Watch success stories of TrueKnack graduates launching their corporate banking careers.</p>
       
       <div class="testimonials-grid">
         <div class="testimonial-video-card reveal" data-video-id="Oqoi8WRZKRc">
           <div class="video-thumbnail-wrapper">
-            <img src="https://img.youtube.com/vi/Oqoi8WRZKRc/hqdefault.jpg" alt="Nikita Review Thumbnail" loading="lazy">
+            <img src="https://img.youtube.com/vi/Oqoi8WRZKRc/hqdefault.jpg" alt="Nikita Garud testimonial" loading="lazy">
             <div class="play-button-overlay">
               <i class="fa-solid fa-play"></i>
             </div>
           </div>
           <div class="testimonial-info">
-            <h4>Nikita</h4>
+            <h4>Nikita Garud</h4>
             <p class="testimonial-meta">Placed at Axis Bank as BRO</p>
           </div>
         </div>
         <div class="testimonial-video-card reveal" data-video-id="2AHEtkDQk7k">
           <div class="video-thumbnail-wrapper">
-            <img src="https://img.youtube.com/vi/2AHEtkDQk7k/hqdefault.jpg" alt="Datta Review Thumbnail" loading="lazy">
+            <img src="https://img.youtube.com/vi/2AHEtkDQk7k/hqdefault.jpg" alt="Datta Gunde testimonial" loading="lazy">
             <div class="play-button-overlay">
               <i class="fa-solid fa-play"></i>
             </div>
           </div>
           <div class="testimonial-info">
-            <h4>Datta</h4>
+            <h4>Datta Gunde</h4>
             <p class="testimonial-meta">Placed at HDFC Bank (Parbhani)</p>
           </div>
         </div>
-        <div class="testimonial-video-card reveal" data-video-id="pq_myQBpGd4">
+        <div class="testimonial-video-card reveal" data-video-id="LmDpTD4OFuQ">
           <div class="video-thumbnail-wrapper">
-            <img src="https://img.youtube.com/vi/pq_myQBpGd4/hqdefault.jpg" alt="Radhakishan Review Thumbnail" loading="lazy">
+            <img src="https://img.youtube.com/vi/LmDpTD4OFuQ/hqdefault.jpg" alt="Radhakishan Giram testimonial" loading="lazy">
             <div class="play-button-overlay">
               <i class="fa-solid fa-play"></i>
             </div>
@@ -397,148 +546,193 @@
         </div>
         <div class="testimonial-video-card reveal" data-video-id="6_uy1MhoF8w">
           <div class="video-thumbnail-wrapper">
-            <img src="https://img.youtube.com/vi/6_uy1MhoF8w/hqdefault.jpg" alt="Abhishek Review Thumbnail" loading="lazy">
+            <img src="https://img.youtube.com/vi/6_uy1MhoF8w/hqdefault.jpg" alt="Gaurav Gawande testimonial" loading="lazy">
             <div class="play-button-overlay">
               <i class="fa-solid fa-play"></i>
             </div>
           </div>
           <div class="testimonial-info">
-            <h4>Abhishek Deshmukh</h4>
-            <p class="testimonial-meta">Placed at Utkarsh Small Finance Bank</p>
+            <h4>Gaurav Gawande</h4>
+            <p class="testimonial-meta">Placed at Piramal Capital as Sr. Relationship Manager</p>
           </div>
         </div>
         <div class="testimonial-video-card reveal" data-video-id="ht6l1pi2PCw">
           <div class="video-thumbnail-wrapper">
-            <img src="https://img.youtube.com/vi/ht6l1pi2PCw/hqdefault.jpg" alt="Sneha Review Thumbnail" loading="lazy">
+            <img src="https://img.youtube.com/vi/ht6l1pi2PCw/hqdefault.jpg" alt="Shivaji Gaikwad testimonial" loading="lazy">
             <div class="play-button-overlay">
               <i class="fa-solid fa-play"></i>
             </div>
           </div>
           <div class="testimonial-info">
-            <h4>Sneha Kulkarni</h4>
-            <p class="testimonial-meta">Placed at Kotak Mahindra Bank</p>
+            <h4>Shivaji Gaikwad</h4>
+            <p class="testimonial-meta">Placed at HDFC Bank as Credit Operation Officer</p>
           </div>
         </div>
-        <div class="testimonial-video-card reveal" data-video-id="Oqoi8WRZKRc">
+        <div class="testimonial-video-card reveal" data-video-id="ESHqnIhuR7M">
           <div class="video-thumbnail-wrapper">
-            <img src="https://img.youtube.com/vi/Oqoi8WRZKRc/hqdefault.jpg" alt="Rohit Review Thumbnail" loading="lazy">
+            <img src="https://img.youtube.com/vi/ESHqnIhuR7M/hqdefault.jpg" alt="Akash Gavhane testimonial" loading="lazy">
             <div class="play-button-overlay">
               <i class="fa-solid fa-play"></i>
             </div>
           </div>
           <div class="testimonial-info">
-            <h4>Rohit Salunkhe</h4>
-            <p class="testimonial-meta">Placed at IndusInd Bank</p>
+            <h4>Akash Gavhane</h4>
+            <p class="testimonial-meta">Placed at Bandhan Bank as Senior Officer</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 9. Explore Our Programs -->
+  <!-- 9. Explore Our Programs (Carousel) -->
   <section id="programs" class="programs-section">
     <div class="container">
       <h2 class="section-title-center reveal">Explore Our Programs</h2>
       <p class="section-subtitle-center reveal">Find the ideal specialized career program to guarantee placement in corporate banking.</p>
       
-      <div class="programs-container">
-        <div class="program-box reveal">
-          <div class="program-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h3>PGCRBF Program</h3>
-          <p><strong>Post Graduate Certificate in Retail Banking & Finance</strong>. Designed to prepare graduates for target roles in customer service, transactions management, sales, and retail bank portfolios.</p>
-          <div class="program-grid-details">
-            <div class="program-grid-item">
-              <span>Duration:</span>
-              <span>2 Months</span>
-            </div>
-            <div class="program-grid-item">
-              <span>Delivery:</span>
-              <span>Live Online</span>
-            </div>
-            <div class="program-grid-item">
-              <span>Eligibility:</span>
-              <span>Graduates (0-28 yrs)</span>
-            </div>
-            <div class="program-grid-item">
-              <span>Placement:</span>
-              <span>100% Support</span>
+      <div class="program-carousel-wrapper" id="programCarousel">
+        <button class="carousel-btn carousel-btn-prev" id="progPrev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn carousel-btn-next" id="progNext"><i class="fa-solid fa-chevron-right"></i></button>
+        
+        <div class="program-carousel-track" id="progTrack">
+          <!-- Slide 1: PGCRBF -->
+          <div class="program-carousel-slide">
+            <div class="program-box">
+              <div class="program-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>PGCRBF Program</h3>
+              <p><strong>Post Graduate Certificate in Retail Banking & Finance</strong>. Designed to prepare graduates for target roles in customer service, transactions management, sales, and retail bank portfolios.</p>
+              <div class="program-grid-details">
+                <div class="program-grid-item">
+                  <span>AVERAGE SALARY RANGE</span>
+                  <span>₹ 2.4 to 3.5 LPA</span>
+                </div>
+                <div class="program-grid-item">
+                  <span>DURATION</span>
+                  <span>90 Days / 90 Hours</span>
+                </div>
+              </div>
+              <div class="program-actions">
+                <a href="programs.html#pgcrbf" class="btn btn-secondary">Know More</a>
+                <a href="#contact" class="btn btn-outline">Enquire</a>
+              </div>
             </div>
           </div>
-          <div class="program-actions">
-            <a href="#contact" class="btn btn-secondary">Know More</a>
-            <a href="#contact" class="btn btn-outline">Enquire</a>
+          <!-- Slide 2: PGCRBO -->
+          <div class="program-carousel-slide">
+            <div class="program-box">
+              <div class="program-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <h3>PGCRBO Program</h3>
+              <p><strong>Post Graduate Certificate in Retail Banking Operations</strong>. A comprehensive operational course tailored for graduates aiming for non-sales corporate roles inside banks.</p>
+              <div class="program-grid-details">
+                <div class="program-grid-item">
+                  <span>AVERAGE SALARY RANGE</span>
+                  <span>₹ 2.4 to 3.5 LPA</span>
+                </div>
+                <div class="program-grid-item">
+                  <span>DURATION</span>
+                  <span>90 Days / 90 Hours</span>
+                </div>
+              </div>
+              <div class="program-actions">
+                <a href="programs.html#pgcrbo" class="btn btn-secondary">Know More</a>
+                <a href="#contact" class="btn btn-outline">Enquire</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3: Sales Officer -->
+          <div class="program-carousel-slide">
+            <div class="program-box">
+              <div class="program-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h3>Sales Officer Program</h3>
+              <p><strong>Specialized Sales Training for Banking</strong>. A focused program that trains you in banking product sales, cross-selling, customer acquisition, and relationship management for field sales roles.</p>
+              <div class="program-grid-details">
+                <div class="program-grid-item">
+                  <span>AVERAGE SALARY RANGE</span>
+                  <span>₹ 2.4 to 3.5 LPA</span>
+                </div>
+                <div class="program-grid-item">
+                  <span>DURATION</span>
+                  <span>90 Days / 90 Hours</span>
+                </div>
+              </div>
+              <div class="program-actions">
+                <a href="programs.html#sales-officer" class="btn btn-secondary">Know More</a>
+                <a href="#contact" class="btn btn-outline">Enquire</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4: Interview Expert -->
+          <div class="program-carousel-slide">
+            <div class="program-box">
+              <div class="program-icon"><i class="fa-solid fa-clipboard-question"></i></div>
+              <h3>Interview Expert Program</h3>
+              <p><strong>Crack Any Banking Interview</strong>. Intensive mock interview preparation, HR round coaching, domain knowledge drills, and communication skills training to ace banking recruitment panels.</p>
+              <div class="program-grid-details">
+                <div class="program-grid-item">
+                  <span>GUARANTEED</span>
+                  <span>100% Placement Assistance</span>
+                </div>
+                <div class="program-grid-item">
+                  <span>DURATION</span>
+                  <span>Short-term Intensive</span>
+                </div>
+              </div>
+              <div class="program-actions">
+                <a href="programs.html#interview-expert" class="btn btn-secondary">Know More</a>
+                <a href="#contact" class="btn btn-outline">Enquire</a>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div class="program-box reveal">
-          <div class="program-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <h3>PGCRBO Program</h3>
-          <p><strong>Post Graduate Certificate in Retail Banking Operations</strong>. A comprehensive operational course tailored specifically for graduates aiming for non-sales corporate roles inside banks.</p>
-          <div class="program-grid-details">
-            <div class="program-grid-item">
-              <span>Duration:</span>
-              <span>2 Months</span>
-            </div>
-            <div class="program-grid-item">
-              <span>Delivery:</span>
-              <span>Interactive Sessions</span>
-            </div>
-            <div class="program-grid-item">
-              <span>Eligibility:</span>
-              <span>Graduates (0-28 yrs)</span>
-            </div>
-            <div class="program-grid-item">
-              <span>Placement:</span>
-              <span>100% Support</span>
-            </div>
-          </div>
-          <div class="program-actions">
-            <a href="#contact" class="btn btn-secondary">Know More</a>
-            <a href="#contact" class="btn btn-outline">Enquire</a>
-          </div>
+
+        <div class="carousel-dots" id="progDots">
+          <button class="carousel-dot active" data-slide="0"></button>
+          <button class="carousel-dot" data-slide="1"></button>
+          <button class="carousel-dot" data-slide="2"></button>
+          <button class="carousel-dot" data-slide="3"></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 10. What Makes IRBF Unique -->
+  <!-- 10. What Makes TrueKnack Unique -->
   <section id="why-choose-us" class="unique-section">
     <div class="container">
-      <h2 class="section-title-center reveal">What Makes IRBF Unique</h2>
-      <p class="section-subtitle-center reveal">Find out how we equip our graduates with practical tools for corporate banking success.</p>
+      <h2 class="section-title-center reveal">What Makes TrueKnack Unique</h2>
+      <p class="section-subtitle-center reveal">TrueKnack offers a promising employment landscape, as blue-chip banks consistently hire our trained talent.</p>
       
       <div class="unique-grid">
         <div class="unique-card reveal">
           <div class="unique-icon"><i class="fa-solid fa-circle-check"></i></div>
-          <h4>ISO 9001:2015 Certified</h4>
+          <h4>ISO 9001:2015 Certified Institute</h4>
         </div>
         <div class="unique-card reveal">
           <div class="unique-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h4>Industry Approved Partner</h4>
+          <h4>NSDC Approved Training Partner</h4>
         </div>
         <div class="unique-card reveal">
-          <div class="unique-icon"><i class="fa-solid fa-laptop"></i></div>
-          <h4>Technology-Enabled Classes</h4>
+          <div class="unique-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h4>Training by Ex Senior Bankers</h4>
         </div>
         <div class="unique-card reveal">
           <div class="unique-icon"><i class="fa-solid fa-users"></i></div>
           <h4>Interactive Training Sessions</h4>
         </div>
         <div class="unique-card reveal">
-          <div class="unique-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <h4>Practical Banking Environment</h4>
-        </div>
-        <div class="unique-card reveal">
-          <div class="unique-icon"><i class="fa-solid fa-user-tie"></i></div>
-          <h4>Senior Ex-Bankers Faculty</h4>
-        </div>
-        <div class="unique-card reveal">
           <div class="unique-icon"><i class="fa-solid fa-clipboard-question"></i></div>
-          <h4>Mock Interview Preparation</h4>
+          <h4>Doubt Clearing Sessions</h4>
+        </div>
+        <div class="unique-card reveal">
+          <div class="unique-icon"><i class="fa-solid fa-laptop"></i></div>
+          <h4>Latest Syllabi as per Banking Industry</h4>
+        </div>
+        <div class="unique-card reveal">
+          <div class="unique-icon"><i class="fa-solid fa-file-certificate"></i></div>
+          <h4>NISM VA Exam Preparation</h4>
         </div>
         <div class="unique-card reveal">
           <div class="unique-icon"><i class="fa-solid fa-handshake"></i></div>
-          <h4>Dedicated Placement Assistance</h4>
+          <h4>100% Placement Assistance</h4>
         </div>
       </div>
     </div>
@@ -557,7 +751,7 @@
         <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Nashik</div>
         <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Nagpur</div>
         <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Kolhapur</div>
-        <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Aurangabad</div>
+        <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Sambhajinagar</div>
         <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Solapur</div>
         <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Amravati</div>
         <div class="presence-pill reveal"><i class="fa-solid fa-location-dot"></i> Jalgaon</div>
@@ -575,7 +769,7 @@
     <div class="container">
       <h2 class="section-title-center reveal">Meet Our Faculty Members</h2>
       <p class="section-subtitle-center reveal">All classes are mentored by veteran ex-bankers with decades of branch manager experience.</p>
-      <a href="#contact" class="btn btn-secondary reveal">View All Members</a>
+      <a href="team.html" class="btn btn-secondary reveal">View All Members</a>
     </div>
   </section>
 
@@ -591,7 +785,7 @@
           <div class="blog-body">
             <h3 class="blog-title">Grooming Fresh Graduates for Corporate Bank Roles</h3>
             <p class="blog-excerpt">Discover how short-term domain training can land you a secure private branch operations career rapidly.</p>
-            <a href="#contact" class="btn btn-outline btn-sm">Read More</a>
+            <a href="blogs.html" class="btn btn-outline btn-sm">Read More</a>
           </div>
         </div>
         <div class="blog-card reveal">
@@ -599,7 +793,7 @@
           <div class="blog-body">
             <h3 class="blog-title">Why Ex-Banker Faculty Mentorship Matters Most</h3>
             <p class="blog-excerpt">Theoretical concepts are secondary compared to practicing live branch simulations and KYC guidelines.</p>
-            <a href="#contact" class="btn btn-outline btn-sm">Read More</a>
+            <a href="blogs.html" class="btn btn-outline btn-sm">Read More</a>
           </div>
         </div>
         <div class="blog-card reveal">
@@ -607,7 +801,7 @@
           <div class="blog-body">
             <h3 class="blog-title">Top Private Banking Interview Questions in 2026</h3>
             <p class="blog-excerpt">Review critical compliance, customer interaction, and domain questions frequently asked by HR teams.</p>
-            <a href="#contact" class="btn btn-outline btn-sm">Read More</a>
+            <a href="blogs.html" class="btn btn-outline btn-sm">Read More</a>
           </div>
         </div>
       </div>
@@ -621,79 +815,110 @@
       <p>Ready to start your banking career? Get in touch with our team today.</p>
     </div>
   </section>
-  <div class="container contact-cards-container">
-    <div class="contact-cards-grid">
+  <!-- Contact Info & Form Layout -->
+  <div class="container contact-section-layout">
+    <div class="contact-cards-side">
       <div class="contact-box-white reveal">
         <div class="contact-box-icon"><i class="fa-solid fa-phone"></i></div>
         <h3>For Admission</h3>
         <p>+91 91721 55613</p>
-        <span>info@irbfedu.com</span>
+        <span>info@trueknack.com</span>
       </div>
       <div class="contact-box-white reveal">
         <div class="contact-box-icon"><i class="fa-solid fa-headset"></i></div>
         <h3>For Student Helpline</h3>
         <p>+91 75591 15998</p>
-        <span>support@irbfedu.com</span>
+        <span>support@trueknack.com</span>
       </div>
       <div class="contact-box-white reveal">
         <div class="contact-box-icon"><i class="fa-solid fa-store"></i></div>
         <h3>For Franchise</h3>
         <p>+91 91721 55613</p>
-        <span>franchise@irbfedu.com</span>
+        <span>franchise@trueknack.com</span>
+      </div>
+    </div>
+    
+    <div class="contact-form-side reveal-right">
+      <div class="contact-form-card">
+        <h3 class="form-title">Apply / Enquire Now</h3>
+        <form id="homeContactForm" novalidate>
+          <div class="cf-row">
+            <div class="cf-field"><input type="text" name="name" placeholder="Full Name *"><div class="field-error">Please enter your name.</div></div>
+            <div class="cf-field"><input type="tel" name="phone" placeholder="Phone Number *"><div class="field-error">Enter a valid 10-digit phone.</div></div>
+          </div>
+          <div class="cf-field full"><input type="email" name="email" placeholder="Email Address *"><div class="field-error">Enter a valid email.</div></div>
+          <div class="cf-row">
+            <div class="cf-field"><input type="text" name="city" placeholder="City *"><div class="field-error">Please enter your city.</div></div>
+            <div class="cf-field">
+              <select name="course">
+                <option value="">Course Interest *</option>
+                <option>PGCRBF (Retail Banking & Finance)</option>
+                <option>PGCRBO (Retail Banking Operations)</option>
+                <option>Other / General Inquiry</option>
+              </select>
+              <div class="field-error">Please select a course.</div>
+            </div>
+          </div>
+          <div class="cf-field full"><textarea name="message" rows="3" placeholder="Your Message *"></textarea><div class="field-error">Please enter a message.</div></div>
+          <div style="text-align:center;"><button type="submit" class="btn btn-primary btn-lg">Submit Inquiry <i class="fa-solid fa-paper-plane"></i></button></div>
+          <div class="form-msg" id="homeFormMsg">Thank you! Opening your email app to send the inquiry...</div>
+        </form>
       </div>
     </div>
   </div>
+
 
   <!-- 15. CTA Floating Card -->
   <div class="container footer-top-card-wrapper">
     <div class="footer-floating-card reveal-scale">
       <div class="cta-content">
         <h3>First Step Towards a Successful Banking Career</h3>
-        <p>Join 6,200+ graduates already placed in top banks.</p>
+        <p>Join 6,000+ graduates already placed in top banks.</p>
       </div>
       <a href="#contact" class="btn btn-primary btn-lg">Apply Today <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 
   <!-- 16. Footer -->
-  <footer>
+    <footer>
     <div class="container footer-grid">
       <div class="footer-col">
         <div class="footer-logo">
-          <img src="logo.jpg" alt="IRBF Footer Logo">
+          <img src="logo-white.png" alt="TrueKnack Footer Logo">
         </div>
-        <p>Grooming university graduates into high-performing professional retail banking assets in Maharashtra. Engage, Nurture, and Grow with IRBF.</p>
+        <p>Grooming university graduates into high-performing professional retail banking assets. The Knack of Finding True Talent.</p>
         <div class="footer-socials">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61585407331946" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/institute-of-retail-banking-finance-irbf/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/irbf_instituteofbanking" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@IRBF_institute_of_Banking" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
       
       <div class="footer-col">
-        <h3>Quick Navigation</h3>
+        <h3>Quick Links</h3>
         <ul class="footer-links">
           <li><a href="#home">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="#programs">Training Programs</a></li>
-          <li><a href="#why-choose-us">Why Choose Us</a></li>
-          <li><a href="#reviews">Student Reviews</a></li>
+          <li><a href="programs.html">Training Programs</a></li>
+          <li><a href="placements.html">Placements</a></li>
+          <li><a href="video-gallery.html">Student Reviews</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3>Useful Information</h3>
+        <h3>Useful Links</h3>
         <ul class="footer-links">
-          <li><a href="#home">Privacy Policy</a></li>
-          <li><a href="#home">Terms & Conditions</a></li>
-          <li><a href="#home">FAQs</a></li>
-          <li><a href="#home">State Centers</a></li>
+          <li><a href="image-gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ's</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="careers.html">Join Our Team</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3>Thane Head Office</h3>
+        <h3>Head Office</h3>
         <div class="footer-contact-item">
           <i class="fa-solid fa-location-dot"></i>
           <div>
@@ -707,14 +932,18 @@
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-envelope"></i>
-          <div>info@irbfedu.com</div>
+          <div>info@trueknack.com</div>
+        </div>
+        <div class="footer-contact-item" style="margin-top: 8px;">
+          <i class="fa-solid fa-clock"></i>
+          <div>9:00 AM - 6:00 PM, Mon - Sat</div>
         </div>
       </div>
     </div>
     
     <div class="container footer-bottom">
-      <div>&copy; 2026 Institute of Retail Banking & Finance (IRBF). All Rights Reserved.</div>
-      <div>Designed for IRBF Careers</div>
+      <div>&copy; 2026 TrueKnack. All Rights Reserved.</div>
+      <div>The Knack of Finding True Talent</div>
     </div>
   </footer>
 
@@ -729,8 +958,43 @@
     </div>
   </div>
 
+  <!-- Floating WhatsApp + Call Buttons -->
+  <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="tel:+919172155613" class="floating-call" aria-label="Call Now">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
   <!-- Custom JavaScript -->
   <script src="script.js"></script>
   <script src="chatbot.js"></script>
+  <script>
+    const hform = document.getElementById('homeContactForm');
+    if (hform) {
+      hform.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        const f = hform.elements;
+        const setErr = (el, show) => {
+          const errDiv = el.parentElement.querySelector('.field-error');
+          if (errDiv) errDiv.style.display = show ? 'block' : 'none';
+          if (show) valid = false;
+        };
+        setErr(f.name, !f.name.value.trim());
+        setErr(f.phone, !/^\d{10}$/.test(f.phone.value.trim()));
+        setErr(f.email, !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim()));
+        setErr(f.city, !f.city.value.trim());
+        setErr(f.course, !f.course.value);
+        setErr(f.message, !f.message.value.trim());
+        
+        if (!valid) return;
+        
+        document.getElementById('homeFormMsg').style.display = 'block';
+        const body = encodeURIComponent(`Name: ${f.name.value}\nPhone: ${f.phone.value}\nEmail: ${f.email.value}\nCity: ${f.city.value}\nCourse Interest: ${f.course.value}\n\nMessage: ${f.message.value}`);
+        window.location.href = `mailto:info@trueknack.com?subject=TrueKnack Inquiry - ${f.name.value}&body=${body}`;
+      });
+    }
+  </script>
 </body>
 </html>

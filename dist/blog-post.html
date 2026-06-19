@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <title>Blog Post | TrueKnack - The Knack of Finding True Talent</title>
+  <meta name="description" content="TrueKnack Ex-Banker Tips & Career Guides. Learn how to launch and build a successful retail banking career.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <style>
+    .blog-post-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
+    .post-content-card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow-sm); }
+    .post-meta { display: flex; gap: 16px; margin-bottom: 20px; font-size: 0.85rem; color: var(--secondary); font-weight: 600; text-transform: uppercase; }
+    .post-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .post-title { color: var(--primary); font-size: 2.2rem; line-height: 1.3; margin-bottom: 24px; font-family: var(--font-headings); }
+    .post-body { color: var(--text-muted); font-size: 1rem; line-height: 1.8; }
+    .post-body h3 { color: var(--primary); font-size: 1.35rem; margin-top: 32px; margin-bottom: 14px; font-family: var(--font-headings); }
+    .post-body p { margin-bottom: 18px; }
+    .post-body ol, .post-body ul { margin-bottom: 20px; padding-left: 20px; }
+    .post-body li { margin-bottom: 10px; }
+    
+    .sidebar-card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm); margin-bottom: 28px; }
+    .sidebar-card h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 18px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; font-family: var(--font-headings); text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .recent-post-item { display: block; text-decoration: none; margin-bottom: 16px; border-bottom: 1px dashed var(--border-color); padding-bottom: 12px; }
+    .recent-post-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .recent-post-item span { font-size: 0.75rem; color: var(--secondary); font-weight: 600; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .recent-post-item h4 { font-size: 0.9rem; color: var(--text-main); transition: var(--transition); line-height: 1.4; }
+    .recent-post-item:hover h4 { color: var(--secondary); }
+    
+    .courses-cta-box { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; text-align: center; border-radius: var(--radius); padding: 36px 24px; box-shadow: var(--shadow-md); }
+    .courses-cta-box h3 { color: #fff; font-size: 1.3rem; margin-bottom: 12px; }
+    .courses-cta-box p { font-size: 0.88rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 24px; line-height: 1.6; }
+    
+    .field-error { color: var(--secondary); font-size: 0.78rem; margin-top: 4px; display: none; }
+    .form-msg { text-align: center; margin-top: 14px; font-weight: 600; color: #128C7E; display: none; }
+    
+    @media(max-width: 992px) {
+      .blog-post-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+<!-- Header / Navigation -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="TrueKnack Logo">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle">About <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="about.html">TrueKnack Overview</a></li>
+            <li><a href="video-gallery.html">Alumni Video Testimonials</a></li>
+            <li><a href="image-gallery.html">Our Gallery</a></li>
+            <li><a href="team.html">TrueKnack Team & Founder's Message</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle">Courses <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="programs.html#pgcrbf">PGCRBF Program</a></li>
+            <li><a href="programs.html#pgcrbo">PGCRBO Program</a></li>
+            <li><a href="programs.html#sales-officer">Sales Officer Program</a></li>
+            <li><a href="programs.html#interview-expert">Interview Expert Program</a></li>
+          </ul>
+        </li>
+        <li><a href="franchise.html" class="nav-link">Franchise</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle active">Explore <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="placements.html">Placements</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="careers.html" class="nav-link">Career</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="index.html#contact" class="btn btn-primary">Apply Now! <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+    <section class="page-banner">
+    <!-- Decorative floating dots -->
+    <div class="floating-dot animate-float" style="width:12px;height:12px;background:var(--secondary);top:15%;left:3%"></div>
+    <div class="floating-dot animate-float-slow" style="width:8px;height:8px;background:var(--primary);top:80%;left:2%"></div>
+    <div class="floating-dot animate-float-reverse" style="width:16px;height:16px;background:rgba(255,255,255,0.15);top:25%;right:5%"></div>
+    <div class="floating-dot animate-float" style="width:8px;height:8px;background:rgba(255,255,255,0.25);top:85%;right:3%"></div>
+    
+    <div class="container page-banner-grid">
+      <div class="page-banner-content reveal-left">
+        <h1 class="text-shimmer" id="bannerTitle">Blog Article</h1>
+        <p id="bannerExcerpt">Insights and tips from veteran bankers and recruiters.</p>
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="blogs.html">Blog</a> / Article</div>
+      </div>
+      <div class="page-banner-image-side reveal-right">
+        <div class="page-banner-image-wrapper">
+          <div class="page-banner-image-circle">
+            <img id="postFeaturedImage" src="images/blog_grooming_graduates.png" alt="Featured Article Image" class="breathe-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <section class="page-section">
+    <div class="container">
+      <div class="blog-post-layout">
+        
+        <!-- Left Side: Article Content -->
+        <article class="post-content-card">
+          <div class="post-meta">
+            <span><i class="fa-regular fa-calendar"></i> <span id="postDate">Date</span></span>
+            <span><i class="fa-solid fa-user-tie"></i> <span id="postCategory">Category</span></span>
+          </div>
+          <h2 class="post-title" id="postTitle">Loading Article...</h2>
+          <div class="post-body" id="postBody">
+            <p>Please wait, loading article contents...</p>
+          </div>
+        </article>
+
+        <!-- Right Side: Sidebar -->
+        <aside class="sidebar-area">
+          <!-- Recent Posts -->
+          <div class="sidebar-card">
+            <h3>Recent Articles</h3>
+            <div id="recentPostsList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Courses CTA Box -->
+          <div class="courses-cta-box">
+            <h3>Start Your Banking Career</h3>
+            <p>Get ex-banker classroom training, mock interviews, and 100% placement support in just 90 days.</p>
+            <a href="programs.html" class="btn btn-primary btn-lg btn-block" style="background:#fff; color:var(--primary); width:100%; border:none; display:block;">Explore Programs</a>
+            <a href="contact.html" class="btn btn-outline btn-lg btn-block" style="color:#fff; border-color:#fff; width:100%; display:block; margin-top:10px;">Contact Advisor</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="logo-white.png" alt="TrueKnack Footer Logo">
+        </div>
+        <p>Grooming university graduates into high-performing professional retail banking assets. The Knack of Finding True Talent.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61585407331946" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/institute-of-retail-banking-finance-irbf/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/irbf_instituteofbanking" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@IRBF_institute_of_Banking" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Training Programs</a></li>
+          <li><a href="placements.html">Placements</a></li>
+          <li><a href="video-gallery.html">Student Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Useful Links</h3>
+        <ul class="footer-links">
+          <li><a href="image-gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ's</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="careers.html">Join Our Team</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Head Office</h3>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            Wagle Industrial Estate, Thane West,<br>
+            Maharashtra - 400604
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>+91 91721 55613</div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>info@trueknack.com</div>
+        </div>
+        <div class="footer-contact-item" style="margin-top: 8px;">
+          <i class="fa-solid fa-clock"></i>
+          <div>9:00 AM - 6:00 PM, Mon - Sat</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <div>&copy; 2026 TrueKnack. All Rights Reserved.</div>
+      <div>The Knack of Finding True Talent</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp + Call Buttons -->
+  <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="tel:+919172155613" class="floating-call" aria-label="Call Now">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+
+  <!-- Blog Engine Script -->
+  <script>
+    // In-memory blog database representing the 6 articles from the audit
+    const blogDatabase = {
+      "1": {
+        featuredImage: "blog_grooming_graduates.png",
+        title: "Grooming Fresh Graduates for Corporate Bank Roles",
+        excerpt: "Discover how short-term domain training can land you a secure private branch operations career rapidly.",
+        category: "Ex-Banker Tip",
+        date: "Mar 2026",
+        author: "TrueKnack Faculty Team",
+        body: `
+          <p>Every year, millions of fresh graduates walk out of colleges with degrees in commerce, business administration, science, or arts. However, they soon realize there is a massive gap between university theories and the practical needs of modern corporate banks.</p>
+          <p>This is where TrueKnack's specialized post-graduate certificate programs come into play. By providing short-term, highly-intensive domain training, we bridge the employability gap and place fresh graduates directly into executive retail branch roles.</p>
+          
+          <h3>Why General Degree Programs Fail to Prepare You</h3>
+          <p>Typical college programs teach general academic concepts. However, they don't cover the key applications used in daily branch operations. Private banks look for candidates who can operate systems, interact confidently with clients, and respect compliance frameworks from day one.</p>
+          
+          <h3>The Core Pillars of Banking Grooming</h3>
+          <p>Our curriculum is structured around four essential pillars to groom fresh talent:</p>
+          <ol>
+            <li><strong>Core Domain Knowledge</strong>: Thorough training on banking products (savings accounts, retail loans, checking accounts, fixed deposits, wealth management).</li>
+            <li><strong>Branch Simulation & Practicals</strong>: Real-life mock runs of branch transactions, customer handling, and account opening procedures.</li>
+            <li><strong>Compliance & KYC Regulations</strong>: Deep dives into RBI guidelines, Anti-Money Laundering (AML) checks, and Know-Your-Customer audits.</li>
+            <li><strong>Corporate Grooming</strong>: Personality development, communications training, and professional dressing guidelines.</li>
+          </ol>
+
+          <h3>Landing Your First Corporate Role</h3>
+          <p>After just 90 days of dedicated training, our students are ready to walk into interviews with top private sector banks like Axis Bank, HDFC Bank, ICICI Bank, and Kotak Mahindra. Because recruiters know that TrueKnack graduates require zero training time post-hiring, they are selected at premium packages.</p>
+        `
+      },
+      "2": {
+        featuredImage: "blog_faculty_mentorship.png",
+        title: "Why Ex-Banker Faculty Mentorship Matters Most",
+        excerpt: "Theoretical concepts are secondary compared to practicing live branch simulations and KYC guidelines.",
+        category: "Ex-Banker Tip",
+        date: "Feb 2026",
+        author: "Deepak Singh Parihar (MD & CEO)",
+        body: `
+          <p>When you prepare for a career in retail banking, the quality of your instructors is the single most important factor. Reading textbooks written a decade ago won't prepare you for the compliance checks, KYC audits, and customer relationship challenges that occur inside a live branch today.</p>
+          <p>At TrueKnack, we take pride in the fact that our entire trainer faculty consists of veteran ex-bankers with decades of experience at top private institutions. Here's why this makes a decisive difference in your career preparation.</p>
+          
+          <h3>Understanding Real-World Scenarios</h3>
+          <p>Academic instructors can teach you what a check is, but an ex-branch manager will teach you how to spot a fraudulent signature, how to handle an irate high-net-worth client, and how to verify KYC records for complex corporate accounts. They share practical anecdotes, lessons from mistakes, and industry standard practices that aren't written in any textbook.</p>
+
+          <h3>Mastering the Interview Room</h3>
+          <p>Who better to prepare you for a private bank interview than the people who spent years conducting them? Our ex-banker mentors conduct simulated interviews that mimic real HR evaluations. They give you individual feedback on your body language, domain answers, and posture, so you walk into the real interview room with 100% confidence.</p>
+          
+          <h3>Building the "Banker Mindset"</h3>
+          <p>Being a banker is not just a job; it is a position of trust. Our ex-banker faculty grooms you in the ethical, customer-first mindset required to manage financial assets and maintain compliance standards. This ensures you survive and excel in your job, leading to rapid promotions.</p>
+        `
+      },
+      "3": {
+        featuredImage: "blog_interview_questions.png",
+        title: "Top Private Banking Interview Questions in 2026",
+        excerpt: "Review critical compliance, customer interaction, and domain questions frequently asked by HR teams.",
+        category: "Ex-Banker Tip",
+        date: "Jan 2026",
+        author: "TrueKnack Placements Team",
+        body: `
+          <p>Preparing for a job interview at a private sector bank? To help you ace the process, our placement team has gathered the most common questions asked by HR and Operations panels at top institutions like HDFC, Axis, Kotak, and IndusInd Bank in 2026.</p>
+          <p>Read through these questions and see how you can answer them using domain knowledge from TrueKnack.</p>
+
+          <h3>1. Domain Knowledge Questions</h3>
+          <ul>
+            <li><strong>What is the difference between a Current Account and a Savings Account (CASA)?</strong><br>
+            <em>Tip:</em> Explain the target audience, interest structures, minimum balance rules, and transaction limits. Highlight the importance of CASA ratio for a bank's profitability.</li>
+            <li><strong>Can you explain what KYC is and why it is mandatory?</strong><br>
+            <em>Tip:</em> Explain Know-Your-Customer rules. RBI mandates it to verify client identity and address to prevent money laundering and fraud. Mention standard KYC documents (Aadhaar, PAN, Passport).</li>
+          </ul>
+
+          <h3>2. Customer & Situation Handling Questions</h3>
+          <ul>
+            <li><strong>How would you handle a customer who is angry about an unauthorized charge on their account?</strong><br>
+            <em>Tip:</em> The panel is testing your empathy and problem-solving skills. Explain how you would calm the client, check the system logs immediately, raise a ticket, and assure them of standard resolution timelines.</li>
+            <li><strong>Are you comfortable with cross-selling retail banking products like credit cards or insurance?</strong><br>
+            <em>Tip:</em> Say yes! Banks are retail commercial enterprises, and cross-selling is an integral part of relationship growth. Show enthusiasm for helping clients find suitable products.</li>
+          </ul>
+
+          <h3>3. Placement Preparation at TrueKnack</h3>
+          <p>At TrueKnack, we don't just give you lists of questions. We conduct mock interviews where you practice these answers live, refining your delivery and tone. This is why over 90% of our graduates clear their bank interviews on the very first attempt!</p>
+        `
+      },
+      "4": {
+        featuredImage: "blog_banking_products.png",
+        title: "Understanding Retail Banking Products & Services",
+        excerpt: "A beginner's guide to the core products every retail banker must know before walking into a branch.",
+        category: "Career Guide",
+        date: "Jan 2026",
+        author: "Balasaheb Sopne (Director)",
+        body: `
+          <p>Retail banking, also known as consumer banking, is the face of any financial institution. It deals directly with individual customers, rather than large corporations. If you are starting your retail banking training, mastering the product suite is your first step.</p>
+          <p>Here is an introductory guide to the core retail products that form the backbone of branch operations.</p>
+
+          <h3>1. Liability Products (Deposits)</h3>
+          <p>Liability products are those that bring funds into the bank. They are liabilities because the bank owes this money back to the depositor:</p>
+          <ul>
+            <li><strong>Savings Accounts</strong>: Account for retail savings with minor interest and transaction limits.</li>
+            <li><strong>Current Accounts</strong>: For businesses with unlimited transactions, zero interest, and overdraft provisions.</li>
+            <li><strong>Term Deposits (FD/RD)</strong>: Fixed Deposits and Recurring Deposits that lock in money for a specific duration at higher interest rates.</li>
+          </ul>
+
+          <h3>2. Asset Products (Loans)</h3>
+          <p>Asset products are loans extended to clients. They generate interest income for the bank, making them assets:</p>
+          <ul>
+            <li><strong>Home Loans & Auto Loans</strong>: Secured long-term loans for purchasing property or vehicles.</li>
+            <li><strong>Personal Loans</strong>: Unsecured short-term loans based on customer income and credit score.</li>
+            <li><strong>Gold Loans & Loans Against Securities</strong>: Secured credit backed by physical gold or financial assets.</li>
+          </ul>
+
+          <h3>3. Third-Party Products</h3>
+          <p>Modern retail banks are financial supermarkets. They sell third-party products to generate fee-based income, including mutual funds, life/general insurance, and demat account services. Understanding these products allows relationship officers to cross-sell and meet branch targets efficiently.</p>
+        `
+      },
+      "5": {
+        featuredImage: "blog_banking_career.png",
+        title: "How to Build a Long-Term Career in Private Banking",
+        excerpt: "From BRO to branch manager: the realistic growth path and skills that accelerate your banking career.",
+        category: "Career Guide",
+        date: "Dec 2025",
+        author: "Hemant Singh Parihar (Director)",
+        body: `
+          <p>Many graduates think of their first bank job as a temporary stop. However, private sector banking offers one of the most structured, rewarding, and rapid career progression paths in the corporate world.</p>
+          <p>If you start with a solid foundation, you can rise from an entry-level Relationship Officer or Customer Service Executive to a Branch Manager in less than 7 to 8 years. Here is a realistic roadmap and tips to build a long-term banking career.</p>
+
+          <h3>The Career Hierarchy in Branch Banking</h3>
+          <ol>
+            <li><strong>Entry Level (0-2 years)</strong>: Banking Relationship Officer (BRO), Welcome Desk Officer, or Teller. Focus is on mastering daily transactions, relationship building, and basic operations.</li>
+            <li><strong>Mid-Level (2-5 years)</strong>: Senior Relationship Manager, Assistant Branch Manager, or Operations Head. Focus shifts to managing high-net-worth client portfolios and branch compliance.</li>
+            <li><strong>Senior Level (5-8 years)</strong>: Branch Manager (BM). You are responsible for the entire branch's targets, team management, customer satisfaction, and compliance audits.</li>
+            <li><strong>Regional/Zonal Roles (8+ years)</strong>: Regional Manager or Cluster Head, supervising 15 to 30 branches.</li>
+          </ol>
+
+          <h3>Three Skills for Rapid Promotion</h3>
+          <ul>
+            <li><strong>Compliance First</strong>: Never take shortcuts on KYC, AML, or RBI rules. A clean audit record is a major prerequisite for senior banking promotions.</li>
+            <li><strong>Consistent Performance</strong>: Consistently meet customer acquisition and service retention goals. High achievers are tracked for fast-track leadership promotions.</li>
+            <li><strong>People Management</strong>: Learn to coordinate with operations, sales, and support staff. Leadership potential is spotted early in collaborative employees.</li>
+          </ul>
+        `
+      },
+      "6": {
+        featuredImage: "blog_kyc_compliance.png",
+        title: "KYC & Compliance Basics Every New Banker Should Master",
+        excerpt: "Why compliance is the backbone of branch banking and how to get it right from day one.",
+        category: "Ex-Banker Tip",
+        date: "Dec 2025",
+        author: "TrueKnack Compliance Team",
+        body: `
+          <p>If there is one word that sends shivers down a bank employee's spine, it is "Audit". In modern retail banking, compliance is not optional—it is the absolute foundation of the business. Regulatory violations can lead to severe RBI penalties, license suspension, or brand damage.</p>
+          <p>For a newly hired banker, understanding KYC (Know Your Customer) and compliance guidelines from day one is critical to protect your job and build a spotless career reputation.</p>
+
+          <h3>What is KYC and Why Does it Exist?</h3>
+          <p>KYC is the regulatory process of verifying a customer's identity and address before or during the time they do business with the bank. It exists to prevent financial crimes, such as money laundering, terror financing, identity theft, and tax evasion.</p>
+
+          <h3>The Pillars of KYC Verification</h3>
+          <ul>
+            <li><strong>Officially Valid Documents (OVDs)</strong>: Standard identity and address proofs mandated by RBI (Aadhaar Card, PAN Card, Passport, Voter ID, Driving License).</li>
+            <li><strong>In-Person Verification (IPV)</strong>: Confirming that the physical person matches the photo in the identity records.</li>
+            <li><strong>Beneficial Ownership</strong>: For corporate clients, identifying who actually controls the funds.</li>
+          </ul>
+
+          <h3>Best Practices for New Branch Employees</h3>
+          <ol>
+            <li><strong>Never Accept Incomplete Forms</strong>: Ensure all signatures are original, dates are correct, and form fields are completed.</li>
+            <li><strong>Cross-Verify Originals</strong>: Always compare photocopies with the original documents before putting your "Original Seen & Verified" stamp.</li>
+            <li><strong>Monitor Suspicious Transactions</strong>: If you notice unusual withdrawals, sudden large cash deposits, or transactions that don't match the customer's profile, escalate it to the Branch Operations Head.</li>
+          </ol>
+        `
+      }
+    };
+
+    // Parse Query Parameter
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      let postId = getQueryParam("post") || "1";
+      
+      // Fallback to post 1 if invalid post ID
+      if (!blogDatabase[postId]) {
+        postId = "1";
+      }
+
+      const post = blogDatabase[postId];
+
+      // Populate Article
+      document.title = `${post.title} | TrueKnack`;
+      document.getElementById("bannerTitle").innerText = post.category;
+      document.getElementById("bannerExcerpt").innerText = post.title;
+      document.getElementById("postDate").innerText = post.date;
+      document.getElementById("postCategory").innerText = post.category;
+      document.getElementById("postTitle").innerText = post.title;
+      document.getElementById("postFeaturedImage").src = "images/" + post.featuredImage;
+      document.getElementById("postFeaturedImage").alt = post.title;
+      document.getElementById("postBody").innerHTML = post.body;
+
+      // Populate Recent Posts Sidebar (excluding current post)
+      const recentListEl = document.getElementById("recentPostsList");
+      recentListEl.innerHTML = "";
+      
+      Object.keys(blogDatabase).forEach(id => {
+        if (id !== postId) {
+          const item = blogDatabase[id];
+          const a = document.createElement("a");
+          a.className = "recent-post-item";
+          a.href = `blog-post.html?post=${id}`;
+          a.innerHTML = `
+            <span>${item.date} • ${item.category}</span>
+            <h4>${item.title}</h4>
+          `;
+          recentListEl.appendChild(a);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

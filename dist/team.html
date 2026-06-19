@@ -4,38 +4,290 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
-  <title>IRBF Team &amp; Founder's Message | IRBF</title>
-  <meta name="description" content="Meet the IRBF leadership team of veteran ex-bankers and read the Founder's message.">
+  <title>TrueKnack Team & Founder's Message | TrueKnack</title>
+  <meta name="description" content="Meet the TrueKnack leadership team – Deepak Singh Parihar, Balasaheb Sopne, and Hemant Singh Parihar. Retail banking experts and specialists in the BFSI industry.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="chatbot.css">
   <style>
-    .founder-card { display:grid; grid-template-columns:300px 1fr; gap:40px; background:var(--bg-white); border:1px solid var(--border-color); border-left:6px solid var(--accent); border-radius:var(--radius); box-shadow:var(--shadow-md); padding:40px; align-items:center; }
-    .founder-photo img { width:100%; border-radius:var(--radius); box-shadow:var(--shadow-sm); }
+    .founder-section { padding: 80px 0; }
+    .founder-card { display:grid; grid-template-columns:320px 1fr; gap:40px; background:var(--bg-white); border:1px solid var(--border-color); border-left:6px solid var(--accent); border-radius:var(--radius); box-shadow:var(--shadow-md); padding:40px; align-items:center; margin-bottom: 40px; }
+    .founder-photo img { width:100%; border-radius:var(--radius); box-shadow:var(--shadow-sm); aspect-ratio: 3/2; object-fit: cover; }
     .founder-quote { font-size:1.05rem; line-height:1.9; color:var(--text-muted); font-style:italic; position:relative; padding-left:28px; }
     .founder-quote::before { content:'\201C'; position:absolute; left:-6px; top:-18px; font-size:4rem; color:var(--accent); font-family:Georgia,serif; }
     .founder-sign { margin-top:22px; font-family:var(--font-headings); font-weight:800; color:var(--primary); }
     .founder-sign span { display:block; font-weight:500; font-size:0.85rem; color:var(--text-muted); }
-    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    .team-member { background:var(--bg-white); border:1px solid var(--border-color); border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:28px; text-align:center; transition:var(--transition); }
-    .team-member:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
-    .team-member .avatar { width:96px; height:96px; border-radius:50%; margin:0 auto 16px; background:linear-gradient(135deg,var(--primary),var(--primary-light)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem; }
-    .team-member h4 { color:var(--primary); margin-bottom:4px; }
-    .team-member .role { color:var(--secondary); font-weight:600; font-size:0.85rem; margin-bottom:10px; }
-    .team-member p { font-size:0.85rem; color:var(--text-muted); }
+    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+    .team-member { background:var(--bg-white); border:1px solid var(--border-color); border-radius:var(--radius); box-shadow:var(--shadow-sm); overflow:hidden; text-align:center; transition:var(--transition); }
+    .team-member:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color: var(--secondary); }
+    .team-member-photo { width:100%; aspect-ratio: 3/2; object-fit:cover; }
+    .team-member-info { padding: 24px; }
+    .team-member h4 { color:var(--primary); margin-bottom:4px; font-size: 1.15rem; }
+    .team-member .role { color:var(--secondary); font-weight:600; font-size:0.85rem; margin-bottom:10px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .team-member p { font-size:0.88rem; color:var(--text-muted); line-height: 1.6; }
+    .team-member .social-links { margin-top: 12px; display: flex; justify-content: center; gap: 12px; }
+    .team-member .social-links a { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-light); color: var(--primary); display: flex; align-items: center; justify-content: center; transition: var(--transition); font-size: 0.85rem; }
+    .team-member .social-links a:hover { background: var(--primary); color: #fff; }
     @media(max-width:768px){ .founder-card{grid-template-columns:1fr;} .team-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
-  <div class="top-bar"><div class="container top-bar-content"><div class="top-bar-info"><span><i class="fa-solid fa-phone"></i> <a>+91 91721 55613</a></span><span><i class="fa-solid fa-envelope"></i> <a href="mailto:info@irbfedu.com">info@irbfedu.com</a></span><span class="top-bar-hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</span></div><div class="top-bar-socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div></div>
-  <header><div class="container navbar"><a href="index.html" class="logo"><img src="logo.jpg" alt="IRBF Logo"></a><ul class="nav-menu"><li><a href="index.html" class="nav-link">Home</a></li><li class="has-dropdown"><a class="nav-link dropdown-toggle">About Us <i class="fa-solid fa-chevron-down"></i></a><ul class="nav-dropdown"><li><a href="about.html">IRBF Overview</a></li><li><a href="video-gallery.html">Video Gallery</a></li><li><a href="image-gallery.html">Image Gallery</a></li><li><a href="team.html">IRBF Team &amp; Founder's Message</a></li></ul></li><li><a href="programs.html" class="nav-link">Programs</a></li><li><a href="placements.html" class="nav-link">Placements</a></li><li><a href="centers.html" class="nav-link">Centers</a></li><li><a href="blogs.html" class="nav-link">Blogs</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul><div class="nav-cta"><a href="contact.html" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a></div><div class="hamburger"><span></span><span></span><span></span></div></div></header>
-  <section class="page-banner"><div class="container"><h1>IRBF Team &amp; Founder's Message</h1><p>Led by veteran ex-bankers committed to grooming the next generation of retail banking professionals.</p><div class="breadcrumb"><a href="index.html">Home</a> / Team</div></div></section>
-  <section class="page-section"><div class="container"><h2 class="section-title-center reveal">Founder's Message</h2><div class="founder-card reveal"><div class="founder-photo"><img src="img_0.png" alt="IRBF Founder"></div><div><p class="founder-quote">At IRBF, our mission is simple: to transform fresh graduates into confident, job-ready retail bankers. Banking is not just a career, it is a discipline of trust, precision, and service. With decades of branch banking experience, our faculty mentors every student the way a senior banker grooms a promising recruit. We don't just teach concepts, we prepare you for the floor.</p><div class="founder-sign">Founder &amp; Director<span>Institute of Retail Banking &amp; Finance</span></div></div></div></div></section>
-  <section class="page-section alt"><div class="container"><h2 class="section-title-center reveal">Leadership &amp; Faculty</h2><p class="section-subtitle-center reveal">Senior ex-bankers from leading institutions guiding every batch.</p><div class="team-grid"><div class="team-member reveal"><div class="avatar"><i class="fa-solid fa-user-tie"></i></div><h4>Senior Faculty</h4><div class="role">Ex-SBI, Branch Manager</div><p>30+ years in retail banking operations and credit appraisal.</p></div><div class="team-member reveal"><div class="avatar"><i class="fa-solid fa-user-tie"></i></div><h4>Lead Trainer</h4><div class="role">Ex-HDFC Bank</div><p>Specialist in sales, liabilities, and customer relationship management.</p></div><div class="team-member reveal"><div class="avatar"><i class="fa-solid fa-user-tie"></i></div><h4>Placement Head</h4><div class="role">Ex-Axis Bank</div><p>Drives corporate alliances and 100% placement assistance.</p></div></div></div></section>
-  <footer><div class="container footer-grid"><div class="footer-col"><div class="footer-logo"><img src="logo.jpg" alt="IRBF Footer Logo"></div><p>Grooming university graduates into high-performing professional retail banking assets in Maharashtra.</p><div class="footer-socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div><div class="footer-col"><h3>Quick Navigation</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="placements.html">Placements</a></li><li><a href="team.html">Our Team</a></li></ul></div><div class="footer-col"><h3>Useful Information</h3><ul class="footer-links"><li><a href="faq.html">FAQs</a></li><li><a href="centers.html">State Centers</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h3>Thane Head Office</h3><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><div>Wagle Industrial Estate, Thane West,<br>Maharashtra - 400604</div></div><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div>+91 91721 55613</div></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><div>info@irbfedu.com</div></div></div></div><div class="container footer-bottom"><div>&copy; 2026 Institute of Retail Banking &amp; Finance (IRBF). All Rights Reserved.</div><div>Designed for IRBF Careers</div></div></footer>
+  <!-- Top Bar -->
+<header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="TrueKnack Logo">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link ">Home</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle active">About <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="about.html">TrueKnack Overview</a></li>
+            <li><a href="video-gallery.html">Alumni Video Testimonials</a></li>
+            <li><a href="image-gallery.html">Our Gallery</a></li>
+            <li><a href="team.html">TrueKnack Team & Founder's Message</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle ">Courses <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="programs.html#pgcrbf">PGCRBF Program</a></li>
+            <li><a href="programs.html#pgcrbo">PGCRBO Program</a></li>
+            <li><a href="programs.html#sales-officer">Sales Officer Program</a></li>
+            <li><a href="programs.html#interview-expert">Interview Expert Program</a></li>
+          </ul>
+        </li>
+        <li><a href="franchise.html" class="nav-link ">Franchise</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link dropdown-toggle ">Explore <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="placements.html">Placements</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link ">Contact Us</a></li>
+        <li><a href="careers.html" class="nav-link ">Career</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="index.html#contact" class="btn btn-primary">Apply Now! <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+    <section class="page-banner">
+    <!-- Decorative floating dots -->
+    <div class="floating-dot animate-float" style="width:12px;height:12px;background:var(--secondary);top:15%;left:3%"></div>
+    <div class="floating-dot animate-float-slow" style="width:8px;height:8px;background:var(--primary);top:80%;left:2%"></div>
+    <div class="floating-dot animate-float-reverse" style="width:16px;height:16px;background:rgba(255,255,255,0.15);top:25%;right:5%"></div>
+    <div class="floating-dot animate-float" style="width:8px;height:8px;background:rgba(255,255,255,0.25);top:85%;right:3%"></div>
+    
+    <div class="container page-banner-grid">
+      <div class="page-banner-content reveal-left">
+        <h1 class="text-shimmer">TrueKnack Team & Founder's Message</h1>
+        <p>Led by veteran ex-bankers committed to grooming the next generation of retail banking professionals.</p>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Team</div>
+      </div>
+      <div class="page-banner-image-side reveal-right">
+        <div class="page-banner-image-wrapper">
+          <div class="page-banner-image-circle">
+            <img src="images/founder-deepak-singh.webp" alt="TrueKnack Team & Founder's Message" class="breathe-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder's Message -->
+  <section class="founder-section page-section">
+    <div class="container">
+      <h2 class="section-title-center reveal">Founder's Message</h2>
+      <div class="founder-card reveal">
+        <div class="founder-photo">
+          <img src="images/deepak-singh.jpg" alt="Deepak Singh Parihar – Founder, TrueKnack">
+        </div>
+        <div>
+          <p class="founder-quote">At TrueKnack, our mission is simple: to transform fresh graduates into confident, job-ready retail bankers. Banking is not just a career, it is a discipline of trust, precision, and service. With over 15 years of experience across HDFC Bank, IDFC FIRST Bank, IndusInd Bank, Axis Bank, and Kotak Mahindra Bank, I understand exactly what banks look for. We don't just teach concepts — we prepare you for the floor. The Knack of Finding True Talent is not a tagline, it's our promise.</p>
+          <div class="founder-sign">Deepak Singh Parihar<span>Founder – Managing Director & CEO, TrueKnack</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team -->
+  <section class="page-section alt">
+    <div class="container">
+      <h2 class="section-title-center reveal">Leadership Team</h2>
+      <p class="section-subtitle-center reveal">The driving force behind 6,000+ placements in leading private sector banks.</p>
+      <div class="team-grid">
+        
+        <div class="team-member reveal">
+          <img src="images/deepak-singh.jpg" alt="Deepak Singh Parihar" class="team-member-photo">
+          <div class="team-member-info">
+            <h4>Deepak Singh Parihar</h4>
+            <div class="role">Founder – MD & CEO</div>
+            <p>Ex. Assistant Vice President in HDFC Bank with 15+ years in BFSI industry under Product, Strategy, Analyst, Sales & Marketing. Also worked with IDFC FIRST Bank, IndusInd Bank, Axis Bank, TATA AIG, Kotak Mahindra Bank & Manipal Global Education Services.</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/deepak-singh-parihar-546449237/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-member reveal">
+          <img src="images/balasaheb-sopne.jpg" alt="Balasaheb Sopne" class="team-member-photo">
+          <div class="team-member-info">
+            <h4>Balasaheb Sopne</h4>
+            <div class="role">Director – Admissions</div>
+            <p>Ex. Senior Manager in HDFC Bank with 12+ years in BFSI Industry under Sales & Marketing. Also worked with IDFC FIRST Bank, Axis Bank, IndusInd Bank, Yes Bank & ICICI Bank.</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/balasaheb-sopne-301013154/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-member reveal">
+          <img src="images/hemant-singh.jpg" alt="Hemant Singh Parihar" class="team-member-photo">
+          <div class="team-member-info">
+            <h4>Hemant Singh Parihar</h4>
+            <div class="role">Director – Placements & HR</div>
+            <p>Ex. HRBP in Bandhan Bank with 11+ years in BFSI Industry under HR Business Partnering, Talent Acquisition & Learning Development. Also worked with Axis Bank, HDFC Bank, American Express & Manipal Global Education Services.</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/hemant-singh-parihar-49567411a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty Section -->
+  <section class="page-section">
+    <div class="container">
+      <h2 class="section-title-center reveal">Our Faculty</h2>
+      <p class="section-subtitle-center reveal">All classes mentored by veteran ex-bankers with decades of branch manager experience.</p>
+      <div class="team-grid">
+        <div class="team-member reveal">
+          <img src="images/faculty_senior_sbi.png" alt="Senior Faculty" class="team-member-photo">
+          <div class="team-member-info">
+            <h4>Senior Faculty</h4>
+            <div class="role">Ex-SBI, Branch Manager</div>
+            <p>30+ years in retail banking operations, credit appraisal, and branch management. Expert in KYC/AML compliance training.</p>
+          </div>
+        </div>
+        <div class="team-member reveal">
+          <img src="images/faculty_lead_hdfc.png" alt="Lead Trainer" class="team-member-photo">
+          <div class="team-member-info">
+            <h4>Lead Trainer</h4>
+            <div class="role">Ex-HDFC Bank</div>
+            <p>Specialist in sales, liabilities, customer relationship management, and cross-selling strategy for private banks.</p>
+          </div>
+        </div>
+        <div class="team-member reveal">
+          <img src="images/faculty_coach_axis.png" alt="Interview Coach" class="team-member-photo">
+          <div class="team-member-info">
+            <h4>Interview Coach</h4>
+            <div class="role">Ex-Axis Bank</div>
+            <p>Drives mock interview preparation, HR panel simulation, and communication skills coaching to ensure interview success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="container footer-top-card-wrapper">
+    <div class="footer-floating-card reveal-scale">
+      <div class="cta-content">
+        <h3>First Step Towards a Successful Banking Career</h3>
+        <p>Join 6,000+ graduates already placed in top banks.</p>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary btn-lg">Apply Today <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+    <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="logo-white.png" alt="TrueKnack Footer Logo">
+        </div>
+        <p>Grooming university graduates into high-performing professional retail banking assets. The Knack of Finding True Talent.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61585407331946" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/institute-of-retail-banking-finance-irbf/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/irbf_instituteofbanking" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@IRBF_institute_of_Banking" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Training Programs</a></li>
+          <li><a href="placements.html">Placements</a></li>
+          <li><a href="video-gallery.html">Student Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Useful Links</h3>
+        <ul class="footer-links">
+          <li><a href="image-gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ's</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="careers.html">Join Our Team</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Head Office</h3>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            Wagle Industrial Estate, Thane West,<br>
+            Maharashtra - 400604
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>+91 91721 55613</div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>info@trueknack.com</div>
+        </div>
+        <div class="footer-contact-item" style="margin-top: 8px;">
+          <i class="fa-solid fa-clock"></i>
+          <div>9:00 AM - 6:00 PM, Mon - Sat</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <div>&copy; 2026 TrueKnack. All Rights Reserved.</div>
+      <div>The Knack of Finding True Talent</div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="tel:+919172155613" class="floating-call" aria-label="Call Now"><i class="fa-solid fa-phone"></i></a>
+
   <script src="script.js"></script>
   <script src="chatbot.js"></script>
 </body>

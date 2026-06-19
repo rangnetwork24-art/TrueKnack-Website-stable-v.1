@@ -1,13 +1,13 @@
-/* === IRBF Interactive Chatbot Styles === */
+/* === TrueKnack Interactive Chatbot Styles === */
 
 :root {
-  --chat-primary: #1F2E55;
-  --chat-secondary: #9B1A1E;
-  --chat-accent: #E5A93C;
+  --chat-primary: #27336A;
+  --chat-secondary: #9B2A27;
+  --chat-accent: #D44A47;
   --chat-bg: #FFFFFF;
-  --chat-bubble-user: #1F2E55;
+  --chat-bubble-user: #27336A;
   --chat-bubble-bot: #F0F2F6;
-  --chat-shadow: 0 10px 30px rgba(31, 46, 85, 0.15);
+  --chat-shadow: 0 10px 30px rgba(39, 51, 106, 0.15);
   --chat-border: #E2E6EF;
 }
 

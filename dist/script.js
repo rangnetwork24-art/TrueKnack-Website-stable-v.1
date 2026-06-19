@@ -31,12 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close menu on link click
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-      hamburger.querySelectorAll('span').forEach(s => {
-        s.style.transform = 'none';
-        s.style.opacity = '1';
-      });
+      if (hamburger) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        hamburger.querySelectorAll('span').forEach(s => {
+          s.style.transform = 'none';
+          s.style.opacity = '1';
+        });
+      }
     });
   });
 
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => navObserver.observe(section));
 
-  // === SCROLL REVEAL ANIMATIONS (IPB-style) ===
+  // === SCROLL REVEAL ANIMATIONS ===
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   
   const revealObserver = new IntersectionObserver((entries) => {
@@ -86,9 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
   // === STATS COUNTER ANIMATION ===
+  // Show final values by default (progressive enhancement)
   const stats = document.querySelectorAll('.stat-number');
   const statsSection = document.querySelector('#stats');
   let countStarted = false;
+
+  // Set final values immediately so "0" never shows
+  stats.forEach(stat => {
+    const target = +stat.getAttribute('data-target');
+    const suffix = stat.getAttribute('data-suffix') || '';
+    const decimals = +stat.getAttribute('data-decimals') || 0;
+    stat.innerText = target.toFixed(decimals) + suffix;
+  });
 
   const startCount = () => {
     stats.forEach(stat => {
@@ -96,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const suffix = stat.getAttribute('data-suffix') || '';
       const decimals = +stat.getAttribute('data-decimals') || 0;
       let count = 0;
-      const duration = 2000; // 2 seconds
+      const duration = 2000;
       const steps = 60;
       const increment = target / steps;
       const stepTime = duration / steps;
@@ -110,6 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
           stat.innerText = target.toFixed(decimals) + suffix;
         }
       };
+      // Reset to 0 then animate
+      stat.innerText = (0).toFixed(decimals) + suffix;
       updateCount();
     });
   };
@@ -127,10 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     statsObserver.observe(statsSection);
   }
+
   // === SMOOTH SCROLL FOR ANCHOR LINKS ===
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
+      const href = this.getAttribute('href');
+      if (href === '#') return; // Skip dead links
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const headerHeight = header ? header.offsetHeight : 0;
@@ -168,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (videoId) {
           modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
           videoModal.classList.add('active');
-          document.body.style.overflow = 'hidden'; // Stop background scrolling
+          document.body.style.overflow = 'hidden';
         }
       });
     });
@@ -176,18 +192,115 @@ document.addEventListener('DOMContentLoaded', () => {
     const hideModal = () => {
       videoModal.classList.remove('active');
       modalIframe.src = '';
-      document.body.style.overflow = ''; // Restore background scrolling
+      document.body.style.overflow = '';
     };
 
     if (closeModal) closeModal.addEventListener('click', hideModal);
     if (modalBackdrop) modalBackdrop.addEventListener('click', hideModal);
 
-    // Escape key closes modal
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && videoModal.classList.contains('active')) {
         hideModal();
       }
     });
   }
+
+  // === PROGRAM CAROUSEL ===
+  const progTrack = document.getElementById('progTrack');
+  const progPrev = document.getElementById('progPrev');
+  const progNext = document.getElementById('progNext');
+  const progDots = document.getElementById('progDots');
+
+  if (progTrack && progPrev && progNext) {
+    const slides = progTrack.querySelectorAll('.program-carousel-slide');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    // How many slides visible at once
+    const getVisibleCount = () => window.innerWidth <= 768 ? 1 : 2;
+
+    const updateCarousel = () => {
+      const visibleCount = getVisibleCount();
+      const maxSlide = Math.max(0, totalSlides - visibleCount);
+      if (currentSlide > maxSlide) currentSlide = maxSlide;
+      
+      const slideWidth = 100 / visibleCount;
+      progTrack.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+      
+      // Update dots
+      if (progDots) {
+        progDots.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentSlide);
+        });
+      }
+
+      // Disable buttons at edges
+      progPrev.style.opacity = currentSlide === 0 ? '0.4' : '1';
+      progNext.style.opacity = currentSlide >= maxSlide ? '0.4' : '1';
+    };
+
+    progPrev.addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+      }
+    });
+
+    progNext.addEventListener('click', () => {
+      const visibleCount = getVisibleCount();
+      const maxSlide = Math.max(0, totalSlides - visibleCount);
+      if (currentSlide < maxSlide) {
+        currentSlide++;
+        updateCarousel();
+      }
+    });
+
+    // Dot click
+    if (progDots) {
+      progDots.querySelectorAll('.carousel-dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+          currentSlide = parseInt(dot.getAttribute('data-slide'));
+          updateCarousel();
+        });
+      });
+    }
+
+    // Recalc on resize
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  }
+
+  // === BACK TO TOP BUTTON ===
+  const backToTop = document.createElement('button');
+  backToTop.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+  backToTop.className = 'back-to-top';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  document.body.appendChild(backToTop);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // === FAQ ACCORDION ===
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.closest('.faq-item');
+      const isOpen = item.classList.contains('active');
+      
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      
+      // Toggle clicked
+      if (!isOpen) item.classList.add('active');
+    });
+  });
 
 });

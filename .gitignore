@@ -1,0 +1,9 @@
+# Exclude local reference files and backups
+ipb-reference/
+trueknack everything/
+trueknack team/
+trueknack/
+rebrand.py
+*.ini
+.gemini/
+*.log
