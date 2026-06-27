@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://trueknack.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://trueknack.com/about.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/programs.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/placements.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/franchise.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/contact.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/course-cbfs.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/course-po.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/course-dcb.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/course-ignite.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/course-aurix.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/team.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/centers.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/careers.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/blogs.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://trueknack.com/blog-post.html</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://trueknack.com/faq.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/image-gallery.html</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/video-gallery.html</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://trueknack.com/privacy-policy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://trueknack.com/terms.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://trueknack.com/no-refund-policy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+</urlset>

@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/webp" sizes="64x64" href="favicon.webp">
   <title>Image Gallery | TrueKnack Classrooms, Events &amp; Placements</title>
   <meta name="description" content="Explore TrueKnack classrooms, student events, placement highlights, and campus interactions.">
+  <link rel="canonical" href="https://trueknack.com/image-gallery.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Image Gallery | TrueKnack Classrooms, Events &amp; Placements">
+  <meta property="og:description" content="Explore TrueKnack classrooms, student events, placement highlights, and campus interactions.">
+  <meta property="og:url" content="https://trueknack.com/image-gallery.html">
+  <meta property="og:image" content="https://trueknack.com/logo.webp">
+  <meta property="og:site_name" content="TrueKnack">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Image Gallery | TrueKnack Classrooms, Events &amp; Placements">
+  <meta name="twitter:description" content="Explore TrueKnack classrooms, student events, placement highlights, and campus interactions.">
+  <meta name="twitter:image" content="https://trueknack.com/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,7 +46,7 @@
 <header>
     <div class="container navbar">
       <a href="index.html" class="logo">
-        <img src="logo.png" alt="TrueKnack Logo">
+        <img src="logo.webp" alt="TrueKnack Logo">
       </a>
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link ">Home</a></li>
@@ -105,23 +119,41 @@
       <button class="filter-btn" data-filter="placements">Placements</button>
       <button class="filter-btn" data-filter="events">Events</button>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-item" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="trueknack_classroom_training.png" alt="Classroom training session"></div><div class="cap">Classroom Training</div></div>
-      <div class="gallery-item" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/students/nikita-garud.jpg" alt="Placed student Nikita"></div><div class="cap">Placement - Axis Bank</div></div>
-      <div class="gallery-item" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/students/radhakishan-giram.jpg" alt="Placed student Radhakishan"></div><div class="cap">Placement - HDFC Bank</div></div>
-      <div class="gallery-item" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="hero_banking.png" alt="Student event"></div><div class="cap">Student Event</div></div>
-      <div class="gallery-item" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="img_1.png" alt="Interactive session"></div><div class="cap">Interactive Session</div></div>
-      <div class="gallery-item" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/students/sakshi-jadhav.jpg" alt="Placed student Sakshi"></div><div class="cap">Placement - Yes Bank</div></div>
-      <div class="gallery-item" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="img_2.png" alt="Campus interaction"></div><div class="cap">Campus Interaction</div></div>
-      <div class="gallery-item" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/students/datta-gunde.jpg" alt="Placed student Datta"></div><div class="cap">Placement - ICICI Bank</div></div>
-      <div class="gallery-item" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="img_0.png" alt="Training in progress"></div><div class="cap">Training In Progress</div></div>
+        <div class="gallery-grid">
+      <!-- Classrooms -->
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00009-2048x1365.webp" alt="Classroom Training Session"></div><div class="cap">Classroom Training Session</div></div>
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00011-2048x1365.webp" alt="Interactive Banking Lecture"></div><div class="cap">Interactive Banking Lecture</div></div>
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00013-2048x1365.webp" alt="Ex-Banker Faculty Mentorship"></div><div class="cap">Ex-Banker Faculty Mentorship</div></div>
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00076-2048x1365.webp" alt="Group Study & Discussion"></div><div class="cap">Group Study & Discussion</div></div>
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00086-2048x1365.webp" alt="Retail Banking Workshop"></div><div class="cap">Retail Banking Workshop</div></div>
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00131-2048x1365.webp" alt="Core Banking Systems Training"></div><div class="cap">Core Banking Systems Training</div></div>
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00186-2048x1365.webp" alt="Interactive Classroom Session"></div><div class="cap">Interactive Classroom Session</div></div>
+      <div class="gallery-item reveal" data-cat="classrooms"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00221-2048x1365.webp" alt="Practical Banking Lab"></div><div class="cap">Practical Banking Lab</div></div>
+
+      <!-- Placements -->
+      <div class="gallery-item reveal" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00234-2048x1365.webp" alt="Mock Interview Preparation"></div><div class="cap">Mock Interview Preparation</div></div>
+      <div class="gallery-item reveal" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00245-2048x1365.webp" alt="Placement Drive - Candidate Screening"></div><div class="cap">Placement Drive - Screening</div></div>
+      <div class="gallery-item reveal" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00262-2048x1365.webp" alt="HR Interview Session"></div><div class="cap">HR Interview Session</div></div>
+      <div class="gallery-item reveal" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00299-2048x1365.webp" alt="Placement Drive - HDFC Bank"></div><div class="cap">Placement Drive - HDFC Bank</div></div>
+      <div class="gallery-item reveal" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00324-1-1-2048x1365.webp" alt="Placement Drive - Axis Bank"></div><div class="cap">Placement Drive - Axis Bank</div></div>
+      <div class="gallery-item reveal" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00324-2048x1365.webp" alt="Selected Students Celebration"></div><div class="cap">Selected Students Celebration</div></div>
+      <div class="gallery-item reveal" data-cat="placements"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00332-2048x1365.webp" alt="Certificate Distribution Ceremony"></div><div class="cap">Certificate Distribution</div></div>
+
+      <!-- Events -->
+      <div class="gallery-item reveal" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00337-2048x1365.webp" alt="Student Orientation Program"></div><div class="cap">Student Orientation</div></div>
+      <div class="gallery-item reveal" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00340-2048x1365.webp" alt="TrueKnack Campus Seminar"></div><div class="cap">TrueKnack Campus Seminar</div></div>
+      <div class="gallery-item reveal" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00355-2048x1365.webp" alt="Industry Guest Lecture"></div><div class="cap">Industry Guest Lecture</div></div>
+      <div class="gallery-item reveal" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00381-2048x1365.webp" alt="Career Guidance Workshop"></div><div class="cap">Career Guidance Workshop</div></div>
+      <div class="gallery-item reveal" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00383-2048x1365.webp" alt="TrueKnack Batch Group Photo"></div><div class="cap">TrueKnack Batch Group Photo</div></div>
+      <div class="gallery-item reveal" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00389-2048x1365.webp" alt="Graduation Day Ceremony"></div><div class="cap">Graduation Day Ceremony</div></div>
+      <div class="gallery-item reveal" data-cat="events"><div class="has-skeleton skeleton"><img class="lazy-img" loading="lazy" src="images/gallery/DSC00391-2048x1365.webp" alt="Student Interaction & Networking"></div><div class="cap">Student Interaction</div></div>
     </div>
   </div></section>
     <footer>
     <div class="container footer-grid">
       <div class="footer-col">
         <div class="footer-logo">
-          <img src="logo-white.png" alt="TrueKnack Footer Logo">
+          <img src="logo-white.webp" alt="TrueKnack Footer Logo">
         </div>
         <p>Grooming university graduates into high-performing professional retail banking assets. The Knack of Finding True Talent.</p>
         <div class="footer-socials">

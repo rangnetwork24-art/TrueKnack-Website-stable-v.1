@@ -170,37 +170,66 @@ document.addEventListener('DOMContentLoaded', () => {
       // Match keywords
       if (query.includes('course') || query.includes('program') || query.includes('pgcr') || query === 'courses') {
         addBotMessage(
-          "Fantastic choice! Banking is one of the most stable and rewarding careers out there. 📈 At TrueKnack, we have two flagship programs custom-designed to get you job-ready in no time:\n\n" +
-          "1. **PGCRBF** (Post Graduate Certificate in Retail Banking & Finance): Perfect if you love interacting with people, managing relations, and driving sales! 🤝\n" +
-          "2. **PGCRBO** (Post Graduate Certificate in Retail Banking Operations): Ideal if you prefer operations, support, and keeping the banking machinery running smoothly behind the scenes! ⚙️\n\n" +
-          "Which path sounds more exciting to you?",
+          "Fantastic choice! Banking is one of the most stable and rewarding careers out there. 📈 At TrueKnack, we offer four placement-focused programs designed for graduates:\n\n" +
+          "1. **CBFS Course** (Certificate in Banking & Financial Services): A 3-month job-ready online certificate. 🎓\n" +
+          "2. **PO Program** (Probationary Officer's Program): A 12-month residential path for AM-II recruitment at Utkarsh Small Finance Bank. 👔\n" +
+          "3. **DCB Bank Program**: A fast-track 15-day Hire-Train-Deploy model for Customer Service Managers. 💼\n" +
+          "4. **IGNITE Program**: A 2-week residential launchpad in collaboration with Equitas Small Finance Bank. ⚡\n\n" +
+          "Which course would you like to explore?",
           [
-            { text: "About PGCRBF", reply: "pgcrbf" },
-            { text: "About PGCRBO", reply: "pgcrbo" },
-            { text: "Check Eligibility", reply: "eligibility" }
+            { text: "CBFS Course", reply: "cbfs" },
+            { text: "PO Program", reply: "po" },
+            { text: "DCB Bank Program", reply: "dcb" },
+            { text: "IGNITE Program", reply: "ignite" }
           ]
         );
       } 
-      else if (query.includes('pgcrbf')) {
+      else if (query.includes('cbfs')) {
         addBotMessage(
-          "Awesome! The **PGCRBF (Retail Banking & Finance)** program is an absolute game-changer! Here's the details:\n\n" +
-          "- ⏱️ **Duration**: A fast-track **2-Month** intensive program.\n" +
-          "- 💻 **Delivery**: Live interactive online classes + branch simulation practice to build confidence.\n" +
-          "- 🎯 **Focus Areas**: Retail bank products, customer relationship management, mock interviews, and grooming.\n" +
-          "- 💼 **Placements**: You get **100% placement support** with top private banks. We prepare you to ace every interview!",
+          "Awesome! The **CBFS (Certificate in Banking & Financial Services)** course is a great entry point:\n\n" +
+          "- ⏱️ **Duration**: 3 Months (Online mode).\n" +
+          "- 🎓 **Eligibility**: Graduation with min. 50% marks in 10th, 12th & Graduation, aged 21-27 years.\n" +
+          "- 🎯 **Salary Package**: ₹ 2.4 to 3.5 LPA (TrueKnack average).\n" +
+          "- 📚 **Highlights**: Core banking systems (Finacle) training, Advanced Excel, NISM VA MF prep, and ex-banker mock interviews.",
           [
             { text: "How to Apply", reply: "apply" },
             { text: "Main Menu", reply: "menu" }
           ]
         );
       } 
-      else if (query.includes('pgcrbo')) {
+      else if (query.includes('po ') || query.includes(' po') || query === 'po' || query.includes('utkarsh')) {
         addBotMessage(
-          "Superb! Operations is the backbone of any banking institution. 🏢 The **PGCRBO (Retail Banking Operations)** program is designed to make you a star ops specialist:\n\n" +
-          "- ⏱️ **Duration**: **2 Months** of dedicated training.\n" +
-          "- 🏫 **Delivery**: Interactive classroom & online training.\n" +
-          "- 🎯 **Focus Areas**: Back-office operations, clearing house tasks, KYC audits, and compliance.\n" +
-          "- 💼 **Job Role Target**: Non-sales core operation executive in private sector banks. No sales pressure!",
+          "Superb choice! The **Probationary Officer's Program** in partnership with Utkarsh Small Finance Bank is a premium residential course:\n\n" +
+          "- ⏱️ **Duration**: 12 Months (4 months residential at Baddi University + 2 months internship with ₹10,000/mo stipend + 6 months OJT with ₹16,000/mo stipend).\n" +
+          "- 🎓 **Eligibility**: Regular graduation or postgraduation with min. 50% marks, aged below 27 years.\n" +
+          "- 🎯 **Starting CTC**: AM-II role starting at ₹ 5.0 LPA.\n" +
+          "- 📚 **Certification**: UGC-approved Advanced Certificate in Banking and Financial Services (ACBFS) from Sharda University.",
+          [
+            { text: "How to Apply", reply: "apply" },
+            { text: "Main Menu", reply: "menu" }
+          ]
+        );
+      } 
+      else if (query.includes('dcb')) {
+        addBotMessage(
+          "Excellent! The **HTD Model with DCB Bank** is a secure, fast-track career launchpad:\n\n" +
+          "- ⏱️ **Duration**: 15 Days (Offline classroom training).\n" +
+          "- 🎓 **Eligibility**: Regular graduation with min. 50% marks, aged below 25 years.\n" +
+          "- 🎯 **Starting CTC**: Customer Service Manager with ₹ 3.5 - 4.5 LPA assured salary.\n" +
+          "- 📚 **Highlights**: Selection by DCB Bank before training starts. Fee of ₹40,000 + GST is payable only after selection.",
+          [
+            { text: "How to Apply", reply: "apply" },
+            { text: "Main Menu", reply: "menu" }
+          ]
+        );
+      } 
+      else if (query.includes('ignite') || query.includes('equitas')) {
+        addBotMessage(
+          "Fantastic! The **Equitas SFB IGNITE Program** is a short, job-assured residential carrier launchpad:\n\n" +
+          "- ⏱️ **Duration**: 2 Weeks (Residential training at Baddi University).\n" +
+          "- 🎓 **Eligibility**: Graduation with min. 50% marks, aged 26 years and below.\n" +
+          "- 🎯 **Starting CTC**: Business Development Officer (BDO) with ₹ 3.5 LPA + incentives.\n" +
+          "- 📚 **Highlights**: Job offer letter issued before training. Full course fee of ₹42,000 + GST is refunded as a performance bonus after 12 months.",
           [
             { text: "How to Apply", reply: "apply" },
             { text: "Main Menu", reply: "menu" }
@@ -210,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (query.includes('placement') || query.includes('job') || query.includes('hiring') || query.includes('recruit')) {
         addBotMessage(
           "Our placement record is something we are incredibly proud of! 🎉\n\n" +
-          "We have successfully helped over **6,000+ graduates** kickstart their careers! 🚀 Our students are placed in top private sector banks like Axis Bank, HDFC Bank, Kotak Mahindra, and ICICI, with average packages starting from **3.0 LPA+**! 💸\n\n" +
+          "We have successfully helped over **6,000+ graduates** kickstart their careers! 🚀 Our students are placed in top private sector banks like Axis Bank, HDFC Bank, Kotak Mahindra, IDFC First Bank, DCB Bank, and Equitas Small Finance Bank, with packages up to **4.5 LPA**! 💸\n\n" +
           "Want to see where our graduates work?",
           [
             { text: "View Recruiters", reply: "recruiters" },
@@ -220,8 +249,12 @@ document.addEventListener('DOMContentLoaded', () => {
       } 
       else if (query.includes('fee') || query.includes('cost') || query.includes('duration') || query === 'fees') {
         addBotMessage(
-          "Investing in yourself is the best decision you can make! 💡 Both PGCRBF and PGCRBO programs are just **2 Months** long—meaning you can be trained and placed in just 60 days!\n\n" +
-          "We also offer easy **EMI (monthly installment) plans** and scholarships to make it stress-free. Would you like our admissions advisor to contact you with the fee structure?",
+          "We offer flexible payment options to help you invest in your future:\n\n" +
+          "- **CBFS Course**: ₹ 69,900 (Installments & 0% interest loan options available).\n" +
+          "- **PO Program**: ₹ 2.65 Lacs (Initial deposit of ₹40,000, rest via bank loan).\n" +
+          "- **DCB Bank Program**: ₹ 40,000 + GST (Payable only after selection).\n" +
+          "- **IGNITE Program**: ₹ 42,000 + GST (Fully refunded after 12 months on job).\n\n" +
+          "Would you like our admissions advisor to contact you with details?",
           [
             { text: "Yes, Request Callback", reply: "contact" },
             { text: "Main Menu", reply: "menu" }
@@ -230,13 +263,14 @@ document.addEventListener('DOMContentLoaded', () => {
       } 
       else if (query.includes('eligibility') || query.includes('eligible') || query.includes('qualification')) {
         addBotMessage(
-          "Let's see if we're a match! Here is the eligibility criteria for our courses:\n\n" +
-          "- 🎓 **Education**: Graduates in any stream (B.Com, BBA, BA, B.Sc, etc.)\n" +
-          "- 👶 **Age**: Fresh graduates up to **28 years** old.\n" +
-          "- 📍 **Location**: Resident of Maharashtra (with centers in Thane, Pune, Mumbai, Nashik, etc.).\n\n" +
-          "If you meet these, you are ready to roll! Let's get your application started! 🌟",
+          "Eligibility criteria varies by program, but generally:\n\n" +
+          "- 🎓 **Education**: Graduation in regular mode with minimum 50% marks.\n" +
+          "- 👶 **Age Limit**: Aged between 21-27 years depending on the program (below 25 for DCB, 26 for IGNITE).\n" +
+          "- 📍 **Centers**: Local counseling is available at our verified Maharashtra centers (Thane, Pune, Mumbai, Nagpur, Sambhajinagar).\n\n" +
+          "Ask me about a specific program to check your fit!",
           [
-            { text: "Apply Now", reply: "apply" },
+            { text: "Check CBFS", reply: "cbfs" },
+            { text: "Check PO Program", reply: "po" },
             { text: "Main Menu", reply: "menu" }
           ]
         );

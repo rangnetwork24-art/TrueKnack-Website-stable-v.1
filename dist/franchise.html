@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/webp" sizes="64x64" href="favicon.webp">
   <title>Own a TrueKnack Franchise | TrueKnack</title>
   <meta name="description" content="Explore franchise opportunities with TrueKnack. Partner with a leading banking training institute in Pune, Nagpur, and Sambhajinagar.">
+  <link rel="canonical" href="https://trueknack.com/franchise.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Own a TrueKnack Franchise | TrueKnack">
+  <meta property="og:description" content="Explore franchise opportunities with TrueKnack. Partner with a leading banking training institute in Pune, Nagpur, and Sambhajinagar.">
+  <meta property="og:url" content="https://trueknack.com/franchise.html">
+  <meta property="og:image" content="https://trueknack.com/logo.webp">
+  <meta property="og:site_name" content="TrueKnack">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Own a TrueKnack Franchise | TrueKnack">
+  <meta name="twitter:description" content="Explore franchise opportunities with TrueKnack. Partner with a leading banking training institute in Pune, Nagpur, and Sambhajinagar.">
+  <meta name="twitter:image" content="https://trueknack.com/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,6 +46,57 @@
     .franchise-form input:focus, .franchise-form select:focus, .franchise-form textarea:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(155, 26, 30, 0.1); }
     .field-error { color: var(--secondary); font-size: 0.78rem; margin-top: 4px; display: none; }
     .form-msg { text-align: center; margin-top: 14px; font-weight: 600; color: #128C7E; }
+
+    /* Who Is This Franchise Perfect For? */
+    .perfect-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 40px; }
+    .perfect-card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); transition: var(--transition); text-align: center; }
+    .perfect-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--secondary); }
+    .perfect-icon { width: 60px; height: 60px; border-radius: 50%; background: rgba(155, 26, 30, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 16px; }
+    .perfect-card h4 { color: var(--primary); font-size: 1.1rem; margin-bottom: 8px; }
+    .perfect-card p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; }
+    
+    /* Process Steps Section */
+    .process-timeline { display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; margin-top: 40px; }
+    .process-step { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 20px 12px; box-shadow: var(--shadow-sm); text-align: center; transition: var(--transition); }
+    .process-step:hover { border-color: var(--secondary); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--secondary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 12px; font-size: 0.95rem; }
+    .process-step h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 6px; }
+    .process-step p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* Testimonials Section */
+    .partner-testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+    .partner-testi-card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm); position: relative; }
+    .partner-testi-card::before { content: "\f10d"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; top: 20px; right: 20px; font-size: 2.5rem; color: rgba(155, 26, 30, 0.05); }
+    .partner-testi-card p { font-style: italic; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; font-size: 0.92rem; }
+    .partner-testi-author { display: flex; align-items: center; gap: 12px; }
+    .partner-testi-avatar { width: 48px; height: 48px; border-radius: 50%; background: rgba(155, 26, 30, 0.08); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold; }
+    .partner-testi-details h5 { color: var(--primary); font-size: 0.95rem; margin-bottom: 2px; }
+    .partner-testi-details span { color: var(--text-muted); font-size: 0.8rem; }
+
+    /* CTA Box */
+    .cta-double-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; margin-bottom: 50px; }
+    .cta-box { background: linear-gradient(135deg, var(--primary), #5a090b); color: white; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-md); position: relative; overflow: hidden; }
+    .cta-box h3 { color: white; font-size: 1.6rem; margin-bottom: 12px; }
+    .cta-box p { color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; }
+    .cta-box .btn { border-color: white; color: white; }
+    .cta-box .btn:hover { background: white; color: var(--primary); }
+    
+    .whatsapp-box { background: linear-gradient(135deg, #128C7E, #075E54); color: white; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-md); position: relative; overflow: hidden; }
+    .whatsapp-box h3 { color: white; font-size: 1.6rem; margin-bottom: 12px; }
+    .whatsapp-box p { color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; }
+    .whatsapp-box .btn { background: #25D366; border-color: #25D366; color: white; display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.95rem; transition: var(--transition); }
+    .whatsapp-box .btn:hover { background: #1ebd59; border-color: #1ebd59; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    @media(max-width: 1200px) {
+      .perfect-grid { grid-template-columns: repeat(3, 1fr); }
+      .process-timeline { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media(max-width: 768px) {
+      .perfect-grid { grid-template-columns: 1fr; }
+      .process-timeline { grid-template-columns: 1fr; }
+      .partner-testi-grid { grid-template-columns: 1fr; }
+      .cta-double-grid { grid-template-columns: 1fr; }
+    }
     
     @media(max-width: 992px) {
       .franchise-cities { grid-template-columns: 1fr; gap: 24px; }
@@ -44,7 +109,7 @@
 <header>
     <div class="container navbar">
       <a href="index.html" class="logo">
-        <img src="logo.png" alt="TrueKnack Logo">
+        <img src="logo.webp" alt="TrueKnack Logo">
       </a>
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link ">Home</a></li>
@@ -79,7 +144,7 @@
         <li><a href="careers.html" class="nav-link ">Career</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="index.html#contact" class="btn btn-primary">Apply Now! <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#enquire" class="btn btn-primary">Partner with Us! <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="hamburger">
         <span></span>
@@ -100,6 +165,10 @@
       <div class="page-banner-content reveal-left">
         <h1 class="text-shimmer">Own a TrueKnack Franchise</h1>
         <p>Partner with India's premier retail banking institute and build a high-returns educational business in your city.</p>
+        <div style="margin-top: 24px; margin-bottom: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#enquire" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">Partner With Us <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
         <div class="breadcrumb"><a href="index.html">Home</a> / Franchise</div>
       </div>
       <div class="page-banner-image-side reveal-right">
@@ -114,29 +183,38 @@
 
   <section class="page-section">
     <div class="container">
-      <h2 class="section-title-center reveal">Franchise Opportunities in Key Cities</h2>
-      <p class="section-subtitle-center reveal">We are exclusively expanding our footprints in 3 high-demand cities in Maharashtra. Establish a center and groom job-ready banking professionals.</p>
+      <h2 class="section-title-center reveal">The Progressive Franchise Model</h2>
+      <p class="section-subtitle-center reveal">Leverage our proven systems, strong placements, and regional credibility to build a business that grows steadily and scales confidently.</p>
       
-      <div class="franchise-cities">
-        <div class="city-card reveal">
-          <div class="city-icon"><i class="fa-solid fa-building"></i></div>
-          <h3>Pune</h3>
-          <p>Pune is the leading educational hub of Maharashtra with hundreds of colleges and fresh graduates seeking secure private sector jobs. Highly lucrative market for retail banking courses.</p>
-          <a href="#enquire" class="btn btn-secondary">Enquire Now</a>
+      <div id="stats" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; margin-bottom: 50px;">
+        <div class="pl-stat reveal" style="padding: 20px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius); text-align: center;"><h3 class="stat-number" data-target="3" data-suffix="+ Years" style="font-size: 2rem; color: var(--secondary); margin-bottom: 8px;">0+ Years</h3><p style="color: var(--text-muted); font-size: 0.9rem;">Brand Presence</p></div>
+        <div class="pl-stat reveal" style="padding: 20px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius); text-align: center;"><h3 class="stat-number" data-target="6000" data-suffix="+" style="font-size: 2rem; color: var(--secondary); margin-bottom: 8px;">0+</h3><p style="color: var(--text-muted); font-size: 0.9rem;">Students Placed</p></div>
+        <div class="pl-stat reveal" style="padding: 20px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius); text-align: center;"><h3 class="stat-number" data-target="15" data-suffix="+" style="font-size: 2rem; color: var(--secondary); margin-bottom: 8px;">0+</h3><p style="color: var(--text-muted); font-size: 0.9rem;">Maharashtra Centers</p></div>
+        <div class="pl-stat reveal" style="padding: 20px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius); text-align: center;"><h3 class="stat-number" data-target="30" data-suffix="+" style="font-size: 2rem; color: var(--secondary); margin-bottom: 8px;">0+</h3><p style="color: var(--text-muted); font-size: 0.9rem;">Hiring Partners</p></div>
+      </div>
+
+      <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 30px;">
+        <div class="reveal-left">
+          <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 16px;">About TrueKnack</h3>
+          <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 14px;">Since 2022, TrueKnack has been on a simple mission to bridge the skill gap between graduates and the banking industry. What started as a dedicated training initiative has today become a trusted professional retail banking training institute in Maharashtra, known for quality, consistency, and placement outcomes.</p>
+          <p style="color: var(--text-muted); line-height: 1.8;">TrueKnack is an NSDC Authorized Training Partner, reinforcing our credibility and quality standards at a regional level. Our students today work as Personal Bankers, Relationship Managers, Tellers, KYC/AML Officers, and Wealth Managers across India's most respected private sector banks.</p>
         </div>
-        
-        <div class="city-card reveal">
-          <div class="city-icon"><i class="fa-solid fa-city"></i></div>
-          <h3>Nagpur</h3>
-          <p>As the largest commercial hub of Central India, Nagpur represents an immense pool of ambitious graduates. Tap into a vast recruiter network and high enrollment volumes.</p>
-          <a href="#enquire" class="btn btn-secondary">Enquire Now</a>
-        </div>
-        
-        <div class="city-card reveal">
-          <div class="city-icon"><i class="fa-solid fa-monument"></i></div>
-          <h3>Sambhajinagar</h3>
-          <p>A rapidly growing industrial and academic city. High demand for quality vocational training and job placement services makes Sambhajinagar a premium launchpad for a center.</p>
-          <a href="#enquire" class="btn btn-secondary">Enquire Now</a>
+        <div class="reveal-right">
+          <div style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm);">
+            <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 20px; text-align: center;">Target Franchise Cities</h3>
+            <p style="color: var(--text-muted); text-align: center; margin-bottom: 20px;">We are actively expanding our footprints in 3 high-demand cities in Maharashtra:</p>
+            <ul style="list-style-type: none; padding: 0;">
+              <li style="padding: 10px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <strong>Pune</strong> <span style="background: var(--secondary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">High Demand</span>
+              </li>
+              <li style="padding: 10px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <strong>Nagpur</strong> <span style="background: var(--secondary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">Commercial Hub</span>
+              </li>
+              <li style="padding: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+                <strong>Sambhajinagar</strong> <span style="background: var(--secondary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">Academic Hub</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -144,43 +222,252 @@
 
   <section class="page-section alt">
     <div class="container">
-      <h2 class="section-title-center reveal">Why Partner with TrueKnack?</h2>
-      <p class="section-subtitle-center reveal">Gain access to a proven academic model, robust recruiter relationships, and operational templates developed by industry veterans.</p>
+      <h2 class="section-title-center reveal">Why Invest in a TrueKnack Franchise?</h2>
+      <p class="section-subtitle-center reveal">Join a mission-driven education brand that delivers consistent results, transforms careers, and ensures stable returns year after year.</p>
       
       <div class="benefits-grid">
         <div class="benefit-item reveal">
           <div class="benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
           <div class="benefit-text">
-            <h4>Established Brand & Model</h4>
+            <h4>Established Brand & Trust</h4>
             <p>Leverage the trust of a premier institute with over 6,000+ placements and years of experience in retail banking training.</p>
           </div>
         </div>
         <div class="benefit-item reveal">
           <div class="benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
           <div class="benefit-text">
-            <h4>100% Placement Support</h4>
-            <p>Our centralized placement team handles all recruitment tie-ups, bank panels, and student interviews directly.</p>
+            <h4>Strong Placement Network</h4>
+            <p>TrueKnack has centralized tie-ups with leading private banks and retail NBFCs, managing student interviews directly.</p>
           </div>
         </div>
         <div class="benefit-item reveal">
           <div class="benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
           <div class="benefit-text">
-            <h4>Comprehensive Marketing Assistance</h4>
-            <p>Get professional leads, digital campaigns, center branding assets, banners, brochures, and training resources.</p>
+            <h4>Affordable Setup & High ROI</h4>
+            <p>Low setup cost, low operational cost, and high local student demand ensure sustainable monthly profitability.</p>
           </div>
         </div>
         <div class="benefit-item reveal">
           <div class="benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
           <div class="benefit-text">
-            <h4>Ex-Banker Faculty Network</h4>
-            <p>Benefit from live online classes conducted directly by our experienced ex-banker trainers, keeping academic quality high and uniform.</p>
+            <h4>Industry-Crafted Curriculum</h4>
+            <p>Programs designed by veteran ex-bankers, keeping graduates updated with latest retail branch systems.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="page-section">
+    <div class="container">
+      <h2 class="section-title-center reveal">Who Is This Franchise Perfect For?</h2>
+      <p class="section-subtitle-center reveal">The TrueKnack franchise is designed for individuals who want a stable, high-impact business with long-term growth potential.</p>
+      
+      <div class="perfect-grid">
+        <div class="perfect-card reveal">
+          <div class="perfect-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h4>Ex-Bankers</h4>
+          <p>Leverage your domain knowledge and professional network to guide the next generation of retail bankers.</p>
+        </div>
+        
+        <div class="perfect-card reveal">
+          <div class="perfect-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h4>Investors</h4>
+          <p>Seek a reliable, scalable business model with a low entry barrier and a strong potential for monthly ROI.</p>
+        </div>
+        
+        <div class="perfect-card reveal">
+          <div class="perfect-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h4>Educationists</h4>
+          <p>Expand your academic portfolio and diversify your service offerings with professional job-linked programs.</p>
+        </div>
+        
+        <div class="perfect-card reveal">
+          <div class="perfect-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <h4>Existing Owners</h4>
+          <p>Diversify your current business with a training brand that has direct hiring tie-ups across the banking sector.</p>
+        </div>
+        
+        <div class="perfect-card reveal">
+          <div class="perfect-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h4>Entrepreneurs</h4>
+          <p>Build a business with a purpose, focusing on skill development, youth employment, and stable career paths.</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 30px;" class="reveal">
+        <p style="font-size: 1.1rem; color: var(--primary); font-weight: 600; font-family: var(--font-headings);">If you enjoy mentoring, business building, and contributing to youth employment, this is tailor-made for you!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h2 class="section-title-center reveal">Franchise Requirements</h2>
+      <p class="section-subtitle-center reveal">Transparent requirements for a successful and mutually beneficial partnership.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+        <div style="background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--primary); margin-bottom: 16px;"><i class="fa-solid fa-expand" style="color: var(--secondary); margin-right: 8px;"></i> Space Required</h3>
+          <ul style="color: var(--text-muted); line-height: 1.8; list-style-type: disc; margin-left: 20px;">
+            <li>Area: 500 – 700 sq ft</li>
+            <li>Centre Head Room: 1</li>
+            <li>Meeting Room: 1</li>
+            <li>Workstations: 3</li>
+            <li>Pantry & Washroom</li>
+          </ul>
+        </div>
+        <div style="background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--primary); margin-bottom: 16px;"><i class="fa-solid fa-indian-rupee-sign" style="color: var(--secondary); margin-right: 8px;"></i> Investment & ROI</h3>
+          <ul style="color: var(--text-muted); line-height: 1.8; list-style-type: disc; margin-left: 20px;">
+            <li>License Fee: Rs. 5,00,000 + GST</li>
+            <li>Setup Cost: As per actuals</li>
+            <li>Term of Contract: 3 years</li>
+            <li>Expected ROI: ₹ 2-5 Lakhs/Month</li>
+            <li>Includes Promotional Kit</li>
+          </ul>
+        </div>
+        <div style="background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--primary); margin-bottom: 16px;"><i class="fa-solid fa-users" style="color: var(--secondary); margin-right: 8px;"></i> Manpower</h3>
+          <ul style="color: var(--text-muted); line-height: 1.8; list-style-type: disc; margin-left: 20px;">
+            <li>Centre Sales Head: 1</li>
+            <li>Education Counsellors: 5</li>
+            <li>Marketing Executive: 1</li>
+            <li>Office Support Staff: 1</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h2 class="section-title-center reveal">What TrueKnack Provides to Partners</h2>
+      <p class="section-subtitle-center reveal">We stay with you throughout the journey to ensure operational and marketing success.</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
+        <div style="background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--secondary); margin-bottom: 16px;">Before Launch</h3>
+          <ul style="color: var(--text-muted); line-height: 1.8; list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;">✓ Assistance in site selection & design layout</li>
+            <li style="margin-bottom: 10px;">✓ Intensive training of centre sales heads & counsellors</li>
+            <li style="margin-bottom: 10px;">✓ Pre-launch localized marketing campaigns</li>
+            <li style="margin-bottom: 10px;">✓ Setup support & corporate identity compliance</li>
+          </ul>
+        </div>
+        <div style="background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--secondary); margin-bottom: 16px;">After Launch</h3>
+          <ul style="color: var(--text-muted); line-height: 1.8; list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;">✓ Continuous digital lead generation support</li>
+            <li style="margin-bottom: 10px;">✓ Access to TrueKnack LMS & CRM portals</li>
+            <li style="margin-bottom: 10px;">✓ Ongoing ex-banker faculty delivery (online mode)</li>
+            <li style="margin-bottom: 10px;">✓ Centralized placement support & recruiters drive</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h2 class="section-title-center reveal">How to Own a TrueKnack Franchise</h2>
+      <p class="section-subtitle-center reveal">Our onboarding process is transparent, structured, and supportive at every stage.</p>
+      
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-num">1</div>
+          <h4>Initial Inquiry</h4>
+          <p>Submit your interest by filling out the online franchise inquiry form.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">2</div>
+          <h4>Discussion</h4>
+          <p>Our business expansion team connects for a detailed conversation.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">3</div>
+          <h4>Application Review</h4>
+          <p>We review your location viability, capital, and business experience.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">4</div>
+          <h4>Approval & Agreement</h4>
+          <p>Submit franchise fees and sign the official partner agreement.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">5</div>
+          <h4>Center Setup</h4>
+          <p>Design, setup, and branding implementation under our guidelines.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">6</div>
+          <h4>Staff Induction</h4>
+          <p>Extensive training for counselors and center heads before launch.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">7</div>
+          <h4>Inauguration</h4>
+          <p>Your center launches admissions with continuous team mentoring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h2 class="section-title-center reveal">What Our Existing Franchise Partners Say</h2>
+      <p class="section-subtitle-center reveal">Hear directly from the partners who have established successful training centers with TrueKnack.</p>
+      
+      <div class="partner-testi-grid">
+        <div class="partner-testi-card reveal">
+          <p>"Partnering with TrueKnack has been an extremely rewarding business decision. The student demand for retail banking training in Maharashtra is massive. The support from the head office in placement tie-ups and faculty delivery is exceptional, which ensures our students get placed in top banks quickly."</p>
+          <div class="partner-testi-author">
+            <div class="partner-testi-avatar">SD</div>
+            <div class="partner-testi-details">
+              <h5>Sachin Deshmukh</h5>
+              <span>Pune Franchise Partner</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="partner-testi-card reveal">
+          <p>"TrueKnack's brand credibility and NSDC partnership make it easy to win the trust of local graduates. The operational blueprint and marketing support they provided during our launch made setting up the center seamless. We've hit operational profitability in our first year."</p>
+          <div class="partner-testi-author">
+            <div class="partner-testi-avatar">PK</div>
+            <div class="partner-testi-details">
+              <h5>Priya Kulkarni</h5>
+              <span>Nagpur Franchise Partner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <div class="cta-double-grid">
+        <div class="cta-box reveal">
+          <h3>Want to Discuss Further?</h3>
+          <p>Have questions about territory exclusivity, fee split, or launch timelines? Reach out to our Franchise Development Team directly to get all your questions answered.</p>
+          <a href="tel:+919172155613" class="btn" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.95rem; border: 2px solid white; transition: var(--transition);">
+            <i class="fa-solid fa-phone"></i> Call: +91 91721 55613
+          </a>
+        </div>
+        
+        <div class="whatsapp-box reveal">
+          <h3>Join Our Community</h3>
+          <p>Connect with a community of visionary partners shaping the future of banking education through entrepreneurship, innovation, and mutual growth.</p>
+          <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="btn">
+            <i class="fa-brands fa-whatsapp"></i> Join Our Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="page-section" id="enquire">
+
     <div class="container">
       <h2 class="section-title-center reveal">Franchise Inquiry Form</h2>
       <p class="section-subtitle-center reveal">Submit your details below and our corporate alliance manager will get back to you with the franchise proposal kit.</p>
@@ -212,7 +499,7 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <div class="footer-logo">
-          <img src="logo-white.png" alt="TrueKnack Footer Logo">
+          <img src="logo-white.webp" alt="TrueKnack Footer Logo">
         </div>
         <p>Grooming university graduates into high-performing professional retail banking assets. The Knack of Finding True Talent.</p>
         <div class="footer-socials">
@@ -269,6 +556,10 @@
       </div>
     </div>
     
+    <div class="container footer-bottom">
+      <div>&copy; 2026 TrueKnack. All Rights Reserved.</div>
+      <div>The Knack of Finding True Talent</div>
+    </div>
   </footer>
 
   <!-- Floating WhatsApp + Call Buttons -->
