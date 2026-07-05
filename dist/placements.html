@@ -1,11 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/webp" sizes="64x64" href="favicon.webp">
   <title>Placements | TrueKnack - 6,000+ Banking Placements</title>
   <meta name="description" content="TrueKnack placement outcomes: 6,000+ graduates placed, highest package 4.5 LPA, and recruiters including Axis, HDFC, ICICI, Kotak, and IDFC First.">
+  <meta name="keywords" content="banking placements, bank job placement, TrueKnack placements, BFSI placement records, banking placement guarantee, private bank recruitment, placed students banking">
   <link rel="canonical" href="https://trueknack.com/placements.html">
   
   <!-- Open Graph -->
@@ -24,8 +27,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="index.min.css">
+  <link rel="stylesheet" href="chatbot.min.css">
   <style>
     .pl-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
     .pl-stat { background:var(--bg-white); border:1px solid var(--border-color); border-bottom:4px solid var(--accent); border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:28px 18px; text-align:center; }
@@ -33,12 +36,22 @@
     .pl-stat p { color:var(--text-muted); font-size:0.85rem; margin-top:6px; }
     @media(max-width:768px){ .pl-stats{grid-template-columns:repeat(2,1fr);} }
   </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Placements | TrueKnack",
+  "url": "https://www.trueknack.in/placements.html",
+  "description": "View TrueKnack's placement records – hundreds of graduates placed in HDFC, ICICI, Axis, Kotak, AU Bank and 25+ leading private banks across India."
+}
+  </script>
 </head>
 <body>
-<header>
+  <header>
     <div class="container navbar">
       <a href="index.html" class="logo">
-        <img src="logo.webp" alt="TrueKnack Logo">
+        <img src="logo.webp" alt="TrueKnack Logo" width="629" height="191">
       </a>
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link ">Home</a></li>
@@ -54,11 +67,8 @@
         <li class="has-dropdown">
           <a class="nav-link dropdown-toggle ">Courses <i class="fa-solid fa-chevron-down"></i></a>
           <ul class="nav-dropdown">
-            <li><a href="course-cbfs.html">CBFS Course</a></li>
-            <li><a href="course-po.html">PO Program</a></li>
-            <li><a href="course-dcb.html">DCB Bank Program</a></li>
-            <li><a href="course-ignite.html">IGNITE Program</a></li>
-            <li><a href="course-aurix.html">Aurix Bankers Program</a></li>
+            <li><a href="smart-banker-program.html">Smart Banker Program</a></li>
+            <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank">Aurix Bankers Program</a></li>
           </ul>
         </li>
         <li><a href="franchise.html" class="nav-link ">Franchise</a></li>
@@ -74,7 +84,7 @@
         <li><a href="careers.html" class="nav-link ">Career</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="index.html#contact" class="btn btn-primary">Apply Now! <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://smartbanker.trueknack.in/" target="_blank" class="btn btn-primary">Apply Now! <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="hamburger">
         <span></span>
@@ -99,7 +109,7 @@
       <div class="page-banner-image-side reveal-right">
         <div class="page-banner-image-wrapper">
           <div class="page-banner-image-circle">
-            <img src="images/team_celebrating.webp" alt="Placements & Career Outcomes" class="breathe-img">
+            <img loading="lazy" src="images/team_celebrating.webp" alt="Placements & Career Outcomes" class="breathe-img" width="1024" height="1024">
           </div>
         </div>
       </div>
@@ -111,56 +121,61 @@
     <div class="pl-stat reveal"><h3 class="stat-number" data-target="100" data-suffix="+">0+</h3><p>Hiring Partners</p></div>
     <div class="pl-stat reveal"><h3 class="stat-number" data-target="100" data-suffix="%">0%</h3><p>Placement Support</p></div>
   </div></div></section>
-  <section class="page-section alt"><div class="container"><h2 class="section-title-center reveal">Our Prospective Recruiters</h2><p class="section-subtitle-center reveal">Trained graduates get hired directly by leading private banks across India.</p></div>
+  <section class="page-section alt"><div class="container"><h2 class="section-title-center reveal">Our Prospective Recruiters</h2><p class="section-subtitle-center reveal">Trained graduates get hired by leading private banks across India.</p></div>
   <div class="recruiters-marquee-wrapper"><div class="recruiters-track">
-    <div class="recruiter-logo-card"><img src="images/banks/axis.svg" alt="Axis Bank"></div><div class="recruiter-logo-card"><img src="images/banks/hdfc.svg" alt="HDFC Bank"></div><div class="recruiter-logo-card"><img src="images/banks/kotak.svg" alt="Kotak Mahindra Bank"></div><div class="recruiter-logo-card"><img src="images/banks/yes.svg" alt="Yes Bank"></div><div class="recruiter-logo-card"><img src="images/banks/indusind.svg" alt="IndusInd Bank"></div><div class="recruiter-logo-card"><img src="images/banks/icici.svg" alt="ICICI Bank"></div><div class="recruiter-logo-card"><img src="images/banks/au.svg" alt="AU Small Finance Bank"></div><div class="recruiter-logo-card"><img src="images/banks/rbl.svg" alt="RBL Bank"></div><div class="recruiter-logo-card"><img src="images/banks/idfc.svg" alt="IDFC First Bank"></div><div class="recruiter-logo-card"><img src="images/banks/federal.svg" alt="Federal Bank"></div><div class="recruiter-logo-card"><img src="images/banks/bandhan.svg" alt="Bandhan Bank"></div><div class="recruiter-logo-card"><img src="images/banks/dcb.svg" alt="DCB Bank"></div>
-    <div class="recruiter-logo-card"><img src="images/banks/axis.svg" alt="Axis Bank"></div><div class="recruiter-logo-card"><img src="images/banks/hdfc.svg" alt="HDFC Bank"></div><div class="recruiter-logo-card"><img src="images/banks/kotak.svg" alt="Kotak Mahindra Bank"></div><div class="recruiter-logo-card"><img src="images/banks/yes.svg" alt="Yes Bank"></div><div class="recruiter-logo-card"><img src="images/banks/indusind.svg" alt="IndusInd Bank"></div><div class="recruiter-logo-card"><img src="images/banks/icici.svg" alt="ICICI Bank"></div><div class="recruiter-logo-card"><img src="images/banks/au.svg" alt="AU Small Finance Bank"></div><div class="recruiter-logo-card"><img src="images/banks/rbl.svg" alt="RBL Bank"></div><div class="recruiter-logo-card"><img src="images/banks/idfc.svg" alt="IDFC First Bank"></div><div class="recruiter-logo-card"><img src="images/banks/federal.svg" alt="Federal Bank"></div><div class="recruiter-logo-card"><img src="images/banks/bandhan.svg" alt="Bandhan Bank"></div><div class="recruiter-logo-card"><img src="images/banks/dcb.svg" alt="DCB Bank"></div>
+    <div class="recruiter-logo-card"><img loading="lazy" src="images/banks/hdfc.svg" alt="HDFC Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/axis.svg" alt="Axis Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/icici.svg" alt="ICICI Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/kotak.webp" alt="Kotak Mahindra Bank" width="5043" height="1488"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/indusind.svg" alt="IndusInd Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/yes.svg" alt="Yes Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/idfc.svg" alt="IDFC First Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/bandhan.svg" alt="Bandhan Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/dcb.svg" alt="DCB Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/rbl.svg" alt="RBL Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/au.webp" alt="AU Small Finance Bank" width="694" height="314"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/utkarsh.webp" alt="Utkarsh Bank" width="367" height="199"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/equitas.webp" alt="Equitas SFB" width="257" height="95"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/ujjivan.webp" alt="Ujjivan SFB" width="540" height="136"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/esaf.webp" alt="ESAF SFB" width="471" height="164"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/jana.webp" alt="Jana SFB" width="872" height="354"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/unity.webp" alt="Unity SFB" width="620" height="350"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/shivalik.webp" alt="Shivalik SFB" width="1009" height="244"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/piramal.webp" alt="Piramal Finance" width="937" height="376"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/tata.webp" alt="TATA Capital" width="1009" height="204"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/birla.webp" alt="Aditya Birla Finance" width="463" height="106"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/muthoot.webp" alt="Muthoot Finance" width="377" height="152"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/bharat.webp" alt="Bharat Financial" width="554" height="260"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/sahayog.webp" alt="Sahayog Multistate" width="600" height="120"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/iifl.webp" alt="IIFL Finance" width="1550" height="293"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/sbi-sec.webp" alt="State Bank of India" width="1359" height="330"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/sc.webp" alt="Standard Chartered" width="797" height="310"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/capri.webp" alt="Capri Global" width="1151" height="471"></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="recruiter-logo-card"><img loading="lazy" src="images/banks/hdfc.svg" alt="HDFC Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/axis.svg" alt="Axis Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/icici.svg" alt="ICICI Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/kotak.webp" alt="Kotak Mahindra Bank" width="5043" height="1488"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/indusind.svg" alt="IndusInd Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/yes.svg" alt="Yes Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/idfc.svg" alt="IDFC First Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/bandhan.svg" alt="Bandhan Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/dcb.svg" alt="DCB Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/rbl.svg" alt="RBL Bank" width="120" height="45"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/au.webp" alt="AU Small Finance Bank" width="694" height="314"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/utkarsh.webp" alt="Utkarsh Bank" width="367" height="199"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/equitas.webp" alt="Equitas SFB" width="257" height="95"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/ujjivan.webp" alt="Ujjivan SFB" width="540" height="136"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/esaf.webp" alt="ESAF SFB" width="471" height="164"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/jana.webp" alt="Jana SFB" width="872" height="354"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/unity.webp" alt="Unity SFB" width="620" height="350"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/shivalik.webp" alt="Shivalik SFB" width="1009" height="244"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/piramal.webp" alt="Piramal Finance" width="937" height="376"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/tata.webp" alt="TATA Capital" width="1009" height="204"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/birla.webp" alt="Aditya Birla Finance" width="463" height="106"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/muthoot.webp" alt="Muthoot Finance" width="377" height="152"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/bharat.webp" alt="Bharat Financial" width="554" height="260"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/sahayog.webp" alt="Sahayog Multistate" width="600" height="120"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/iifl.webp" alt="IIFL Finance" width="1550" height="293"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/sbi-sec.webp" alt="State Bank of India" width="1359" height="330"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/sc.webp" alt="Standard Chartered" width="797" height="310"></div><div class="recruiter-logo-card"><img loading="lazy" src="images/banks/capri.webp" alt="Capri Global" width="1151" height="471"></div>
   </div></div></section>
   <section class="placed-carousel"><div class="container"><h2 class="section-title-center reveal">Our Placed Students</h2></div>
   <div class="placed-track-wrapper"><div class="placed-track">
     <!-- Set 1 -->
-    <div class="placed-student-card"><img src="images/students/nikita-garud.webp" alt="Nikita Garud" loading="lazy"><h4>Nikita Garud</h4><p>Axis Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/akash-gavhane.webp" alt="Akash Gavhane" loading="lazy"><h4>Akash Gavhane</h4><p>Bandhan Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/anil-mulgir.webp" alt="Anil Mulgir" loading="lazy"><h4>Anil Mulgir</h4><p>Kotak Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/radhakishan-giram.webp" alt="Radhakishan Giram" loading="lazy"><h4>Radhakishan Giram</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/shivaji-gaikwad.webp" alt="Shivaji Gaikwad" loading="lazy"><h4>Shivaji Gaikwad</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/rani-ingole.webp" alt="Rani Ingole" loading="lazy"><h4>Rani Ingole</h4><p>Bandhan Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/nasir-bagwan.webp" alt="Nasir Bagwan" loading="lazy"><h4>Nasir Bagwan</h4><p>IDFC First Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/sakshi-jadhav.webp" alt="Sakshi Jadhav" loading="lazy"><h4>Sakshi Jadhav</h4><p>Axis Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/priti-yadav.webp" alt="Priti Yadav" loading="lazy"><h4>Priti Yadav</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/gajanan-bhalerao.webp" alt="Gajanan Bhalerao" loading="lazy"><h4>Gajanan Bhalerao</h4><p>Kotak Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/datta-gunde.webp" alt="Datta Gunde" loading="lazy"><h4>Datta Gunde</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/ganesh-mulgir.webp" alt="Ganesh Mulgir" loading="lazy"><h4>Ganesh Mulgir</h4><p>ICICI Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/sandeep-bhalerao.webp" alt="Sandeep Bhalerao" loading="lazy"><h4>Sandeep Bhalerao</h4><p>IndusInd Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/bharat-sawant.webp" alt="Bharat Sawant" loading="lazy"><h4>Bharat Sawant</h4><p>DCB Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/tukaram-echnar.webp" alt="Tukaram Echnar" loading="lazy"><h4>Tukaram Echnar</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/nikita-garud.webp" alt="Nikita Garud" loading="lazy" width="1139" height="1280"><h4>Nikita Garud</h4><p>Axis Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/akash-gavhane.webp" alt="Akash Gavhane" loading="lazy" width="748" height="983"><h4>Akash Gavhane</h4><p>Bandhan Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/anil-mulgir.webp" alt="Anil Mulgir" loading="lazy" width="1600" height="1204"><h4>Anil Mulgir</h4><p>Kotak Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/radhakishan-giram.webp" alt="Radhakishan Giram" loading="lazy" width="1200" height="1600"><h4>Radhakishan Giram</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/shivaji-gaikwad.webp" alt="Shivaji Gaikwad" loading="lazy" width="960" height="1280"><h4>Shivaji Gaikwad</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/rani-ingole.webp" alt="Rani Ingole" loading="lazy" width="1200" height="1600"><h4>Rani Ingole</h4><p>Bandhan Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/nasir-bagwan.webp" alt="Nasir Bagwan" loading="lazy" width="652" height="1160"><h4>Nasir Bagwan</h4><p>IDFC First Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/sakshi-jadhav.webp" alt="Sakshi Jadhav" loading="lazy" width="666" height="1180"><h4>Sakshi Jadhav</h4><p>Axis Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/priti-yadav.webp" alt="Priti Yadav" loading="lazy" width="1200" height="1600"><h4>Priti Yadav</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/gajanan-bhalerao.webp" alt="Gajanan Bhalerao" loading="lazy" width="990" height="1280"><h4>Gajanan Bhalerao</h4><p>Kotak Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/datta-gunde.webp" alt="Datta Gunde" loading="lazy" width="899" height="1599"><h4>Datta Gunde</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/ganesh-mulgir.webp" alt="Ganesh Mulgir" loading="lazy" width="1280" height="1280"><h4>Ganesh Mulgir</h4><p>ICICI Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/sandeep-bhalerao.webp" alt="Sandeep Bhalerao" loading="lazy" width="3072" height="4096"><h4>Sandeep Bhalerao</h4><p>IndusInd Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/bharat-sawant.webp" alt="Bharat Sawant" loading="lazy" width="794" height="1280"><h4>Bharat Sawant</h4><p>DCB Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/tukaram-echnar.webp" alt="Tukaram Echnar" loading="lazy" width="3024" height="4032"><h4>Tukaram Echnar</h4><p>HDFC Bank</p></div>
     
     <!-- Set 2 - Duplicate for seamless loop -->
-    <div class="placed-student-card"><img src="images/students/nikita-garud.webp" alt="Nikita Garud" loading="lazy"><h4>Nikita Garud</h4><p>Axis Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/akash-gavhane.webp" alt="Akash Gavhane" loading="lazy"><h4>Akash Gavhane</h4><p>Bandhan Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/anil-mulgir.webp" alt="Anil Mulgir" loading="lazy"><h4>Anil Mulgir</h4><p>Kotak Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/radhakishan-giram.webp" alt="Radhakishan Giram" loading="lazy"><h4>Radhakishan Giram</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/shivaji-gaikwad.webp" alt="Shivaji Gaikwad" loading="lazy"><h4>Shivaji Gaikwad</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/rani-ingole.webp" alt="Rani Ingole" loading="lazy"><h4>Rani Ingole</h4><p>Bandhan Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/nasir-bagwan.webp" alt="Nasir Bagwan" loading="lazy"><h4>Nasir Bagwan</h4><p>IDFC First Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/sakshi-jadhav.webp" alt="Sakshi Jadhav" loading="lazy"><h4>Sakshi Jadhav</h4><p>Axis Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/priti-yadav.webp" alt="Priti Yadav" loading="lazy"><h4>Priti Yadav</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/gajanan-bhalerao.webp" alt="Gajanan Bhalerao" loading="lazy"><h4>Gajanan Bhalerao</h4><p>Kotak Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/datta-gunde.webp" alt="Datta Gunde" loading="lazy"><h4>Datta Gunde</h4><p>HDFC Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/ganesh-mulgir.webp" alt="Ganesh Mulgir" loading="lazy"><h4>Ganesh Mulgir</h4><p>ICICI Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/sandeep-bhalerao.webp" alt="Sandeep Bhalerao" loading="lazy"><h4>Sandeep Bhalerao</h4><p>IndusInd Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/bharat-sawant.webp" alt="Bharat Sawant" loading="lazy"><h4>Bharat Sawant</h4><p>DCB Bank</p></div>
-    <div class="placed-student-card"><img src="images/students/tukaram-echnar.webp" alt="Tukaram Echnar" loading="lazy"><h4>Tukaram Echnar</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/nikita-garud.webp" alt="Nikita Garud" loading="lazy" width="1139" height="1280"><h4>Nikita Garud</h4><p>Axis Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/akash-gavhane.webp" alt="Akash Gavhane" loading="lazy" width="748" height="983"><h4>Akash Gavhane</h4><p>Bandhan Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/anil-mulgir.webp" alt="Anil Mulgir" loading="lazy" width="1600" height="1204"><h4>Anil Mulgir</h4><p>Kotak Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/radhakishan-giram.webp" alt="Radhakishan Giram" loading="lazy" width="1200" height="1600"><h4>Radhakishan Giram</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/shivaji-gaikwad.webp" alt="Shivaji Gaikwad" loading="lazy" width="960" height="1280"><h4>Shivaji Gaikwad</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/rani-ingole.webp" alt="Rani Ingole" loading="lazy" width="1200" height="1600"><h4>Rani Ingole</h4><p>Bandhan Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/nasir-bagwan.webp" alt="Nasir Bagwan" loading="lazy" width="652" height="1160"><h4>Nasir Bagwan</h4><p>IDFC First Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/sakshi-jadhav.webp" alt="Sakshi Jadhav" loading="lazy" width="666" height="1180"><h4>Sakshi Jadhav</h4><p>Axis Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/priti-yadav.webp" alt="Priti Yadav" loading="lazy" width="1200" height="1600"><h4>Priti Yadav</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/gajanan-bhalerao.webp" alt="Gajanan Bhalerao" loading="lazy" width="990" height="1280"><h4>Gajanan Bhalerao</h4><p>Kotak Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/datta-gunde.webp" alt="Datta Gunde" loading="lazy" width="899" height="1599"><h4>Datta Gunde</h4><p>HDFC Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/ganesh-mulgir.webp" alt="Ganesh Mulgir" loading="lazy" width="1280" height="1280"><h4>Ganesh Mulgir</h4><p>ICICI Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/sandeep-bhalerao.webp" alt="Sandeep Bhalerao" loading="lazy" width="3072" height="4096"><h4>Sandeep Bhalerao</h4><p>IndusInd Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/bharat-sawant.webp" alt="Bharat Sawant" loading="lazy" width="794" height="1280"><h4>Bharat Sawant</h4><p>DCB Bank</p></div>
+    <div class="placed-student-card"><img src="images/students/tukaram-echnar.webp" alt="Tukaram Echnar" loading="lazy" width="3024" height="4032"><h4>Tukaram Echnar</h4><p>HDFC Bank</p></div>
   </div></div></section>
   <section class="page-section"><div class="container"><h2 class="section-title-center reveal">Guest Lectures &amp; Placement Workshops</h2><p class="section-subtitle-center reveal">Regular industry guest lectures, mock interviews, and placement workshops led by senior ex-bankers prepare every graduate for real branch roles before placement day.</p><div style="text-align:center;"><a href="contact.html" class="btn btn-primary reveal">Talk to Placement Team <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
     <footer>
     <div class="container footer-grid">
       <div class="footer-col">
         <div class="footer-logo">
-          <img src="logo-white.webp" alt="TrueKnack Footer Logo">
+          <img loading="lazy" src="logo-white.webp" alt="TrueKnack Footer Logo" width="628" height="191">
         </div>
-        <p>Grooming university graduates into high-performing professional retail banking assets. The Knack of Finding True Talent.</p>
+        <p style="margin-top: 10px; font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.7); font-family: var(--font-body); text-align: left;">
+          <strong>Head Office:</strong><br>
+          2nd Floor, 201, Bhairaav Milestone, Wagle Industrial Estate, Thane West, Maharashtra - 400604
+        </p>
         <div class="footer-socials">
+          <a href="https://wa.me/919967049610" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="https://www.facebook.com/profile.php?id=61585407331946" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.linkedin.com/company/institute-of-retail-banking-finance-irbf/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://www.instagram.com/irbf_instituteofbanking" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -171,11 +186,8 @@
       <div class="footer-col">
         <h3>Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="course-cbfs.html">CBFS Course</a></li>
-          <li><a href="course-po.html">PO Program</a></li>
-          <li><a href="course-ignite.html">IGNITE Program</a></li>
-          <li><a href="course-aurix.html">Aurix Bankers Program</a></li>
-          <li><a href="course-dcb.html">DCB Bank Program</a></li>
+          <li><a href="smart-banker-program.html">Smart Banker Program</a></li>
+          <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank">Aurix Bankers Program</a></li>
           <li><a href="blogs.html">Blog</a></li>
         </ul>
       </div>
@@ -193,25 +205,22 @@
       </div>
 
       <div class="footer-col">
-        <h3>Head Office</h3>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <div>
-            Wagle Industrial Estate, Thane West,<br>
-            Maharashtra - 400604
-          </div>
-        </div>
+        <h3>Contacts</h3>
         <div class="footer-contact-item">
           <i class="fa-solid fa-phone"></i>
-          <div>+91 91721 55613</div>
+          <div>+91 99670 49610</div>
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-envelope"></i>
           <div>info@trueknack.com</div>
         </div>
-        <div class="footer-contact-item" style="margin-top: 8px;">
+      </div>
+
+      <div class="footer-col">
+        <h3>Working Hours</h3>
+        <div class="footer-contact-item">
           <i class="fa-solid fa-clock"></i>
-          <div>9:00 AM - 6:00 PM, Mon - Sat</div>
+          <div>9:00 AM - 6:00 PM, Monday - Saturday</div>
         </div>
       </div>
     </div>
@@ -223,14 +232,22 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp + Call Buttons -->
-  <a href="https://wa.me/919172155613" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-  <a href="tel:+919172155613" class="floating-call" aria-label="Call Now">
-    <i class="fa-solid fa-phone"></i>
-  </a>
+  
   <script src="script.js"></script>
   <script src="chatbot.js"></script>
+
+  
+  
+      
+  
+
+
+  
+  <a href="https://wa.me/919967049610" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="tel:+919967049610" class="floating-call" aria-label="Call Now"><i class="fa-solid fa-phone"></i></a>
+
+
+
+
 </body>
 </html>

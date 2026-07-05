@@ -48,12 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
     chatbotContainer.id = 'trueknack-chatbot-container';
     chatbotContainer.innerHTML = `
       <div class="chatbot-launcher">
-        <i class="fa-solid fa-comments"></i>
+        <img src="images/chatbot_agent.webp?v=7" alt="Chatbot Launcher" class="chatbot-launcher-img">
+        <i class="fa-solid fa-xmark chatbot-close-icon" style="display: none;"></i>
+        <span class="chatbot-launcher-badge">Hi!</span>
       </div>
       <div class="chatbot-window">
         <div class="chatbot-header">
           <div class="chatbot-avatar">
-            <i class="fa-solid fa-user-tie"></i>
+            <img src="images/chatbot_agent.webp?v=7" alt="Knacky Avatar" class="chatbot-avatar-img">
           </div>
           <div class="chatbot-header-info">
             <h4>Knacky 🚀</h4>
@@ -290,9 +292,9 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (query.includes('contact') || query.includes('call') || query.includes('number') || query.includes('phone') || query.includes('email') || query.includes('support')) {
         addBotMessage(
           "Let's chat! Our friendly advisor team is ready to answer all your questions and guide you:\n\n" +
-          "📞 **Admissions Helpline**: +91 91721 55613\n" +
+          "📞 **Admissions Helpline**: +91 99670 49610\n" +
           "📧 **Email**: info@trueknack.com\n" +
-          "💬 **WhatsApp**: [Click here to Chat directly!](https://wa.me/919172155613)\n\n" +
+          "💬 **WhatsApp**: [Click here to Chat directly!](https://wa.me/919967049610)\n\n" +
           "Helpline hours: Mon - Sat, 9:00 AM - 6:00 PM. Talk soon! 😊",
           [
             { text: "Back to Menu", reply: "menu" }
@@ -303,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addBotMessage(
           "Fantastic choice! I'm so excited you're ready to start your journey! 🌟 Here are the easiest ways to apply:\n\n" +
           "1️⃣ Fill out the application form on the [Contact Us](#contact) page.\n" +
-          "2️⃣ Call Admissions directly at **+91 91721 55613**.\n" +
+          "2️⃣ Call Admissions directly at **+91 99670 49610**.\n" +
           "3️⃣ Or request a callback below and we'll reach out to you!\n\n" +
           "Let's build your future together! 🚀",
           [
@@ -315,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (query.includes('recruiters') || query.includes('banks')) {
         addBotMessage(
           "We partner with the best in the industry! 🤝 Our graduates are highly sought after by premier financial brands:\n\n" +
-          "🏦 Axis Bank, HDFC Bank, Kotak Mahindra, IndusInd Bank, Yes Bank, ICICI Bank, AU Small Finance Bank, Federal Bank, and Bandhan Bank.",
+          "🏦 Axis Bank, HDFC Bank, Kotak Mahindra, IndusInd Bank, Yes Bank, ICICI Bank, AU Small Finance Bank, and Bandhan Bank.",
           [
             { text: "Placement Record", reply: "placement" },
             { text: "Main Menu", reply: "menu" }

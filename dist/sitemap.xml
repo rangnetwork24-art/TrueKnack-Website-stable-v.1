@@ -6,11 +6,6 @@
   <url><loc>https://trueknack.com/placements.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://trueknack.com/franchise.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://trueknack.com/contact.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://trueknack.com/course-cbfs.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://trueknack.com/course-po.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://trueknack.com/course-dcb.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://trueknack.com/course-ignite.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://trueknack.com/course-aurix.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://trueknack.com/team.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://trueknack.com/centers.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://trueknack.com/careers.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
@@ -22,4 +17,5 @@
   <url><loc>https://trueknack.com/privacy-policy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://trueknack.com/terms.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://trueknack.com/no-refund-policy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://trueknack.com/smart-banker-program.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 </urlset>

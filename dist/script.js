@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+
   // === HEADER SCROLL EFFECT ===
   const header = document.querySelector('header');
   if (header) {
@@ -28,9 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close menu on link click
+  // Close menu on link click (excluding dropdown accordions)
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
+      if (link.classList.contains('dropdown-toggle')) return;
       if (hamburger) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
@@ -303,4 +306,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // === WHATSAPP WIDGET TOGGLE ===
+  const waToggle = document.getElementById('waToggle');
+  const waPopup = document.getElementById('waPopup');
+  
+  if (waToggle && waPopup) {
+    waToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      waPopup.classList.toggle('active');
+    });
+    
+    document.addEventListener('click', (e) => {
+      if (!waPopup.contains(e.target) && !waToggle.contains(e.target)) {
+        waPopup.classList.remove('active');
+      }
+    });
+  }
+
+
+
+
+  // === MOBILE READ MORE TOGGLE ===
+  if (window.innerWidth <= 768) {
+    const selectors = '.program-box p, .testimonial-card p, .blog-card p, .faq-answer p, .about-content p';
+    document.querySelectorAll(selectors).forEach(el => {
+      const text = el.innerText.trim();
+      if (text.length > 140) {
+        const truncated = text.substring(0, 120) + '...';
+        el.setAttribute('data-full-text', text);
+        el.setAttribute('data-truncated-text', truncated);
+        el.innerHTML = truncated + ' <span class="read-more-toggle" style="color: var(--secondary); font-weight: 700; cursor: pointer; margin-left: 5px; text-decoration: underline;">Read More</span>';
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (e.target && e.target.classList.contains('read-more-toggle')) {
+        const parent = e.target.parentElement;
+        const full = parent.getAttribute('data-full-text');
+        const truncated = parent.getAttribute('data-truncated-text');
+        
+        if (e.target.textContent === 'Read More') {
+          parent.innerHTML = full + ' <span class="read-more-toggle" style="color: var(--secondary); font-weight: 700; cursor: pointer; margin-left: 5px; text-decoration: underline;">Read Less</span>';
+        } else {
+          parent.innerHTML = truncated + ' <span class="read-more-toggle" style="color: var(--secondary); font-weight: 700; cursor: pointer; margin-left: 5px; text-decoration: underline;">Read More</span>';
+        }
+      }
+    });
+  }
+
 });
+

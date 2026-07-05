@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
+  <circle cx="24" cy="24" r="22" fill="#005691" />
+  <circle cx="24" cy="24" r="19" fill="none" stroke="#ffffff" stroke-width="2" />
+  <path d="M15 24l6 6 12-12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="24" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="7" fill="#ffffff">ISO 9001</text>
+</svg>

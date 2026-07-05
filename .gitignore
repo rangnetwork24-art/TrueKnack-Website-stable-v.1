@@ -7,3 +7,14 @@ rebrand.py
 *.ini
 .gemini/
 *.log
+
+# Root-level raw source images
+/*.png
+/*.jpg
+/*.webp
+/*.jpeg
+
+# Local recovery & temp directories
+/trueknacksiteV3 (revovery file)/
+/ponytail-main/
+/docs/
