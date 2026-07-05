@@ -305,7 +305,7 @@ h1:hover, h2:hover, h3:hover {
   font-size: 0.85rem;
 }
 .top-bar-left .partner-logo {
-  height: 38px;
+  height: 50px;
   width: auto;
   object-fit: contain;
   display: inline-block;
@@ -396,7 +396,7 @@ h1:hover, h2:hover, h3:hover {
     font-size: 0.8rem;
   }
   .top-bar-left .partner-logo {
-    height: 30px;
+    height: 36px;
   }
 }
 
@@ -2413,7 +2413,7 @@ h1:hover, h2:hover, h3:hover {
   font-size: 0.85rem;
 }
 .top-bar-left .partner-logo {
-  height: 38px;
+  height: 50px;
   width: auto;
   object-fit: contain;
   display: inline-block;
@@ -2504,7 +2504,7 @@ h1:hover, h2:hover, h3:hover {
     font-size: 0.8rem;
   }
   .top-bar-left .partner-logo {
-    height: 30px;
+    height: 36px;
   }
 }
 
