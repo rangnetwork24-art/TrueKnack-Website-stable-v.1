@@ -314,7 +314,7 @@ h1:hover, h2:hover, h3:hover {
   height: 72px;
 }
 .top-bar-left .partner-logo[src*="skill-india"] {
-  height: 70px;
+  height: 92px;
 }
 .top-bar-left .separator {
   color: var(--border-color);
@@ -405,7 +405,7 @@ h1:hover, h2:hover, h3:hover {
     height: 72px;
   }
   .top-bar-left .partner-logo[src*="skill-india"] {
-    height: 70px;
+    height: 92px;
   }
 }
 
@@ -2766,7 +2766,7 @@ h1:hover, h2:hover, h3:hover {
   height: 72px;
 }
 .top-bar-left .partner-logo[src*="skill-india"] {
-  height: 70px;
+  height: 92px;
 }
 .top-bar-left .separator {
   color: var(--border-color);
@@ -2857,7 +2857,7 @@ h1:hover, h2:hover, h3:hover {
     height: 72px;
   }
   .top-bar-left .partner-logo[src*="skill-india"] {
-    height: 70px;
+    height: 92px;
   }
 }
 
