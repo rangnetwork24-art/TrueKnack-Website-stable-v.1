@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_ipb_comparison/
+Disallow: /404.html
+
+Sitemap: https://www.trueknack.in/sitemap.xml

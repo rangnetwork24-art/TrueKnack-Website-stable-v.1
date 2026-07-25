@@ -1,0 +1,67 @@
+# Enable Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml application/xhtml+xml application/rss+xml application/javascript image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype font/otf font/ttf image/x-icon
+</IfModule>
+
+# Enable Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  
+  # CSS and JS
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # HTML and data
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
+  
+  # Fallback
+  ExpiresDefault "access plus 1 month"
+</IfModule>
+
+# Security Headers & Vary Encoding
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Content-Security-Policy "upgrade-insecure-requests"
+  Header append Vary Accept-Encoding
+  
+  # Cache static assets (images, fonts, css, js) for 1 year
+  <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|webp|js|css|woff2|woff|ttf|otf|svg)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# Force HTTPS and www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect non-www to www
+  RewriteCond %{HTTP_HOST} ^trueknack\.in [NC]
+  RewriteRule ^(.*)$ https://www.trueknack.in/$1 [L,R=301]
+
+  # Redirect to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
