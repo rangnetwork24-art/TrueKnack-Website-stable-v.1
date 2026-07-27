@@ -6,11 +6,11 @@ This document contains rules, guidelines, and workflows specific to the **TrueKn
 
 ## 1. Project Coding Standards
 
-* **Structure**: Maintain a clean, flat static site structure inside the [dist/](file:///c:/Users/Kaushik%20Ghosh/Downloads/trueknacksiteV3/dist) directory.
+* **Structure**: Maintain a clean, flat static site structure inside the `public_html/` directory.
 * **HTML/CSS/JS ONLY**:
   * Structuring: Semantic HTML5 elements (`<header>`, `<main>`, `<section>`, `<footer>`).
-  * Styling: Use vanilla CSS in [index.css](file:///c:/Users/Kaushik%20Ghosh/Downloads/trueknacksiteV3/dist/index.css). Keep style rules organized by page/component.
-  * Logic: Keep custom interactions in [script.js](file:///c:/Users/Kaushik%20Ghosh/Downloads/trueknacksiteV3/dist/script.js) and chatbot logic in [chatbot.js](file:///c:/Users/Kaushik%20Ghosh/Downloads/trueknacksiteV3/dist/chatbot.js).
+  * Styling: Use vanilla CSS in `public_html/index.css`. Keep style rules organized by page/component.
+  * Logic: Keep custom interactions in `public_html/script.js` and chatbot logic in `public_html/chatbot.js`.
 * **SEO Best Practices**:
   * Every page MUST have unique, optimized Title tags, Meta descriptions, Open Graph meta tags, and structured JSON-LD data.
   * Ensure a single `<h1>` tag per page and proper hierarchical heading nesting (`<h2>`, `<h3>`).
@@ -32,21 +32,23 @@ When adapting content or reference pages from **IPB (Institute of Professional B
   * Replace the IPB logo with `logo.webp` (for light backgrounds) and `logo-white.webp` (for dark backgrounds).
   * Replace default favicons with `favicon.webp`.
 * **Program/Course Mappings**:
-  * Ensure the custom *Aurix Bankers Program* ([course-aurix.html](file:///c:/Users/Kaushik%20Ghosh/Downloads/trueknacksiteV3/dist/course-aurix.html)) is correctly linked instead of the old IPB Bandhan Bank program page.
+  * Ensure the custom *Aurix Bankers Program* (`course-aurix.html`) is correctly linked instead of the old IPB Bandhan Bank program page.
 
 ---
 
 ## 3. Local Development Workflow
 
 1. **Start the Local Server**:
-   * Run the development server using: `npx -y http-server dist -p 8080`
+   * Run the development server using: `npx -y http-server public_html -p 8080`
    * Keep it running in the background.
 2. **Implement Changes**:
-   * Edit or create files directly in the `dist/` directory.
+   * Edit or create files directly in the `public_html/` directory.
    * Add any new pages matching the navigation layout.
 3. **Verify Layout & Responsive Behavior**:
    * Inspect layouts locally at `http://127.0.0.1:8080/`.
    * Test mobile views and interactive elements (mobile hamburger menu, dropdowns, carousels, and the chatbot).
+4. **Git Workflow**:
+   * **Do NOT Auto-Commit/Push**: Never commit or push changes to Git automatically after edits. Only execute `git commit` and `git push` when explicitly asked by the user or after requesting permission.
 
 ---
 
