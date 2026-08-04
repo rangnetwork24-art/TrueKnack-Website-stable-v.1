@@ -331,14 +331,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       else if (query.includes('apply') || query.includes('register') || query.includes('admission')) {
         addBotMessage(
-          "Fantastic choice! I'm so excited you're ready to start your journey! 🌟 Here are the easiest ways to apply:\n\n" +
-          "1️⃣ Fill out the application form on the [Contact Us](#contact) page.\n" +
-          "2️⃣ Call Admissions directly at **+91 91721 55613**.\n" +
-          "3️⃣ Or request a callback below and we'll reach out to you!\n\n" +
+          "Fantastic choice! I'm so excited you're ready to start your banking career! 🌟 Here are the direct links to apply:\n\n" +
+          "👔 **AURIX Bankers Program (AU Bank)**:\n" +
+          "👉 [Click here to Apply for Screening](https://aubankaurixprogram.trueknack.in/)\n\n" +
+          "🎓 **Smart Banker Program**:\n" +
+          "👉 [Click here to Apply on Smart Banker Portal](https://smartbanker.trueknack.in/)\n\n" +
+          "📞 **Admissions Helpline**:\n" +
+          "Call **+91 91721 55613** or [Chat with us on WhatsApp](https://wa.me/919967049610).\n\n" +
           "Let's build your future together! 🚀",
           [
-            { text: "Request Callback", reply: "contact" },
-            { text: "Main Menu", reply: "menu" }
+            { text: "Aurix Program Portal 👔", reply: "aurix" },
+            { text: "Smart Banker Portal 🎓", reply: "smartbanker" },
+            { text: "Request Callback 📞", reply: "contact" }
           ]
         );
       }
