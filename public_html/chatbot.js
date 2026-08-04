@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addBotMessage(
           "Let's chat! Our friendly advisor team is ready to answer all your questions and guide you:\n\n" +
           "📞 **Admissions Helpline**: +91 91721 55613\n" +
-          "📧 **Email**: info@trueknack.com\n" +
+          "📧 **Email**: info@trueknack.in\n" +
           "💬 **WhatsApp**: [Click here to Chat directly!](https://wa.me/919967049610)\n\n" +
           "Helpline hours: Mon - Sat, 9:00 AM - 7:00 PM. Talk soon! 😊",
           [
