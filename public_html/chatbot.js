@@ -222,13 +222,35 @@ document.addEventListener('DOMContentLoaded', () => {
           ]
         );
       } 
-      else if (query.includes('aurix') || query.includes('au bank') || query.includes('au small') || query.includes('po') || query.includes('utkarsh') || query.includes('dcb') || query.includes('ignite') || query.includes('equitas')) {
+      else if (query.includes('aurix') || query.includes('au bank') || query.includes('au small')) {
         addBotMessage(
-          "Superb choice! The **Aurix Bankers Program** in partnership with AU Small Finance Bank is a premium job-assured course:\n\n" +
-          "- ⏱️ **Duration**: 3 Months (45 days residential classroom training at Baddi University campus + 45 days on-the-job training at AU Small Finance Bank).\n" +
-          "- 🎓 **Eligibility**: Regular graduation with min. 50% marks, aged 21-28 years.\n" +
-          "- 🎯 **Starting CTC**: AM-I role starting up to ₹ 4.5 LPA.\n" +
-          "- 📚 **Highlights**: Job offer letter is issued before training begins.",
+          "Superb choice! The **AURIX Bankers Program** in partnership with **AU Small Finance Bank** is an official banking career program:\n\n" +
+          "- ⏱️ **Duration**: 1 Month Online Training + 2 Months Paid Internship in AU Bank Branch.\n" +
+          "- 💼 **Target Role**: Bank Officer at AU Small Finance Bank.\n" +
+          "- 🎓 **Eligibility**: Graduation min. 50% marks from a recognized university, Age up to 26 years.\n" +
+          "- 💰 **Stipend**: INR 12,000 total stipend (from AU Bank) during 2-month internship.\n" +
+          "- 🎯 **Starting CTC**: **₹ 3,50,000 P.A.** + Variable Incentives upon clearing final interview.\n" +
+          "- 💸 **Program Fee**: ₹ 35,000 + 18% GST.\n\n" +
+          "🔗 [Apply for Aurix Program Screening](https://aubankaurixprogram.trueknack.in/)",
+          [
+            { text: "Program Journey 🚀", reply: "aurix_journey" },
+            { text: "How to Apply 📝", reply: "apply" },
+            { text: "Main Menu 🏠", reply: "menu" }
+          ]
+        );
+      }
+      else if (query.includes('aurix_journey') || query.includes('journey') || query.includes('steps')) {
+        addBotMessage(
+          "Here is your structured 8-step path to start your career in **AU Small Finance Bank**:\n\n" +
+          "1️⃣ **Application & Screening** by TrueKnack Team\n" +
+          "2️⃣ **Enrollment**: Program Fee (₹35,000 + 18% GST)\n" +
+          "3️⃣ **1-Month Online Training** by TrueKnack (Banking fundamentals, sales readiness & workplace skills)\n" +
+          "4️⃣ **2-Month Paid Internship (OJT)** in an AU Bank Branch\n" +
+          "5️⃣ **OJT Stipend**: INR 12,000 total stipend from AU Bank\n" +
+          "6️⃣ **Final Bank Interview** by AU Small Finance Bank\n" +
+          "7️⃣ **Offer / Joining Letter** as Bank Officer (₹ 3,50,000 P.A. + Variable Incentives)\n" +
+          "8️⃣ **Start Your Career** in AU Bank! 🏦\n\n" +
+          "🔗 [Click here to Book Your Screening](https://aubankaurixprogram.trueknack.in/)",
           [
             { text: "How to Apply", reply: "apply" },
             { text: "Main Menu", reply: "menu" }
@@ -248,26 +270,37 @@ document.addEventListener('DOMContentLoaded', () => {
       } 
       else if (query.includes('fee') || query.includes('cost') || query.includes('duration') || query === 'fees') {
         addBotMessage(
-          "We offer flexible payment options to help you invest in your future:\n\n" +
-          "- **Smart Banker Program**: ₹ 50,000 + GST (Flexible installments & 0% interest loan options available).\n" +
-          "- **Aurix Bankers Program**: Contact our advisor for detailed fees and sponsorship structures.\n\n" +
-          "Would you like our admissions advisor to contact you with details?",
+          "Here are the fee and duration details for our banking programs:\n\n" +
+          "1️⃣ **Smart Banker Program**:\n" +
+          "- ⏱️ **Duration**: 3 Months (Online Training)\n" +
+          "- 💸 **Fee**: ₹ 50,000 + GST (Installment & 0% interest loan options available)\n\n" +
+          "2️⃣ **AURIX Bankers Program (AU Bank)**:\n" +
+          "- ⏱️ **Duration**: 1 Month Online Training + 2 Months Paid Branch Internship\n" +
+          "- 💸 **Program Fee**: ₹ 35,000 + 18% GST\n" +
+          "- 💰 **Stipend**: INR 12,000 total stipend paid by AU Bank during internship\n\n" +
+          "🔗 [Apply for Aurix Screening](https://aubankaurixprogram.trueknack.in/)",
           [
-            { text: "Yes, Request Callback", reply: "contact" },
+            { text: "Apply for Aurix", reply: "aurix" },
+            { text: "Request Callback", reply: "contact" },
             { text: "Main Menu", reply: "menu" }
           ]
         );
       } 
       else if (query.includes('eligibility') || query.includes('eligible') || query.includes('qualification')) {
         addBotMessage(
-          "Eligibility criteria for our programs generally require:\n\n" +
-          "- 🎓 **Education**: Graduation in regular mode with minimum 50% marks.\n" +
-          "- 👶 **Age Limit**: Aged between 21-28 years.\n" +
-          "- 📍 **Centers**: Local counseling is available at our verified Maharashtra centers (Thane, Pune, Mumbai, Nagpur, Sambhajinagar).\n\n" +
+          "Eligibility criteria for our programs:\n\n" +
+          "🎓 **Aurix Bankers Program (AU Small Finance Bank)**:\n" +
+          "- **Education**: Graduate with min. 50% marks from a recognized University\n" +
+          "- **Age**: Up to 26 Years\n" +
+          "- **Skills**: Basic English communication preferred\n" +
+          "- **Gender & Location**: Male & Female candidates, Open Pan India\n\n" +
+          "🎓 **Smart Banker Program**:\n" +
+          "- **Education**: Graduation in regular mode with min. 50% marks\n" +
+          "- **Age**: 21 to 28 Years\n\n" +
           "Ask me about a specific program to check your fit!",
           [
-            { text: "Check Smart Banker", reply: "smartbanker" },
             { text: "Check Aurix Program", reply: "aurix" },
+            { text: "Check Smart Banker", reply: "smartbanker" },
             { text: "Main Menu", reply: "menu" }
           ]
         );
