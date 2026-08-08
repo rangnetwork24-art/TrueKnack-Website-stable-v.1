@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (query.includes('aurix') || query.includes('au bank') || query.includes('au small')) {
         addBotMessage(
           "Superb choice! The **AURIX Bankers Program** in partnership with **AU Small Finance Bank** is an official banking career program:\n\n" +
-          "- ⏱️ **Duration**: 1 Month Online Training + 2 Months Paid Internship in AU Bank Branch.\n" +
+          "- ⏱️ **Duration**: 1 Month intensive training program.\n" +
           "- 💼 **Target Role**: Bank Officer at AU Small Finance Bank.\n" +
           "- 🎓 **Eligibility**: Graduation min. 50% marks from a recognized university, Age up to 26 years.\n" +
           "- 💰 **Stipend**: INR 12,000 total stipend (from AU Bank) during 2-month internship.\n" +
