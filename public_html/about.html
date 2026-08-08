@@ -100,11 +100,11 @@
     .about-aim-banner {
       background: var(--bg-light);
       border-left: 5px solid var(--secondary);
-      padding: 40px;
+      padding: 36px 40px;
       border-radius: var(--radius);
       text-align: center;
       margin: 40px auto 80px;
-      max-width: 900px;
+      max-width: 1100px;
       box-shadow: var(--shadow-sm);
     }
     .about-aim-banner h3 {
@@ -115,10 +115,17 @@
       letter-spacing: 0.5px;
     }
     .about-aim-banner p {
-      font-size: 1.8rem;
+      font-size: clamp(1.3rem, 2.2vw, 1.75rem);
       font-family: var(--font-headings);
       font-weight: 800;
       color: var(--primary);
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .about-aim-banner p {
+        white-space: normal;
+      }
     }
 
     /* Mission / Vision Cards */
