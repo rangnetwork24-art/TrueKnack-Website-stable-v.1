@@ -521,12 +521,12 @@ header.scrolled {
 }
 .page-banner-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 48px;
 }
 .page-banner-content {
-  max-width: 680px;
+  max-width: 100%;
 }
 .page-banner h1 { 
   color: var(--bg-white); 
@@ -537,10 +537,11 @@ header.scrolled {
 }
 .page-banner p { 
   color: rgba(255,255,255,0.9); 
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   font-weight: 600;
   line-height: 1.6;
   margin-bottom: 0;
+  white-space: nowrap;
 }
 .page-banner .breadcrumb { 
   margin-top: 20px; 
@@ -598,7 +599,8 @@ header.scrolled {
   .page-banner-content {
     margin: 0 auto;
   }
-  .page-banner h1 {
+  .page-banner h1,
+  .page-banner p {
     white-space: normal;
   }
   .page-banner-image-side {
@@ -2979,12 +2981,12 @@ header.scrolled {
 }
 .page-banner-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 48px;
 }
 .page-banner-content {
-  max-width: 680px;
+  max-width: 100%;
 }
 .page-banner h1 { 
   color: var(--bg-white); 
@@ -2995,10 +2997,11 @@ header.scrolled {
 }
 .page-banner p { 
   color: rgba(255,255,255,0.9); 
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   font-weight: 600;
   line-height: 1.6;
   margin-bottom: 0;
+  white-space: nowrap;
 }
 .page-banner .breadcrumb { 
   margin-top: 20px; 
@@ -3056,7 +3059,8 @@ header.scrolled {
   .page-banner-content {
     margin: 0 auto;
   }
-  .page-banner h1 {
+  .page-banner h1,
+  .page-banner p {
     white-space: normal;
   }
   .page-banner-image-side {
