@@ -530,9 +530,10 @@ header.scrolled {
 }
 .page-banner h1 { 
   color: var(--bg-white); 
-  font-size: 2.6rem; 
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem); 
   margin-bottom: 14px; 
   line-height: 1.2;
+  white-space: nowrap;
 }
 .page-banner p { 
   color: rgba(255,255,255,0.85); 
@@ -595,6 +596,9 @@ header.scrolled {
   }
   .page-banner-content {
     margin: 0 auto;
+  }
+  .page-banner h1 {
+    white-space: normal;
   }
   .page-banner-image-side {
     margin-top: 16px;
@@ -2983,9 +2987,10 @@ header.scrolled {
 }
 .page-banner h1 { 
   color: var(--bg-white); 
-  font-size: 2.6rem; 
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem); 
   margin-bottom: 14px; 
   line-height: 1.2;
+  white-space: nowrap;
 }
 .page-banner p { 
   color: rgba(255,255,255,0.85); 
@@ -3048,6 +3053,9 @@ header.scrolled {
   }
   .page-banner-content {
     margin: 0 auto;
+  }
+  .page-banner h1 {
+    white-space: normal;
   }
   .page-banner-image-side {
     margin-top: 16px;
