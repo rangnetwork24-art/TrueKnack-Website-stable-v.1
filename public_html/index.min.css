@@ -311,10 +311,10 @@ h1:hover, h2:hover, h3:hover {
   display: inline-block;
 }
 .top-bar-left .partner-logo[src*="nsdc"] {
-  height: 72px;
+  height: 102px;
 }
 .top-bar-left .partner-logo[src*="skill-india"] {
-  height: 70px;
+  height: 102px;
 }
 .top-bar-left .partner-logo[src*="bfsi"] {
   height: 102px;
@@ -405,10 +405,10 @@ h1:hover, h2:hover, h3:hover {
     font-size: 0.8rem;
   }
   .top-bar-left .partner-logo[src*="nsdc"] {
-    height: 72px;
+    height: 102px;
   }
   .top-bar-left .partner-logo[src*="skill-india"] {
-    height: 70px;
+    height: 102px;
   }
   .top-bar-left .partner-logo[src*="bfsi"] {
     height: 102px;
@@ -2906,10 +2906,10 @@ h1:hover, h2:hover, h3:hover {
     font-size: 0.8rem;
   }
   .top-bar-left .partner-logo[src*="nsdc"] {
-    height: 72px;
+    height: 102px;
   }
   .top-bar-left .partner-logo[src*="skill-india"] {
-    height: 70px;
+    height: 102px;
   }
   .top-bar-left .partner-logo[src*="bfsi"] {
     height: 102px;
