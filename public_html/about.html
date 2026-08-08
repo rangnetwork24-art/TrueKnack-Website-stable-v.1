@@ -235,6 +235,75 @@
       line-height: 1.5;
     }
 
+    /* Why Choose Us Dark Grid Section */
+    .why-choose-section {
+      background: linear-gradient(145deg, #16080b 0%, #280b10 40%, #170709 100%);
+      padding: 90px 0;
+      color: #ffffff;
+      position: relative;
+    }
+    .why-choose-header {
+      margin-bottom: 40px;
+    }
+    .why-choose-title {
+      font-size: 2.1rem;
+      font-family: var(--font-headings);
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.3px;
+    }
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .why-choose-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 180px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .why-choose-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .why-choose-icon {
+      font-size: 2.2rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 32px;
+    }
+    .why-choose-content h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      font-family: var(--font-headings);
+    }
+    .why-choose-content p {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+    @media (max-width: 991px) {
+      .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .why-choose-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Process Flow Flowchart */
     .about-process-section {
       padding: 80px 0;
@@ -680,57 +749,97 @@
     </div>
   </section>
 
-  <!-- 8. Why Choose us & Process -->
-  <section class="about-process-section">
+  <!-- 8. Why Choose Us Section -->
+  <section class="why-choose-section">
     <div class="container">
-      <div class="about-process-grid">
-        <div class="about-process-left reveal-left">
-          <h3>Why Choose TrueKnack</h3>
-          <p>Empowering Fresh Graduates Across Maharashtra</p>
-          <div class="stat-callout">6,000+</div>
-          <p>Students Placed Successfully</p>
-          <div class="salary-flex">
-            <div class="salary-flex-item">
-              <h4>₹ 4.5 LPA</h4>
-              <p>Highest Salary</p>
-            </div>
-            <div class="salary-flex-item">
-              <h4>₹ 2.4 - 3.5 LPA</h4>
-              <p>Average Salary Range</p>
-            </div>
+      <div class="why-choose-header reveal">
+        <h2 class="why-choose-title"><span style="color: var(--secondary); font-size: 1.2rem; margin-right: 8px;">♦</span><span style="font-weight: 300; color: #ffffff;">Why </span><span style="font-weight: 700; font-style: italic; color: #ffffff;">Choose Us?</span></h2>
+      </div>
+
+      <div class="why-choose-grid">
+        <!-- Card 1 -->
+        <div class="why-choose-card reveal">
+          <div class="why-choose-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="why-choose-content">
+            <h4>Job-Ready<br>Programs</h4>
           </div>
         </div>
-        
-        <div class="about-process-right reveal-right">
-          <h3 style="margin-bottom: 24px; font-size: 1.8rem;">Our Process Flow</h3>
-          <div class="process-timeline">
-            <div class="process-step">
-              <div class="process-num">1</div>
-              <div class="process-info">
-                <h4>Application</h4>
-                <p>Fill an online application or walk in to a TrueKnack center with all your educational documents.</p>
-              </div>
+
+        <!-- Card 2 -->
+        <div class="why-choose-card reveal">
+          <div class="why-choose-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="why-choose-content">
+            <h4>Fast-Track<br>Your Career</h4>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-choose-card reveal">
+          <div class="why-choose-icon"><i class="fa-solid fa-coins"></i></div>
+          <div class="why-choose-content">
+            <h4>Increased Earning<br>Potential</h4>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="why-choose-card reveal">
+          <div class="why-choose-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="why-choose-content">
+            <h4>Secure<br>Your Future</h4>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="why-choose-card reveal">
+          <div class="why-choose-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="why-choose-content">
+            <h4>Certification For<br>Success</h4>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="why-choose-card reveal">
+          <div class="why-choose-icon"><i class="fa-solid fa-people-group"></i></div>
+          <div class="why-choose-content">
+            <h4>Networking<br>Opportunities</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8b. Our Process Flow Section -->
+  <section class="about-process-section" style="padding: 70px 0;">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;" class="reveal">
+        <h3 style="margin-bottom: 32px; font-size: 2rem; text-align: center; color: var(--primary);">Our Process Flow</h3>
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="process-num">1</div>
+            <div class="process-info">
+              <h4>Application</h4>
+              <p>Fill an online application or walk in to a TrueKnack center with all your educational documents.</p>
             </div>
-            <div class="process-step">
-              <div class="process-num">2</div>
-              <div class="process-info">
-                <h4>Screen Test</h4>
-                <p>Attend a face-to-face interview with our senior ex-bankers, carrying your academic records.</p>
-              </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">2</div>
+            <div class="process-info">
+              <h4>Screen Test</h4>
+              <p>Attend a face-to-face interview with our senior ex-bankers, carrying your academic records.</p>
             </div>
-            <div class="process-step">
-              <div class="process-num">3</div>
-              <div class="process-info">
-                <h4>Shortlisted</h4>
-                <p>If shortlisted in the screening test, secure your seat by submitting the fees as guided by the center head.</p>
-              </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">3</div>
+            <div class="process-info">
+              <h4>Shortlisted</h4>
+              <p>If shortlisted in the screening test, secure your seat by submitting the fees as guided by the center head.</p>
             </div>
-            <div class="process-step">
-              <div class="process-num">4</div>
-              <div class="process-info">
-                <h4>Training</h4>
-                <p>Undergo training for 3 Months, along with modular assessment tests conducted each fortnight.</p>
-              </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">4</div>
+            <div class="process-info">
+              <h4>Training</h4>
+              <p>Undergo training for 3 Months, along with modular assessment tests conducted each fortnight.</p>
             </div>
           </div>
         </div>
