@@ -464,7 +464,9 @@ header.scrolled {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  min-width: 250px;
+  min-width: 320px;
+  width: max-content;
+  max-width: 450px;
   background: var(--bg-white);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
@@ -484,6 +486,7 @@ header.scrolled {
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-main);
+  white-space: nowrap;
 }
 .nav-dropdown a:hover,
 .nav-dropdown a.active,
@@ -655,6 +658,7 @@ img.lazy-img.loaded { opacity: 1; }
   .nav-dropdown a {
     color: var(--text-main) !important;
     opacity: 1 !important;
+    white-space: normal;
   }
   .nav-menu li.has-dropdown.open .dropdown-toggle .fa-chevron-down { transform: rotate(180deg); }
 }
@@ -2954,7 +2958,9 @@ header.scrolled {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  min-width: 250px;
+  min-width: 320px;
+  width: max-content;
+  max-width: 450px;
   background: var(--bg-white);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
@@ -2974,6 +2980,7 @@ header.scrolled {
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-main);
+  white-space: nowrap;
 }
 .nav-dropdown a:hover { background: var(--bg-light); color: var(--secondary); }
 .nav-menu li.has-dropdown:hover .nav-dropdown {
@@ -3138,6 +3145,7 @@ img.lazy-img.loaded { opacity: 1; }
   .nav-dropdown a {
     color: var(--text-main) !important;
     opacity: 1 !important;
+    white-space: normal;
   }
   .nav-menu li.has-dropdown.open .dropdown-toggle .fa-chevron-down { transform: rotate(180deg); }
 }
