@@ -320,9 +320,11 @@ h1:hover, h2:hover, h3:hover {
   height: 68px;
 }
 .top-bar-left .separator {
-  color: var(--border-color);
-  font-weight: 300;
-  font-size: 1.4rem;
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 1.85rem;
+  line-height: 1;
+  align-self: center;
 }
 .top-bar-right {
   display: flex;
@@ -2790,9 +2792,11 @@ h1:hover, h2:hover, h3:hover {
   height: 68px;
 }
 .top-bar-left .separator {
-  color: var(--border-color);
-  font-weight: 300;
-  font-size: 1.5rem;
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 1.85rem;
+  line-height: 1;
+  align-self: center;
 }
 .top-bar-right {
   display: flex;
