@@ -521,12 +521,12 @@ header.scrolled {
 }
 .page-banner-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   gap: 48px;
 }
 .page-banner-content {
-  max-width: 100%;
+  max-width: 950px;
 }
 .page-banner h1 { 
   color: var(--bg-white); 
@@ -537,7 +537,7 @@ header.scrolled {
 }
 .page-banner p { 
   color: rgba(255,255,255,0.9); 
-  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
   font-weight: 600;
   line-height: 1.6;
   margin-bottom: 0;
@@ -2981,12 +2981,12 @@ header.scrolled {
 }
 .page-banner-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   gap: 48px;
 }
 .page-banner-content {
-  max-width: 100%;
+  max-width: 950px;
 }
 .page-banner h1 { 
   color: var(--bg-white); 
@@ -2997,7 +2997,7 @@ header.scrolled {
 }
 .page-banner p { 
   color: rgba(255,255,255,0.9); 
-  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
   font-weight: 600;
   line-height: 1.6;
   margin-bottom: 0;
