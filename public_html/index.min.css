@@ -296,7 +296,7 @@ h1:hover, h2:hover, h3:hover {
 }
 .top-bar-left {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 14px;
 }
 .top-bar-left .partner-text {
@@ -2798,7 +2798,7 @@ h1:hover, h2:hover, h3:hover {
 }
 .top-bar-left {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 14px;
 }
 .top-bar-left .partner-text {
