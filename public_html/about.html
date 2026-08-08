@@ -235,13 +235,12 @@
       line-height: 1.5;
     }
 
-    /* Why Choose Us TrueKnack Crimson Section */
+    /* Why Choose Us Clean Light Section */
     .why-choose-section {
-      background-color: #7A1417;
+      background-color: var(--bg-light);
       padding: 85px 0;
-      color: #ffffff;
+      color: var(--text-main);
       position: relative;
-      margin-bottom: 70px;
     }
     .why-choose-header {
       margin-bottom: 36px;
@@ -252,6 +251,7 @@
       display: flex;
       align-items: center;
       letter-spacing: -0.3px;
+      color: var(--primary);
     }
     .why-choose-grid {
       display: grid;
@@ -259,23 +259,25 @@
       gap: 24px;
     }
     .why-choose-card {
-      background-color: #ffffff;
-      border-radius: 12px;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
       padding: 32px 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       min-height: 175px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
     }
     .why-choose-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+      box-shadow: var(--shadow-md);
+      border-color: var(--secondary);
     }
     .why-choose-icon {
       font-size: 2.2rem;
-      color: #7A1417;
+      color: var(--secondary);
       margin-bottom: 28px;
     }
     .why-choose-content h4 {
@@ -752,7 +754,7 @@
   <section class="why-choose-section">
     <div class="container">
       <div class="why-choose-header reveal">
-        <h2 class="why-choose-title"><span style="color: #ffffff; font-size: 1.2rem; margin-right: 8px;">♦</span><span style="font-weight: 300; color: #ffffff;">Why </span><span style="font-weight: 700; font-style: italic; color: #ffffff;">Choose Us ?</span></h2>
+        <h2 class="why-choose-title"><span style="color: var(--secondary); font-size: 1.2rem; margin-right: 8px;">♦</span><span style="font-weight: 300; color: var(--primary);">Why </span><span style="font-weight: 700; font-style: italic; color: var(--primary);">Choose Us ?</span></h2>
       </div>
 
       <div class="why-choose-grid">
