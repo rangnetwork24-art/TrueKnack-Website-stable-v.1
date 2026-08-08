@@ -304,6 +304,7 @@ h1:hover, h2:hover, h3:hover {
   color: var(--primary);
   font-size: 0.88rem;
   letter-spacing: 0.2px;
+  align-self: center;
 }
 .top-bar-left .partner-logo {
   width: auto;
@@ -2808,6 +2809,7 @@ h1:hover, h2:hover, h3:hover {
   color: var(--primary);
   font-size: 0.88rem;
   letter-spacing: 0.2px;
+  align-self: center;
 }
 .top-bar-left .partner-logo {
   width: auto;
