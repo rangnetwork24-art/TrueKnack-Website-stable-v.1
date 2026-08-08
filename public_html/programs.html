@@ -34,11 +34,11 @@
   <link rel="stylesheet" href="chatbot.min.css?v=1.2">
   <style>
     .prog-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
-    .prog-card { background:var(--bg-white); border:1px solid var(--border-color); border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:32px; transition:var(--transition); }
+    .prog-card { background:var(--bg-white); border:1px solid var(--border-color); border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:32px; transition:var(--transition); display:flex; flex-direction:column; height:100%; }
     .prog-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
     .prog-card .program-icon { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,var(--secondary),var(--secondary-light)); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.6rem; margin-bottom:18px; }
     .prog-card h3 { color:var(--primary); margin-bottom:10px; }
-    .prog-card p { color:var(--text-muted); font-size:0.9rem; margin-bottom:18px; }
+    .prog-card p { color:var(--text-muted); font-size:0.9rem; margin-bottom:18px; flex:1 1 auto; }
     .tabs-nav { display:flex; flex-wrap:wrap; gap:8px; border-bottom:2px solid var(--border-color); margin-bottom:24px; }
     .tab-btn { background:none; border:none; padding:12px 20px; font-family:var(--font-headings); font-weight:600; font-size:0.9rem; color:var(--text-muted); cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; }
     .tab-btn.active { color:var(--secondary); border-bottom-color:var(--secondary); }
@@ -143,10 +143,11 @@
           </ul>
         </li>
         <li class="has-dropdown">
-          <a href="programs.html" class="nav-link dropdown-toggle active">Courses <i class="fa-solid fa-chevron-down"></i></a>
+          <a href="programs.html" class="nav-link dropdown-toggle active">Programs <i class="fa-solid fa-chevron-down"></i></a>
           <ul class="nav-dropdown">
             <li><a href="smart-banker-program.html">Smart Banker Program</a></li>
             <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank">Aurix Bankers Program</a></li>
+            <li><a href="https://equitas.trueknack.in/" target="_blank">Equitas Bankers Program</a></li>
           </ul>
         </li>
         <li><a href="franchise.html" class="nav-link ">Franchise</a></li>
@@ -211,36 +212,14 @@
           <a href="https://aubankaurixprogram.trueknack.in/" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-    </div>
-  </div></section>
-  <section class="page-section alt"><div class="container" style="max-width:900px;">
-    <h2 class="section-title-center reveal">Program Highlights</h2>
-    <div class="tabs-nav reveal">
-      <button class="tab-btn active" data-tab="tab-cbfs">Smart Banker Program</button>
-      <button class="tab-btn" data-tab="tab-aurix">Aurix Program</button>
-    </div>
-    <div class="tab-panel active" id="tab-cbfs">
-      <h3 style="color: var(--secondary); margin-bottom: 12px;">Smart Banker Program</h3>
-      <p>A <span style="white-space: nowrap;">job-ready</span> certificate course designed for fresh graduates to prepare them as Smart Bankers for retail banking portfolios.</p>
-      <ul style="margin-bottom: 24px;">
-        <li><strong>Duration:</strong> 3 Months (Online mode)</li>
-        <li><strong>Eligibility:</strong> Graduation with min. 50% marks in 10th, 12th & Graduation, aged 21-27 years.</li>
-        <li><strong>Salary Package:</strong> ₹ 2 LPA - 3.5 LPA</li>
-        <li><strong>Training Highlights:</strong> Finacle core banking software training, Advanced Excel, NISM VA MF exam prep, and ex-banker mock interview sessions.</li>
-        <li><strong>Course Fee:</strong> ₹ 50,000 + GST (Installment and 0% interest loan options available).</li>
-      </ul>
-      <a href="smart-banker-program.html" class="btn btn-secondary">View Detailed Course Info <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="tab-panel" id="tab-aurix">
-      <h3 style="color: var(--secondary); margin-bottom: 12px;">Aurix Bankers Program (AU Small Finance Bank)</h3>
-      <p>A job-assured training and placement program in collaboration with AU Small Finance Bank, grooming fresh graduates into Bank Officers.</p>
-      <ul style="margin-bottom: 24px;">
-        <li><strong>Duration:</strong> 3 Months (1 Month online training + 2 Months paid branch internship).</li>
-        <li><strong>Eligibility:</strong> Graduation in any stream with min. 50% marks, aged below 28 years.</li>
-        <li><strong>Designation & CTC:</strong> Bank Officer with a starting package of ₹ 3.5 LPA + Performance Incentives.</li>
-        <li><strong>Training Highlights:</strong> 1-month online foundation training, Finacle bank software training, customer service delivery, and a 2-month paid local branch internship with ₹5,000/mo stipend.</li>
-        <li><strong>Course Fee:</strong> ₹ 40,000 (INR 22,000 admission fee + INR 18,000 remaining fee payable post-placement).</li>
-      </ul>
+      <div class="prog-card reveal" id="equitas">
+        <div class="program-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>Equitas Ignite Program</h3>
+        <p>The Equitas Small Finance Bank Ignite Program, in partnership with TrueKnack Skill Services, is an intensive and Job Assured 2-week initiative preparing you to excel as a Business Development Officer in retail banking.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; width: 100%;">
+          <a href="https://equitas.trueknack.in/" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
   </div></section>
   <section class="page-section alt"><div class="container" style="max-width:900px;">
@@ -350,6 +329,7 @@
         <ul class="footer-links ipb-links">
           <li><a href="smart-banker-program.html"><i class="fa-solid fa-arrow-right"></i> Smart Banker Program</a></li>
           <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Aurix Bankers Program</a></li>
+          <li><a href="https://equitas.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Bankers Program</a></li>
           <li><a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a></li>
         </ul>
       </div>

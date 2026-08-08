@@ -120,12 +120,26 @@
     }
     .program-carousel-track {
       display: flex;
+      align-items: stretch;
       transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .program-carousel-slide {
       min-width: 50%;
       padding: 0 12px;
       box-sizing: border-box;
+      display: flex;
+    }
+    .program-carousel-slide .program-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .program-carousel-slide .program-box > p {
+      flex: 1 1 auto;
+    }
+    .program-carousel-slide .program-grid-details {
+      margin-top: auto;
     }
     .carousel-btn {
       position: absolute;
@@ -206,10 +220,11 @@
           </ul>
         </li>
         <li class="has-dropdown">
-          <a href="programs.html" class="nav-link dropdown-toggle">Courses <i class="fa-solid fa-chevron-down"></i></a>
+          <a href="programs.html" class="nav-link dropdown-toggle">Programs <i class="fa-solid fa-chevron-down"></i></a>
           <ul class="nav-dropdown">
             <li><a href="smart-banker-program.html">Smart Banker Program</a></li>
             <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank">Aurix Bankers Program</a></li>
+            <li><a href="https://equitas.trueknack.in/" target="_blank">Equitas Bankers Program</a></li>
           </ul>
         </li>
         <li><a href="franchise.html" class="nav-link ">Franchise</a></li>
@@ -694,11 +709,33 @@
               </div>
             </div>
           </div>
+          <!-- Slide 6: Equitas Small Finance Bank Ignite Program -->
+          <div class="program-carousel-slide">
+            <div class="program-box">
+              <h3>Equitas Ignite Program</h3>
+              <p>The Equitas Small Finance Bank Ignite Program, in partnership with TrueKnack Skill Services, is an intensive and Job Assured initiative designed to launch your career in the dynamic banking sector. As one of the most practical bank job training programs, this focused 2-week program provides comprehensive training in essential banking practices, preparing you to excel as a Business Development Officer.</p>
+              <div class="program-grid-details">
+                <div class="program-grid-item">
+                  <span>TARGET ROLE</span>
+                  <span>Business Development Officer</span>
+                </div>
+                <div class="program-grid-item">
+                  <span>DURATION</span>
+                  <span>2 Weeks</span>
+                </div>
+              </div>
+              <div class="program-actions">
+                <a href="https://equitas.trueknack.in/" target="_blank" class="btn btn-secondary">Know More</a>
+                <a href="https://equitas.trueknack.in/" target="_blank" class="btn btn-outline" aria-label="Enquire now about the Equitas Ignite Program">Enquire Now</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="carousel-dots" id="progDots">
           <button class="carousel-dot active" data-slide="0"></button>
           <button class="carousel-dot" data-slide="1"></button>
+          <button class="carousel-dot" data-slide="2"></button>
         </div>
       </div>
     </div>
@@ -920,6 +957,7 @@
         <ul class="footer-links ipb-links">
           <li><a href="smart-banker-program.html"><i class="fa-solid fa-arrow-right"></i> Smart Banker Program</a></li>
           <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Aurix Bankers Program</a></li>
+          <li><a href="https://equitas.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Bankers Program</a></li>
           <li><a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a></li>
         </ul>
       </div>

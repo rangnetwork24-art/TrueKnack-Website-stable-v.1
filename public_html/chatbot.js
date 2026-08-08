@@ -199,13 +199,15 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (query.includes('course') || query.includes('program') || query.includes('pgcr') || query === 'courses') {
         addBotMessage(
-          "Fantastic choice! Banking is one of the most stable and rewarding careers out there. 📈 At TrueKnack, we offer two premium placement-focused programs designed for graduates:\n\n" +
+          "Fantastic choice! Banking is one of the most stable and rewarding careers out there. 📈 At TrueKnack, we offer job-focused placement programs designed for graduates:\n\n" +
           "1. **Smart Banker Program**: A 3-month online comprehensive certificate course in Banking & Financial Services. 🎓\n" +
-          "2. **Aurix Bankers Program**: A 3-month job-assured program in collaboration with AU Small Finance Bank. 👔\n\n" +
-          "Which course would you like to explore?",
+          "2. **Aurix Bankers Program**: A 3-month job-assured program in collaboration with AU Small Finance Bank. 👔\n" +
+          "3. **Equitas Ignite Program**: A focused 2-week job-assured initiative with Equitas Small Finance Bank to become a Business Development Officer. 🏦\n\n" +
+          "Which program would you like to explore?",
           [
             { text: "Smart Banker Program", reply: "smartbanker" },
-            { text: "Aurix Bankers Program", reply: "aurix" }
+            { text: "Aurix Bankers Program", reply: "aurix" },
+            { text: "Equitas Ignite Program", reply: "equitas" }
           ]
         );
       } 
@@ -234,6 +236,19 @@ document.addEventListener('DOMContentLoaded', () => {
           "🔗 [Apply for Aurix Program Screening](https://aubankaurixprogram.trueknack.in/)",
           [
             { text: "Program Journey 🚀", reply: "aurix_journey" },
+            { text: "How to Apply 📝", reply: "apply" },
+            { text: "Main Menu 🏠", reply: "menu" }
+          ]
+        );
+      }
+      else if (query.includes('equitas') || query.includes('ignite')) {
+        addBotMessage(
+          "Great choice! The **Equitas Ignite Program** in partnership with **Equitas Small Finance Bank** is a job-assured banking training initiative:\n\n" +
+          "- ⏱️ **Duration**: 2 Weeks intensive training.\n" +
+          "- 💼 **Target Role**: Business Development Officer at Equitas Small Finance Bank.\n" +
+          "- 🎯 **Highlights**: Comprehensive training in essential banking practices & practical skill building.\n\n" +
+          "🔗 [Enquire for Equitas Ignite Program](https://equitas.trueknack.in/)",
+          [
             { text: "How to Apply 📝", reply: "apply" },
             { text: "Main Menu 🏠", reply: "menu" }
           ]
