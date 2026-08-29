@@ -33,18 +33,55 @@
   <link rel="stylesheet" href="index.min.css?v=3.8">
   <link rel="stylesheet" href="chatbot.min.css?v=1.2">
   <style>
-    .contact-layout { display:grid; grid-template-columns:1fr 1.2fr; gap:40px; align-items:start; }
-    .contact-info-card { background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:#fff; border-radius:var(--radius); padding:36px; }
-    .contact-info-card h3 { color:#fff; margin-bottom:8px; }
-    .contact-info-card > p { color:rgba(255,255,255,0.8); font-size:0.9rem; margin-bottom:26px; }
-    .ci-item { display:flex; gap:14px; align-items:flex-start; margin-bottom:22px; }
-    .ci-item i { color:var(--accent); font-size:1.1rem; margin-top:3px; width:22px; text-align:center; }
-    .ci-item strong { display:block; font-family:var(--font-headings); font-size:0.9rem; }
-    .ci-item span { font-size:0.85rem; color:rgba(255,255,255,0.8); }
-    .contact-form-card { background:var(--bg-white); border:1px solid var(--border-color); border-radius:var(--radius); box-shadow:var(--shadow-md); padding:36px; }
-    .field-error { color:var(--secondary); font-size:0.78rem; margin-top:4px; display:none; }
-    .form-msg { text-align:center; margin-top:14px; font-weight:600; color:#128C7E; display:none; }
-    @media(max-width:900px){ .contact-layout{grid-template-columns:1fr;} .cf-row{grid-template-columns:1fr;} }
+    .contact-layout { display:grid; grid-template-columns:1fr 1.3fr; gap:36px; align-items:start; }
+    
+    /* Left Info Card */
+    .contact-info-card { background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:#fff; border-radius:var(--radius); padding:32px 28px; }
+    .contact-info-card h3 { color:#fff; margin-bottom:8px; font-size:1.35rem; }
+    .contact-info-card > p { color:rgba(255,255,255,0.85); font-size:0.88rem; margin-bottom:22px; line-height:1.5; }
+    .ci-item { display:flex; gap:12px; align-items:flex-start; margin-bottom:18px; }
+    .ci-item:last-child { margin-bottom:0; }
+    .ci-item i { color:var(--accent); font-size:1.05rem; margin-top:2px; width:20px; text-align:center; flex-shrink:0; }
+    .ci-item strong { display:block; font-family:var(--font-headings); font-size:0.88rem; line-height:1.3; }
+    .ci-item span { font-size:0.82rem; color:rgba(255,255,255,0.8); line-height:1.4; }
+    
+    /* Right Form Card */
+    .contact-form-card { background:var(--bg-white); border:1px solid var(--border-color); border-radius:var(--radius); box-shadow:var(--shadow-md); padding:30px 32px; }
+    .contact-form-card h3 { margin-bottom:4px; color:var(--primary); font-size:1.3rem; }
+    .contact-form-card > p { color:var(--text-muted); font-size:0.86rem; margin-bottom:18px; }
+    
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px; }
+    .form-group { display:flex; flex-direction:column; margin-bottom:14px; text-align:left; }
+    .form-group.full-width { grid-column:1 / -1; margin-bottom:12px; }
+    .form-group label { font-size:0.82rem; font-weight:600; color:var(--text-dark); margin-bottom:4px; display:flex; align-items:center; gap:3px; }
+    .req-star { color:var(--secondary); font-weight:700; }
+    
+    .form-control { width:100%; padding:10px 12px; font-size:0.88rem; font-family:inherit; border:1.5px solid #d1d5db; border-radius:8px; background:#fff; color:var(--text-dark); transition:all 0.2s ease; box-sizing:border-box; }
+    .form-control:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 3px rgba(11,37,69,0.12); }
+    .form-control::placeholder { color:#9ca3af; font-size:0.85rem; }
+    select.form-control { cursor:pointer; }
+    textarea.form-control { resize:vertical; min-height:65px; }
+    
+    /* Consent checkbox styling */
+    .consent-wrapper { display:flex; align-items:flex-start; gap:10px; margin:12px 0 18px; text-align:left; background:rgba(11,37,69,0.02); border:1px solid #e5e7eb; border-radius:8px; padding:10px 12px; }
+    .consent-wrapper input[type="checkbox"] { width:18px; height:18px; margin-top:2px; accent-color:var(--primary); cursor:pointer; flex-shrink:0; }
+    .consent-text { font-size:0.78rem; line-height:1.45; color:#374151; }
+    .consent-text strong { color:var(--primary); }
+    .consent-dot { display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--secondary); margin-right:4px; vertical-align:middle; }
+    
+    .btn-submit { width:100%; padding:12px 20px; font-size:0.96rem; font-weight:600; display:inline-flex; justify-content:center; align-items:center; gap:8px; border-radius:8px; cursor:pointer; transition:all 0.25s ease; }
+    .btn-submit:disabled { opacity:0.75; cursor:not-allowed; }
+    
+    .form-status-box { margin-top:14px; padding:12px 14px; border-radius:8px; font-size:0.88rem; text-align:center; font-weight:500; }
+    .status-success { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .status-error { background:#fef2f2; border:1px solid #fecaca; color:#991b1b; display:flex; align-items:center; justify-content:center; gap:6px; }
+
+    @media(max-width:900px){
+      .contact-layout { grid-template-columns:1fr; gap:24px; }
+      .form-grid { grid-template-columns:1fr; gap:0; }
+      .form-group.full-width { grid-column:auto; }
+      .contact-form-card { padding:22px 18px; }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -144,7 +181,7 @@
           <ul class="nav-dropdown">
             <li><a href="smart-banker-program.html">TrueKnack - SMART Banker Program</a></li>
             <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank">AU Bank - AURIX Bankers Program</a></li>
-            <li><a href="https://equitas.trueknack.in/" target="_blank">Equitas Bank - IGNITE Bankers Program</a></li>
+            <li><a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank">Equitas Bank - IGNITE Bankers Program</a></li>
           </ul>
         </li>
         <li><a href="franchise.html" class="nav-link ">Franchise</a></li>
@@ -198,10 +235,98 @@
       <div class="ci-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>info@trueknack.in</span></div></div>
       <div class="ci-item"><i class="fa-solid fa-store"></i><div><strong>Franchise</strong><span>info@trueknack.in</span></div></div>
     </div>
-    <div class="contact-form-card reveal-right" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; min-height: 380px;">
-      <h3 class="form-title" style="margin-bottom: 24px;">Start Your Enquiry</h3>
-      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px;">Apply or submit your general enquiry directly through our admissions portal.</p>
-      <a href="https://aubankaurixprogram.trueknack.in/" target="_blank" class="btn btn-secondary btn-lg" style="width: 100%; text-align: center; justify-content: center;">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="contact-form-card reveal-right">
+      <h3 class="form-title">Send Us a Message</h3>
+      <p>Fill out the form below and our admissions team will get in touch with you shortly.</p>
+      
+      <form id="contact-enquiry-form" action="https://formspree.io/f/xyeyzjzy" method="POST">
+        <!-- Formspree Email Organization Meta -->
+        <input type="hidden" name="_subject" id="email-subject" value="New Admission Enquiry - TrueKnack Skill Services">
+        <input type="hidden" name="Entity" value="TrueKnack Skill Services">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Row 1: Name & Email -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="contact-name">Full Name <span class="req-star">*</span></label>
+            <input type="text" id="contact-name" name="Full Name" class="form-control" placeholder="Enter your full name" required autocomplete="name">
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-email">Email Address <span class="req-star">*</span></label>
+            <input type="email" id="contact-email" name="Email Address" class="form-control" placeholder="Enter your email address" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Row 2: Phone & Qualification -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="contact-phone">Mobile Number <span class="req-star">*</span></label>
+            <input type="tel" id="contact-phone" name="Mobile Number" class="form-control" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-qualification">Highest Qualification <span class="req-star">*</span></label>
+            <select id="contact-qualification" name="Highest Qualification" class="form-control" required>
+              <option value="" disabled selected>Select Qualification</option>
+              <option value="Graduate">Graduate</option>
+              <option value="Post-Graduate">Post-Graduate</option>
+              <option value="Under-Graduate">Under-Graduate</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 3: State & City/District -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="contact-state">Enter State Name <span class="req-star">*</span></label>
+            <input type="text" id="contact-state" name="State" class="form-control" placeholder="Enter state name" required autocomplete="address-level1">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-city">Enter City/District Name <span class="req-star">*</span></label>
+            <input type="text" id="contact-city" name="City or District" class="form-control" placeholder="Enter city/district name" required autocomplete="address-level2">
+          </div>
+        </div>
+
+        <!-- Row 4: Program & Message -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="contact-program">Select Program / Course <span class="req-star">*</span></label>
+            <select id="contact-program" name="Program Interested In" class="form-control" required>
+              <option value="" disabled selected>Select Program / Query</option>
+              <option value="TrueKnack - SMART Banker Program">TrueKnack - SMART Banker Program</option>
+              <option value="AU Bank - AURIX Bankers Program">AU Bank - AURIX Bankers Program</option>
+              <option value="Equitas Bank - IGNITE Bankers Program">Equitas Bank - IGNITE Bankers Program</option>
+              <option value="Franchise Opportunities">Franchise Opportunities</option>
+              <option value="Placement / Corporate Enquiry">Placement / Corporate Enquiry</option>
+              <option value="General Enquiry">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Your Message (Optional)</label>
+            <input type="text" id="contact-message" name="Message / Remarks" class="form-control" placeholder="Any queries or questions...">
+          </div>
+        </div>
+
+        <!-- Authorization / Consent Checkbox -->
+        <div class="consent-wrapper">
+          <input type="checkbox" id="consent-check" name="DNC / NDNC Waiver & Consent" checked="checked" autocomplete="off" required value="Authorized: Yes, I authorize TrueKnack Skill Services and its representatives to Call, SMS, Email or Whatsapp me about its products and offers. This consent overrides any registration for DNC/NDNC.">
+          <label for="consent-check" class="consent-text">
+            <span class="consent-dot" title="Required"></span>
+            I authorize "<strong>TrueKnack Skill Services</strong>" and its representatives to Call, SMS, Email or Whatsapp me about its products and offers.<br>
+            This consent overrides any registration for DNC/NDNC.
+          </label>
+        </div>
+
+        <button type="submit" id="contact-submit-btn" class="btn btn-secondary btn-submit">
+          <span>Submit Enquiry</span> <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+        <div id="contact-form-status" class="form-status-box" style="display:none;" role="status" aria-live="polite"></div>
+      </form>
     </div>
   </div></div></section>
   <!-- CONTACT US SECTION -->
@@ -280,7 +405,7 @@
         <ul class="footer-links ipb-links">
           <li><a href="smart-banker-program.html"><i class="fa-solid fa-arrow-right"></i> Smart Banker Program</a></li>
           <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Aurix Bankers Program</a></li>
-          <li><a href="https://equitas.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Ignite Program</a></li>
+          <li><a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Ignite Program</a></li>
           <li><a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a></li>
         </ul>
       </div>
@@ -315,7 +440,83 @@
   <script src="script.js"></script>
   <script src="chatbot.js?v=1.3"></script>
   <script>
-    
+    document.addEventListener('DOMContentLoaded', function () {
+      var contactForm = document.getElementById('contact-enquiry-form');
+      var submitBtn = document.getElementById('contact-submit-btn');
+      var statusBox = document.getElementById('contact-form-status');
+
+      var consentCheckbox = document.getElementById('consent-check');
+      if (consentCheckbox) {
+        consentCheckbox.checked = true;
+      }
+      window.addEventListener('load', function () {
+        if (consentCheckbox) consentCheckbox.checked = true;
+      });
+
+      contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        var consentCheckbox = document.getElementById('consent-check');
+        if (consentCheckbox && !consentCheckbox.checked) {
+          statusBox.className = 'form-status-box status-error';
+          statusBox.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please check the authorization consent before submitting.';
+          statusBox.style.display = 'flex';
+          consentCheckbox.focus();
+          return;
+        }
+
+        var originalBtnContent = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Submitting...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+        statusBox.style.display = 'none';
+
+        // Dynamically organize the email subject line
+        var nameVal = (document.getElementById('contact-name') || {}).value || 'Visitor';
+        var qualVal = (document.getElementById('contact-qualification') || {}).value || '';
+        var stateVal = (document.getElementById('contact-state') || {}).value || '';
+        var cityVal = (document.getElementById('contact-city') || {}).value || '';
+        var subjectInput = document.getElementById('email-subject');
+        if (subjectInput) {
+          subjectInput.value = 'New Admission Enquiry: ' + nameVal + ' - TrueKnack Skill Services' + (qualVal ? ' (' + qualVal + ')' : '') + (cityVal ? ' - ' + cityVal + ', ' + stateVal : '');
+        }
+
+        var formData = new FormData(contactForm);
+
+        try {
+          var response = await fetch('https://formspree.io/f/xyeyzjzy', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            statusBox.className = 'form-status-box status-success';
+            statusBox.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your enquiry has been received. Our team will contact you shortly.';
+            statusBox.style.display = 'flex';
+            contactForm.reset();
+            if (consentCheckbox) consentCheckbox.checked = true;
+          } else {
+            var data = await response.json();
+            var errorMsg = 'Oops! There was a problem submitting your form. Please try again.';
+            if (data && data.errors && data.errors.length > 0) {
+              errorMsg = data.errors.map(function(err) { return err.message; }).join(', ');
+            }
+            statusBox.className = 'form-status-box status-error';
+            statusBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> ' + errorMsg;
+            statusBox.style.display = 'flex';
+          }
+        } catch (err) {
+          statusBox.className = 'form-status-box status-error';
+          statusBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Network error. Please try again or reach us at +91 91721 55613.';
+          statusBox.style.display = 'flex';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+        }
+      });
+    });
   </script>
 
   

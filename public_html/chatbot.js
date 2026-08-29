@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "- ⏱️ **Duration**: 2 Weeks intensive training.\n" +
           "- 💼 **Target Role**: Business Development Officer at Equitas Small Finance Bank.\n" +
           "- 🎯 **Highlights**: Comprehensive training in essential banking practices & practical skill building.\n\n" +
-          "🔗 [Enquire for Equitas Ignite Program](https://equitas.trueknack.in/)",
+          "🔗 [Enquire for Equitas Ignite Program](https://equitasbankigniteprogram.trueknack.in/)",
           [
             { text: "How to Apply 📝", reply: "apply" },
             { text: "Main Menu 🏠", reply: "menu" }
