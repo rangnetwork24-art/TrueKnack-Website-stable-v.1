@@ -268,6 +268,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    progTrack.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    progTrack.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 45) {
+        // Swiped left -> next
+        if (currentSlide < Math.max(0, totalSlides - getVisibleCount())) {
+          currentSlide++;
+          updateCarousel();
+        }
+      } else if (touchEndX - touchStartX > 45) {
+        // Swiped right -> prev
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateCarousel();
+        }
+      }
+    }, { passive: true });
+
     // Recalc on resize
     window.addEventListener('resize', updateCarousel);
     updateCarousel();
@@ -351,6 +374,30 @@ document.addEventListener('DOMContentLoaded', () => {
           parent.innerHTML = truncated + ' <span class="read-more-toggle" style="color: var(--secondary); font-weight: 700; cursor: pointer; margin-left: 5px; text-decoration: underline;">Read More</span>';
         }
       }
+    });
+  }
+
+  // === CORE VALUES CAROUSEL SYNC (about.html) ===
+  const valuesGrid = document.querySelector('.about-values-grid');
+  const valuesDotsContainer = document.getElementById('valuesDots');
+  if (valuesGrid && valuesDotsContainer) {
+    const dots = valuesDotsContainer.querySelectorAll('.values-dot');
+    valuesGrid.addEventListener('scroll', () => {
+      const card = valuesGrid.querySelector('.value-card');
+      const cardWidth = card ? card.offsetWidth : 280;
+      const activeIdx = Math.min(
+        dots.length - 1,
+        Math.max(0, Math.round(valuesGrid.scrollLeft / (cardWidth + 12)))
+      );
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === activeIdx));
+    }, { passive: true });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        const card = valuesGrid.querySelector('.value-card');
+        const cardWidth = card ? card.offsetWidth : 280;
+        valuesGrid.scrollTo({ left: (cardWidth + 12) * i, behavior: 'smooth' });
+      });
     });
   }
 

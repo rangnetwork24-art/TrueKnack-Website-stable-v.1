@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="index.min.css?v=4.0">
+  <link rel="stylesheet" href="index.min.css?v=4.3">
   <link rel="stylesheet" href="chatbot.min.css?v=1.2">
   <style>
     .founder-section { padding: 80px 0; }
@@ -50,7 +50,12 @@
     .team-member .social-links { margin-top: 12px; display: flex; justify-content: center; gap: 12px; }
     .team-member .social-links a { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-light); color: var(--primary); display: flex; align-items: center; justify-content: center; transition: var(--transition); font-size: 0.85rem; }
     .team-member .social-links a:hover { background: var(--primary); color: #fff; }
-    @media(max-width:768px){ .founder-card{grid-template-columns:1fr;} .team-grid{grid-template-columns:1fr;} }
+    @media(max-width:768px){
+      .founder-section { padding: 40px 0; }
+      .founder-card { grid-template-columns: 1fr; padding: 22px 18px; gap: 20px; }
+      .team-grid { grid-template-columns: 1fr; gap: 16px; }
+      .team-member-info { padding: 18px; }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -128,7 +133,7 @@
     <div class="top-bar">
       <div class="container top-bar-container">
         <div class="top-bar-left">
-          <span class="partner-text">Authorized Training Partner of NSDC</span>
+          <span class="partner-text">Authorized Training Partner of</span>
           <img src="images/nsdc.webp" alt="NSDC Logo" class="partner-logo">
           <span class="separator">|</span>
           <img src="images/skill-india.webp" alt="Skill India Logo" class="partner-logo">
@@ -233,7 +238,7 @@
             <p style="margin-bottom: 14px;">Navigating the evolving landscape of employment in our dynamic world is a timeless challenge. It’s a challenge that has demotivated countless generations, a challenge that holds even more complexity in our current era.</p>
             <p style="margin-bottom: 14px;">As our economy continues to expand with promising prospects on the horizon, various industries are experiencing significant transformations.</p>
             <p style="margin-bottom: 14px;">However, the disparity between this aspiration and the skills required often creates a mismatch between job opportunities and qualified individuals. This disconnect fuels the pressing issue of unemployment. In recognizing this, I am firmly convinced that the solution lies not merely in theoretical education, but in the cultivation of practical knowledge. This conviction propelled me to establish the “Trueknack Skill Services”.</p>
-            <p style="margin-bottom: 14px;">Trueknack takes on the role of a vital bridge, linking the ambitions of skilled and aspiring individuals with the ever-evolving Industries &amp; sectors. Through rigorous upskilling, our mission is to equip these individuals to not only meet industry standards but to excel within them. Our well-prepared candidates are poised not only to keep pace with industry growth but also to drive it forward.</p>
+            <p style="margin-bottom: 14px;">Trueknack takes on the role of a vital bridge, linking the ambitions of skilled and aspiring individuals with the ever-evolving Industries &amp; sectors. Through rigorous skilling, our mission is to equip these individuals to not only meet industry standards but to excel within them. Our well-prepared candidates are poised not only to keep pace with industry growth but also to drive it forward.</p>
             <p style="margin-bottom: 0;">This endeavour is about more than just addressing unemployment; it’s about contributing to society.</p>
           </div>
           <div class="founder-sign">Deepak Singh Parihar<span>Founder – Managing Director &amp; CEO</span></div>
@@ -362,7 +367,7 @@
       
       <div class="footer-col">
         <h3>Quick Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="smart-banker-program.html"><i class="fa-solid fa-arrow-right"></i> Smart Banker Program</a></li>
           <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Aurix Bankers Program</a></li>
           <li><a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Ignite Program</a></li>
@@ -372,7 +377,7 @@
 
       <div class="footer-col">
         <h3>Useful Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="image-gallery.html"><i class="fa-solid fa-arrow-right"></i> Gallery</a></li>
           <li><a href="faq.html"><i class="fa-solid fa-arrow-right"></i> FAQ's</a></li>
           <li><a href="privacy-policy.html"><i class="fa-solid fa-arrow-right"></i> Privacy Policy</a></li>

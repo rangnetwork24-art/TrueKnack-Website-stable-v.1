@@ -12,16 +12,16 @@
   <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
   
   <!-- SEO Meta Tags -->
-  <title>Job Placements, Upskilling & Staffing Solutions | TrueKnack</title>
-  <meta name="description" content="India's leading upskilling, recruitment, and staffing platform. Join TrueKnack for job-oriented training, professional placements, and corporate hiring solutions across all sectors.">
-  <meta name="keywords" content="job placement, upskilling platform, corporate staffing, recruitment agency, jobs for graduates, fresher jobs, career placement, bank recruitment, Equitas Ignite program, Equitas bank jobs, Smart Banker program, Aurix program, jobs in Thane, jobs in Pune, job placement assistance, corporate hiring, manpower solutions, professional upskilling, TrueKnack">
+  <title>Job Placements, Skilling & Staffing Solutions | TrueKnack</title>
+  <meta name="description" content="India's leading skilling, recruitment, and staffing platform. Join TrueKnack for job-oriented training, professional placements, and corporate hiring solutions across all sectors.">
+  <meta name="keywords" content="job placement, skilling platform, corporate staffing, recruitment agency, jobs for graduates, fresher jobs, career placement, bank recruitment, Equitas Ignite program, Equitas bank jobs, Smart Banker program, Aurix program, jobs in Thane, jobs in Pune, job placement assistance, corporate hiring, manpower solutions, professional skilling, TrueKnack">
   <meta name="author" content="TrueKnack">
   <link rel="canonical" href="https://www.trueknack.in/">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Job Placements, Upskilling & Staffing Solutions | TrueKnack">
-  <meta property="og:description" content="India's leading upskilling, recruitment, and staffing platform. Join TrueKnack for job-oriented training, professional placements, and corporate hiring solutions across all sectors.">
+  <meta property="og:title" content="Job Placements, Skilling & Staffing Solutions | TrueKnack">
+  <meta property="og:description" content="India's leading skilling, recruitment, and staffing platform. Join TrueKnack for job-oriented training, professional placements, and corporate hiring solutions across all sectors.">
   <meta property="og:url" content="https://www.trueknack.in/">
   <meta property="og:image" content="https://www.trueknack.in/logo.webp">
   <meta property="og:site_name" content="TrueKnack">
@@ -29,8 +29,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Job Placements, Upskilling & Staffing Solutions | TrueKnack">
-  <meta name="twitter:description" content="India's leading upskilling, recruitment, and staffing platform. Join TrueKnack for job-oriented training, professional placements, and corporate hiring solutions across all sectors.">
+  <meta name="twitter:title" content="Job Placements, Skilling & Staffing Solutions | TrueKnack">
+  <meta name="twitter:description" content="India's leading skilling, recruitment, and staffing platform. Join TrueKnack for job-oriented training, professional placements, and corporate hiring solutions across all sectors.">
   <meta name="twitter:image" content="https://www.trueknack.in/logo.webp">
   
   <!-- JSON-LD Structured Data -->
@@ -53,7 +53,7 @@
     ],
     "url": "https://www.trueknack.in",
     "logo": "https://www.trueknack.in/logo.webp",
-    "description": "TrueKnack is India's leading upskilling, recruitment, and staffing platform, offering professional training and placement solutions across all sectors.",
+    "description": "TrueKnack is India's leading skilling, recruitment, and staffing platform, offering professional training and placement solutions across all sectors.",
     "telephone": "+917559115998",
     "email": "info@trueknack.in",
     "address": {
@@ -65,7 +65,7 @@
       "addressCountry": "IN"
     },
     "knowsAbout": [
-      "Upskilling Programs",
+      "Skilling Programs",
       "Job Placements",
       "Equitas Ignite Program",
       "Aurix Bankers Program",
@@ -111,15 +111,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="index.min.css?v=4.0">
+  <link rel="stylesheet" href="index.min.css?v=4.3">
   <link rel="stylesheet" href="chatbot.min.css?v=1.2">
 
   <style>
     /* === PROGRAM CAROUSEL === */
     .program-carousel-wrapper {
       position: relative;
+      padding: 0 48px;
+    }
+    .program-carousel-viewport {
       overflow: hidden;
-      padding: 0 50px;
+      width: 100%;
     }
     .program-carousel-track {
       display: flex;
@@ -127,7 +130,9 @@
       transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .program-carousel-slide {
+      flex: 0 0 50%;
       min-width: 50%;
+      max-width: 50%;
       padding: 0 12px;
       box-sizing: border-box;
       display: flex;
@@ -143,6 +148,20 @@
     }
     .program-carousel-slide .program-grid-details {
       margin-top: auto;
+      grid-template-columns: 1.6fr 1fr;
+    }
+    .program-grid-item > span:first-child {
+      color: var(--text-muted);
+      display: block;
+    }
+    .program-grid-item > span:last-child {
+      font-weight: 600;
+      color: var(--primary);
+      display: block;
+    }
+    .program-grid-item .nobr {
+      white-space: nowrap !important;
+      display: inline !important;
     }
     .carousel-btn {
       position: absolute;
@@ -175,7 +194,7 @@
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-top: 28px;
+      margin-top: 24px;
     }
     .carousel-dot {
       width: 12px;
@@ -200,8 +219,149 @@
     }
 
     @media (max-width: 768px) {
-      .program-carousel-slide { min-width: 100%; }
-      .program-carousel-wrapper { padding: 0 40px; }
+      .program-carousel-wrapper {
+        padding: 0 10px;
+      }
+      .program-carousel-viewport {
+        overflow: hidden;
+        width: 100%;
+        border-radius: 16px;
+      }
+      .program-carousel-slide {
+        flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 2px;
+      }
+      .program-carousel-slide .program-box {
+        padding: 22px 18px !important;
+        margin: 0 !important;
+        border-radius: 16px !important;
+      }
+      .program-carousel-slide .program-box h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 8px !important;
+      }
+      .program-carousel-slide .program-box > p {
+        font-size: 0.88rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 14px !important;
+        flex: 0 1 auto !important;
+      }
+      .program-carousel-slide .program-grid-details {
+        display: grid !important;
+        grid-template-columns: 1.8fr 1fr !important;
+        gap: 12px !important;
+        margin-top: 0 !important;
+        margin-bottom: 18px !important;
+        background: #f8fafc;
+        padding: 12px 12px !important;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        align-items: start !important;
+      }
+      .program-grid-item {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        min-width: 0 !important;
+      }
+      .program-grid-item > span:first-child {
+        font-size: 0.7rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.1px;
+        display: block;
+        margin-bottom: 4px;
+        color: var(--text-muted);
+        line-height: 1.3;
+      }
+      .program-grid-item > span:last-child {
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        color: var(--primary);
+        line-height: 1.35;
+        white-space: normal !important;
+        word-break: normal;
+        overflow-wrap: break-word;
+      }
+      .program-grid-item .nobr {
+        white-space: nowrap !important;
+        display: inline !important;
+      }
+      .program-actions {
+        display: flex !important;
+        gap: 10px !important;
+        width: 100% !important;
+      }
+      .program-actions .btn {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 10px 10px !important;
+        font-size: 0.85rem !important;
+        white-space: nowrap !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        letter-spacing: 0.1px;
+      }
+      .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+        border: 1px solid var(--border-color);
+        z-index: 10;
+      }
+      .carousel-btn-prev { left: -6px; }
+      .carousel-btn-next { right: -6px; }
+
+      /* Compact, balanced tiles for 'What Makes TrueKnack Unique' on mobile */
+      .unique-section {
+        padding: 36px 0 !important;
+      }
+      .unique-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        padding: 6px 0 !important;
+        width: 100% !important;
+      }
+      .unique-card {
+        padding: 10px 8px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: left !important;
+        gap: 8px !important;
+        border-radius: 12px !important;
+        min-height: 58px !important;
+        box-sizing: border-box !important;
+      }
+      .unique-icon {
+        font-size: 1.05rem !important;
+        margin-bottom: 0 !important;
+        flex-shrink: 0 !important;
+        width: 32px !important;
+        height: 32px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(155, 42, 39, 0.08) !important;
+        color: var(--secondary) !important;
+        border-radius: 8px !important;
+      }
+      .unique-card h4 {
+        font-size: 0.74rem !important;
+        line-height: 1.25 !important;
+        font-weight: 600 !important;
+        margin: 0 !important;
+        color: var(--primary) !important;
+      }
     }
   </style>
 </head>
@@ -269,7 +429,7 @@
           <i class="fa-solid fa-award"></i> Transform Talent, Elevate Your Workforce
         </div>
         <h1 class="hero-title">
-          India's Leading<br><span class="text-shimmer">Job Ready Upskilling Platform</span>
+          India's Leading<br><span class="text-shimmer">Job Ready Skilling Platform</span>
         </h1>
         
         <p class="hero-tagline">
@@ -666,79 +826,81 @@
 
       
       <div class="program-carousel-wrapper" id="programCarousel">
-        <button class="carousel-btn carousel-btn-prev" id="progPrev"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="carousel-btn carousel-btn-next" id="progNext"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="carousel-btn carousel-btn-prev" id="progPrev" aria-label="Previous Program"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn carousel-btn-next" id="progNext" aria-label="Next Program"><i class="fa-solid fa-chevron-right"></i></button>
         
-        <div class="program-carousel-track" id="progTrack">
-          <!-- Slide 1: CBFS -->
-          <div class="program-carousel-slide">
-            <div class="program-box">
-              <h3>Smart Banker Program</h3>
-              <p>A 3-month online training program focused on making you <span style="white-space: nowrap;">job-ready</span> with banking skills, certifications, and placement assistance, offering entry-level banking roles with ₹2 LPA - 3.5 LPA for those wanting a flexible learning option.</p>
-              <div class="program-grid-details">
-                <div class="program-grid-item">
-                  <span>AVERAGE SALARY RANGE</span>
-                  <span>₹ 2 LPA - 3.5 LPA</span>
+        <div class="program-carousel-viewport">
+          <div class="program-carousel-track" id="progTrack">
+            <!-- Slide 1: CBFS -->
+            <div class="program-carousel-slide">
+              <div class="program-box">
+                <h3>Smart Banker Program</h3>
+                <p>A 3-month online training program focused on making you <span style="white-space: nowrap;">job-ready</span> with banking skills, certifications, and placement assistance, offering entry-level banking roles with ₹2 LPA - <span class="nobr">3.5 LPA</span> for those wanting a flexible learning option.</p>
+                <div class="program-grid-details">
+                  <div class="program-grid-item">
+                    <span>AVERAGE SALARY RANGE</span>
+                    <span>₹&nbsp;2&nbsp;LPA - <span class="nobr">3.5&nbsp;LPA</span></span>
+                  </div>
+                  <div class="program-grid-item">
+                    <span>DURATION</span>
+                    <span>3 Months</span>
+                  </div>
                 </div>
-                <div class="program-grid-item">
-                  <span>DURATION</span>
-                  <span>3 Months</span>
+                <div class="program-actions">
+                  <a href="smart-banker-program.html" class="btn btn-secondary">Know More</a>
+                  <a href="https://smartbanker.trueknack.in/" target="_blank" class="btn btn-outline" aria-label="Enquire now about the Smart Banker Program">Enquire Now</a>
                 </div>
-              </div>
-              <div class="program-actions">
-                <a href="smart-banker-program.html" class="btn btn-secondary">Know More</a>
-                <a href="https://smartbanker.trueknack.in/" target="_blank" class="btn btn-outline" aria-label="Enquire now about the Smart Banker Program">Enquire Now</a>
               </div>
             </div>
-          </div>
-          <!-- Slide 5: Aurix Bankers Program -->
-          <div class="program-carousel-slide">
-            <div class="program-box">
-              <h3>Aurix Bankers Program</h3>
-              <p>An intensive 1-month training program designed in partnership with AU Small Finance Bank. Tailored for ambitious graduates of Age Upto 26 years, this program equips you to step confidently into the Bank Officer role opportunity. Gain professional training and practical exposure through a paid on-the-job internship in AU Bank Branch.</p>
-              <div class="program-grid-details">
-                <div class="program-grid-item">
-                  <span>GUARANTEED SALARY</span>
-                  <span>₹ 3.5 LPA + Incentives</span>
+            <!-- Slide 5: Aurix Bankers Program -->
+            <div class="program-carousel-slide">
+              <div class="program-box">
+                <h3>Aurix Bankers Program</h3>
+                <p>An intensive 1-month training program designed in partnership with AU Small Finance Bank. Tailored for ambitious graduates of Age Upto 26 years, this program equips you to step confidently into the Bank Officer role opportunity. Gain professional training and practical exposure through a paid on-the-job internship in AU Bank Branch.</p>
+                <div class="program-grid-details">
+                  <div class="program-grid-item">
+                    <span>GUARANTEED SALARY</span>
+                    <span><span class="nobr">₹ 3.5&nbsp;LPA</span> + Incentives</span>
+                  </div>
+                  <div class="program-grid-item">
+                    <span>DURATION</span>
+                    <span>1 Month</span>
+                  </div>
                 </div>
-                <div class="program-grid-item">
-                  <span>DURATION</span>
-                  <span>1 Month</span>
+                <div class="program-actions">
+                  <a href="https://aubankaurixprogram.trueknack.in/" target="_blank" class="btn btn-secondary">Know More</a>
+                  <a href="https://aubankaurixprogram.trueknack.in/" target="_blank" class="btn btn-outline" aria-label="Enquire now about the Aurix Bankers Program">Enquire Now</a>
                 </div>
-              </div>
-              <div class="program-actions">
-                <a href="https://aubankaurixprogram.trueknack.in/" target="_blank" class="btn btn-secondary">Know More</a>
-                <a href="https://aubankaurixprogram.trueknack.in/" target="_blank" class="btn btn-outline" aria-label="Enquire now about the Aurix Bankers Program">Enquire Now</a>
               </div>
             </div>
-          </div>
-          <!-- Slide 6: Equitas Small Finance Bank Ignite Program -->
-          <div class="program-carousel-slide">
-            <div class="program-box">
-              <h3>Equitas Ignite Program</h3>
-              <p>The Equitas Small Finance Bank Ignite Program, in partnership with TrueKnack Skill Services, is an intensive and Job Assured initiative designed to launch your career in the dynamic banking sector. As one of the most practical bank job training programs, this focused 2-week program provides comprehensive training in essential banking practices, preparing you to excel as a Business Development Officer.</p>
-              <div class="program-grid-details">
-                <div class="program-grid-item">
-                  <span>TARGET ROLE</span>
-                  <span>Business Development Officer</span>
+            <!-- Slide 6: Equitas Small Finance Bank Ignite Program -->
+            <div class="program-carousel-slide">
+              <div class="program-box">
+                <h3>Equitas Ignite Program</h3>
+                <p>The Equitas Small Finance Bank Ignite Program, in partnership with TrueKnack Skill Services, is an intensive and Job Assured initiative designed to launch your career in the dynamic banking sector. As one of the most practical bank job training programs, this focused 2-week program provides comprehensive training in essential banking practices, preparing you to excel as a Business Development Officer.</p>
+                <div class="program-grid-details">
+                  <div class="program-grid-item">
+                    <span>TARGET ROLE</span>
+                    <span>Business Development Officer</span>
+                  </div>
+                  <div class="program-grid-item">
+                    <span>DURATION</span>
+                    <span>2 Weeks</span>
+                  </div>
                 </div>
-                <div class="program-grid-item">
-                  <span>DURATION</span>
-                  <span>2 Weeks</span>
+                <div class="program-actions">
+                  <a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank" class="btn btn-secondary">Know More</a>
+                  <a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank" class="btn btn-outline" aria-label="Enquire now about the Equitas Ignite Program">Enquire Now</a>
                 </div>
-              </div>
-              <div class="program-actions">
-                <a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank" class="btn btn-secondary">Know More</a>
-                <a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank" class="btn btn-outline" aria-label="Enquire now about the Equitas Ignite Program">Enquire Now</a>
               </div>
             </div>
           </div>
         </div>
 
         <div class="carousel-dots" id="progDots">
-          <button class="carousel-dot active" data-slide="0"></button>
-          <button class="carousel-dot" data-slide="1"></button>
-          <button class="carousel-dot" data-slide="2"></button>
+          <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
         </div>
       </div>
     </div>
@@ -957,7 +1119,7 @@
       
       <div class="footer-col">
         <h3>Quick Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="smart-banker-program.html"><i class="fa-solid fa-arrow-right"></i> Smart Banker Program</a></li>
           <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Aurix Bankers Program</a></li>
           <li><a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Ignite Program</a></li>
@@ -967,7 +1129,7 @@
 
       <div class="footer-col">
         <h3>Useful Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="image-gallery.html"><i class="fa-solid fa-arrow-right"></i> Gallery</a></li>
           <li><a href="faq.html"><i class="fa-solid fa-arrow-right"></i> FAQ's</a></li>
           <li><a href="privacy-policy.html"><i class="fa-solid fa-arrow-right"></i> Privacy Policy</a></li>

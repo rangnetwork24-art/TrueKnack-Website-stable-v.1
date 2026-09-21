@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="index.min.css?v=4.0">
+  <link rel="stylesheet" href="index.min.css?v=4.3">
   <link rel="stylesheet" href="chatbot.min.css?v=1.2">
 
   <style>
@@ -234,6 +234,10 @@
       color: var(--text-muted);
       line-height: 1.5;
     }
+    .values-dots,
+    .values-swipe-hint {
+      display: none;
+    }
 
     /* Why Choose Us Clean Light Section */
     .why-choose-section {
@@ -301,7 +305,8 @@
     }
     @media (max-width: 600px) {
       .why-choose-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
       }
     }
 
@@ -439,29 +444,187 @@
     @media (max-width: 992px) {
       .about-intro-grid, .about-mv-grid, .about-process-grid, .about-benefits-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
       }
       .about-values-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
       }
       .about-values-row-2 {
         flex-direction: column;
         align-items: center;
-        gap: 24px;
+        gap: 20px;
       }
       .value-card-row-2 {
         width: 100%;
       }
     }
-    @media (max-width: 576px) {
-      .about-values-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      .about-aim-banner {
+        margin: 24px auto 36px;
+        padding: 24px 18px;
       }
+      .about-mv-card {
+        padding: 24px 20px;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .about-values-section {
+        padding: 36px 0 28px !important;
+      }
+      .about-values-section h2 {
+        font-size: 1.55rem !important;
+        margin-bottom: 10px !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .values-subtitle {
+        font-size: 0.88rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .about-values-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 12px !important;
+        padding: 4px 16px 12px !important;
+        margin: 0 -16px !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        align-items: stretch !important;
+      }
+      .about-values-grid::-webkit-scrollbar {
+        display: none;
+      }
+      .value-card {
+        flex: 0 0 80% !important;
+        max-width: 295px !important;
+        scroll-snap-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        padding: 20px 18px !important;
+        border-radius: 16px !important;
+        background: #FFFFFF !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+        box-sizing: border-box !important;
+        min-height: 220px !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .value-icon {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        font-size: 1.2rem !important;
+        margin-bottom: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(155, 42, 39, 0.08) !important;
+        color: var(--secondary) !important;
+        border-radius: 10px !important;
+      }
+      .value-card h4 {
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        margin: 0 0 6px 0 !important;
+        line-height: 1.3 !important;
+        color: var(--primary) !important;
+      }
+      .value-card p {
+        font-size: 0.84rem !important;
+        line-height: 1.45 !important;
+        margin: 0 !important;
+        color: var(--text-muted) !important;
+      }
+      .values-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        margin-top: 14px;
+      }
+      .values-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.35);
+        transition: all 0.25s ease;
+        cursor: pointer;
+      }
+      .values-dot.active {
+        width: 18px;
+        border-radius: 4px;
+        background: #FFFFFF;
+      }
+      .values-swipe-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.75);
+        margin-top: 8px;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      /* Why Choose Us on about.html */
+      .why-choose-section {
+        padding: 44px 0 !important;
+      }
+      .why-choose-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 20px !important;
+      }
+      .why-choose-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+      .why-choose-card {
+        padding: 12px 10px !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: left !important;
+        gap: 10px !important;
+        border-radius: 12px !important;
+      }
+      .why-choose-icon {
+        font-size: 1.15rem !important;
+        margin-bottom: 0 !important;
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(155, 42, 39, 0.08) !important;
+        color: var(--secondary) !important;
+        border-radius: 8px !important;
+      }
+      .why-choose-content h4 {
+        font-size: 0.78rem !important;
+        line-height: 1.25 !important;
+        margin: 0 !important;
+        color: var(--primary) !important;
+      }
+    }
+    @media (max-width: 576px) {
       .about-hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
       .about-aim-banner p {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
       }
     }
   </style>
@@ -491,7 +654,7 @@
     "foundingDate": "2019",
     "foundingLocation": "Pune, Maharashtra, India",
     "knowsAbout": [
-      "Upskilling Programs",
+      "Skilling Programs",
       "Job Placements",
       "Corporate Recruitment",
       "Manpower Staffing",
@@ -531,7 +694,7 @@
     <div class="top-bar">
       <div class="container top-bar-container">
         <div class="top-bar-left">
-          <span class="partner-text">Authorized Training Partner of NSDC</span>
+          <span class="partner-text">Authorized Training Partner of</span>
           <img src="images/nsdc.webp" alt="NSDC Logo" class="partner-logo">
           <span class="separator">|</span>
           <img src="images/skill-india.webp" alt="Skill India Logo" class="partner-logo">
@@ -610,7 +773,7 @@
     <div class="container page-banner-grid">
       <div class="page-banner-content reveal-left">
         <h1 class="text-shimmer">Live your dreams with TrueKnack</h1>
-        <p style="font-size: 1.1rem; font-weight: 600;"><span style="color: #ff4d5a; font-weight: 700;">Master tomorrow's skills</span> with India’s top upskilling platform.</p>
+        <p style="font-size: 1.1rem; font-weight: 600;"><span style="color: #ff4d5a; font-weight: 700;">Master tomorrow's skills</span> with India’s top skilling platform.</p>
       </div>
       <div class="page-banner-image-side reveal-right">
         <div class="page-banner-image-wrapper">
@@ -712,6 +875,22 @@
           <h4>Recognition</h4>
           <p>We celebrate effort, progress, and success. By recognising impact, big or small, we ensure everyone feels valued, seen and appreciated.</p>
         </div>
+      </div>
+      
+      <!-- Mobile swipe navigation dots & hint -->
+      <div class="values-dots" id="valuesDots" aria-hidden="true">
+        <span class="values-dot active" data-index="0"></span>
+        <span class="values-dot" data-index="1"></span>
+        <span class="values-dot" data-index="2"></span>
+        <span class="values-dot" data-index="3"></span>
+        <span class="values-dot" data-index="4"></span>
+        <span class="values-dot" data-index="5"></span>
+        <span class="values-dot" data-index="6"></span>
+        <span class="values-dot" data-index="7"></span>
+        <span class="values-dot" data-index="8"></span>
+      </div>
+      <div class="values-swipe-hint" aria-hidden="true">
+        <i class="fa-solid fa-arrow-left-long"></i> Swipe to explore values <i class="fa-solid fa-arrow-right-long"></i>
       </div>
     </div>
   </section>
@@ -885,7 +1064,7 @@
       
       <div class="footer-col">
         <h3>Quick Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="smart-banker-program.html"><i class="fa-solid fa-arrow-right"></i> Smart Banker Program</a></li>
           <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Aurix Bankers Program</a></li>
           <li><a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Ignite Program</a></li>
@@ -895,7 +1074,7 @@
 
       <div class="footer-col">
         <h3>Useful Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="image-gallery.html"><i class="fa-solid fa-arrow-right"></i> Gallery</a></li>
           <li><a href="faq.html"><i class="fa-solid fa-arrow-right"></i> FAQ's</a></li>
           <li><a href="privacy-policy.html"><i class="fa-solid fa-arrow-right"></i> Privacy Policy</a></li>

@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="index.min.css?v=3.8">
+  <link rel="stylesheet" href="index.min.css?v=4.3">
   <link rel="stylesheet" href="chatbot.min.css?v=1.2">
   <style>
     .prog-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
@@ -52,7 +52,14 @@
     .enquiry-form input:focus, .enquiry-form select:focus, .enquiry-form textarea:focus { outline:none; border-color:var(--secondary); box-shadow:0 0 0 3px rgba(155,26,30,0.1); }
     .field-error { color:var(--secondary); font-size:0.78rem; margin-top:4px; display:none; }
     .form-msg { text-align:center; margin-top:14px; font-weight:600; color:#128C7E; }
-    @media(max-width:768px){ .prog-cards{grid-template-columns:1fr;} .enquiry-form{grid-template-columns:1fr;} }
+    @media(max-width:768px){
+      .prog-cards { grid-template-columns:1fr; gap:16px; }
+      .prog-card { padding:20px 18px; border-radius:12px; }
+      .prog-card .program-icon { width:48px; height:48px; font-size:1.3rem; margin-bottom:12px; }
+      .prog-card h3 { font-size:1.2rem; margin-bottom:8px; }
+      .prog-card p { font-size:0.85rem; line-height:1.5; margin-bottom:14px; }
+      .enquiry-form { grid-template-columns:1fr; }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -112,7 +119,7 @@
     <div class="top-bar">
       <div class="container top-bar-container">
         <div class="top-bar-left">
-          <span class="partner-text">Authorized Training Partner of NSDC</span>
+          <span class="partner-text">Authorized Training Partner of</span>
           <img src="images/nsdc.webp" alt="NSDC Logo" class="partner-logo">
           <span class="separator">|</span>
           <img src="images/skill-india.webp" alt="Skill India Logo" class="partner-logo">
@@ -334,7 +341,7 @@
       
       <div class="footer-col">
         <h3>Quick Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="smart-banker-program.html"><i class="fa-solid fa-arrow-right"></i> Smart Banker Program</a></li>
           <li><a href="https://aubankaurixprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Aurix Bankers Program</a></li>
           <li><a href="https://equitasbankigniteprogram.trueknack.in/" target="_blank"><i class="fa-solid fa-arrow-right"></i> Equitas Ignite Program</a></li>
@@ -344,7 +351,7 @@
 
       <div class="footer-col">
         <h3>Useful Links</h3>
-        <ul class="footer-links ipb-links">
+        <ul class="footer-links">
           <li><a href="image-gallery.html"><i class="fa-solid fa-arrow-right"></i> Gallery</a></li>
           <li><a href="faq.html"><i class="fa-solid fa-arrow-right"></i> FAQ's</a></li>
           <li><a href="privacy-policy.html"><i class="fa-solid fa-arrow-right"></i> Privacy Policy</a></li>
