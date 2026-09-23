@@ -401,5 +401,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === FOUNDER'S MESSAGE READ MORE TOGGLE (team.html) ===
+  const founderBtn = document.getElementById('founderReadMoreBtn');
+  const founderMore = document.getElementById('founderQuoteMore');
+  if (founderBtn && founderMore) {
+    founderBtn.addEventListener('click', () => {
+      const isExpanded = founderMore.classList.toggle('show');
+      founderBtn.setAttribute('aria-expanded', isExpanded);
+      const span = founderBtn.querySelector('span');
+      if (span) {
+        span.textContent = isExpanded ? 'Read Less' : 'Read More';
+      }
+      const icon = founderBtn.querySelector('i');
+      if (icon) {
+        icon.className = isExpanded ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down';
+      }
+    });
+  }
+
 });
 
