@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Messages will load here dynamically -->
         </div>
         <div class="chatbot-input-area">
-          <input type="text" id="chatbotInput" placeholder="Ask me about banking courses..." autocomplete="off">
+          <input type="text" id="chatbotInput" placeholder="Ask about courses, fees, franchise..." autocomplete="off">
           <button class="chatbot-send-btn" aria-label="Send message">
             <i class="fa-solid fa-paper-plane"></i>
           </button>
@@ -109,18 +109,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function triggerBotGreeting() {
     showTypingIndicator();
+    const isFranchise = window.location.pathname.includes('franchise');
     setTimeout(() => {
       removeTypingIndicator();
-      addBotMessage(
-        "Hey there! 🌟 Welcome to **TrueKnack**! I'm Knacky, your Admission Assistant. I'm super excited to help you launch a successful career in banking! 🚀 What are we exploring today?",
-        [
-          { text: "Explore Courses 🎓", reply: "courses" },
-          { text: "Placement Record 💼", reply: "placement" },
-          { text: "Fees & Duration 💸", reply: "fees" },
-          { text: "Contact an Advisor 📞", reply: "contact" }
-        ]
-      );
-    }, 1000);
+      if (isFranchise) {
+        addBotMessage(
+          "Hey there! 🌟 Interested in partnering with **TrueKnack** and owning a high-returns banking training franchise? I'm Knacky, here to guide you with investment details, ROI, requirements, or connecting directly with our Franchise Team! 🚀",
+          [
+            { text: "Investment & ROI 💰", reply: "franchise_roi" },
+            { text: "Franchise Requirements 📋", reply: "franchise_req" },
+            { text: "Contact Franchise Team 📞", reply: "franchise_contact" },
+            { text: "Explore Courses 🎓", reply: "courses" }
+          ]
+        );
+      } else {
+        addBotMessage(
+          "Hey there! 🌟 Welcome to **TrueKnack**! I'm Knacky, your Admission & Career Assistant. I'm super excited to help you launch a successful career in banking or explore partnership opportunities! 🚀 What are we exploring today?",
+          [
+            { text: "Explore Courses 🎓", reply: "courses" },
+            { text: "Placement Record 💼", reply: "placement" },
+            { text: "Fees & Duration 💸", reply: "fees" },
+            { text: "Franchise Enquiry 🏢", reply: "franchise" },
+            { text: "Contact an Advisor 📞", reply: "contact" }
+          ]
+        );
+      }
+    }, 800);
   }
 
   function handleUserSend() {
@@ -332,15 +346,89 @@ document.addEventListener('DOMContentLoaded', () => {
           ]
         );
       } 
+      else if (query.includes('franchise_req') || (query.includes('franchise') && query.includes('requirement'))) {
+        addBotMessage(
+          "Here are the requirements to open a **TrueKnack Franchise Center**:\n\n" +
+          "📐 **Space Required**: 500 – 700 sq ft\n" +
+          "- 1 Centre Head Room\n" +
+          "- 1 Meeting Room\n" +
+          "- 3 Workstations\n" +
+          "- Pantry & Washroom\n\n" +
+          "👥 **Required Manpower**:\n" +
+          "- Centre Sales Head: 1\n" +
+          "- Education Counsellors: 5\n" +
+          "- Office Support Staff: 1\n\n" +
+          "🎯 **Target Cities in Maharashtra**: Pune, Nagpur, Sambhajinagar, and expanding pan-state.",
+          [
+            { text: "Investment & ROI 💰", reply: "franchise_roi" },
+            { text: "Contact Franchise Team 📞", reply: "franchise_contact" },
+            { text: "Main Menu 🏠", reply: "menu" }
+          ]
+        );
+      }
+      else if (query.includes('franchise_roi') || query.includes('license fee') || query.includes('franchise cost') || query.includes('franchise fee') || (query.includes('franchise') && query.includes('roi')) || (query.includes('franchise') && query.includes('invest'))) {
+        addBotMessage(
+          "Here is the financial & ROI breakdown for a **TrueKnack Franchise**:\n\n" +
+          "💵 **License Fee**: Rs. 3,00,000 + GST\n" +
+          "🏗️ **Setup Cost**: As per actuals\n" +
+          "📜 **Term of Contract**: 3 Years\n" +
+          "📈 **Expected Monthly ROI**: ₹ 2-5 Lakhs / Month\n" +
+          "🎁 **Includes**: Comprehensive Promotional Kit, Corporate Branding & CRM portal access.",
+          [
+            { text: "Space & Manpower 📋", reply: "franchise_req" },
+            { text: "Speak to Franchise Team 📞", reply: "franchise_contact" },
+            { text: "Main Menu 🏠", reply: "menu" }
+          ]
+        );
+      }
+      else if (query.includes('franchise_contact') || (query.includes('franchise') && (query.includes('call') || query.includes('phone') || query.includes('whatsapp') || query.includes('lead')))) {
+        addBotMessage(
+          "Reach out directly to our **Franchise Development Team**:\n\n" +
+          "📞 **Call Numbers**:\n" +
+          "- **+91 77385 15998**\n" +
+          "- **+91 80073 33811**\n\n" +
+          "💬 **WhatsApp Direct**:\n" +
+          "- [Chat with Franchise Lead on WhatsApp](https://wa.me/919967049610)\n\n" +
+          "📧 **Email**: info@trueknack.in\n" +
+          "🔗 [View Franchise Details Page](franchise.html)",
+          [
+            { text: "Investment & ROI 💰", reply: "franchise_roi" },
+            { text: "Franchise Requirements 📋", reply: "franchise_req" },
+            { text: "Main Menu 🏠", reply: "menu" }
+          ]
+        );
+      }
+      else if (query.includes('franchise') || query.includes('partner') || query.includes('center setup') || query.includes('open center')) {
+        addBotMessage(
+          "Partner with India's premier retail banking training institute! 🏢\n\n" +
+          "The **TrueKnack Franchise Opportunity** delivers a proven, high-returns educational business model:\n\n" +
+          "- 💵 **License Fee**: Rs. 3,00,000 + GST (3-Year Contract)\n" +
+          "- 📈 **Expected ROI**: ₹ 2-5 Lakhs / Month\n" +
+          "- 📐 **Space**: 500 – 700 sq ft\n" +
+          "- 👥 **Staff**: 1 Center Head, 5 Counsellors, 1 Support Staff\n" +
+          "- 🤝 **Head Office Support**: Centralized recruiter tie-ups, marketing campaigns, staff training & CRM portal.\n\n" +
+          "What details would you like to explore?",
+          [
+            { text: "Investment & ROI 💰", reply: "franchise_roi" },
+            { text: "Requirements 📋", reply: "franchise_req" },
+            { text: "Contact Franchise Team 📞", reply: "franchise_contact" },
+            { text: "Main Menu 🏠", reply: "menu" }
+          ]
+        );
+      }
       else if (query.includes('contact') || query.includes('call') || query.includes('number') || query.includes('phone') || query.includes('email') || query.includes('support')) {
         addBotMessage(
-          "Let's chat! Our friendly advisor team is ready to answer all your questions and guide you:\n\n" +
+          "Let's connect! Our team is ready to answer all your questions and guide you:\n\n" +
           "📞 **Admissions Helpline**: +91 91721 55613\n" +
+          "🎧 **Student Helpline**: +91 75591 15998\n" +
+          "🏢 **Franchise Enquiry**: +91 77385 15998 / +91 80073 33811\n" +
           "📧 **Email**: info@trueknack.in\n" +
           "💬 **WhatsApp**: [Click here to Chat directly!](https://wa.me/919967049610)\n\n" +
-          "Helpline hours: Mon - Sat, 9:00 AM - 7:00 PM. Talk soon! 😊",
+          "Working hours: Mon - Sat, 9:00 AM - 7:00 PM. Talk soon! 😊",
           [
-            { text: "Back to Menu", reply: "menu" }
+            { text: "Explore Courses 🎓", reply: "courses" },
+            { text: "Franchise Details 🏢", reply: "franchise" },
+            { text: "Back to Menu 🏠", reply: "menu" }
           ]
         );
       }
@@ -373,11 +461,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       else if (query === 'menu' || query === 'help' || query === 'hi' || query === 'hello') {
         addBotMessage(
-          "Hey! Great to see you here! 😄 How can I help you kickstart your banking career today? Pick an option to get started:",
+          "Hey! Great to see you here! 😄 How can I assist you today? Pick an option to get started:",
           [
             { text: "Explore Courses 🎓", reply: "courses" },
             { text: "Placement Record 💼", reply: "placement" },
             { text: "Fees & Duration 💸", reply: "fees" },
+            { text: "Franchise Enquiry 🏢", reply: "franchise" },
             { text: "Contact Info 📞", reply: "contact" }
           ]
         );
